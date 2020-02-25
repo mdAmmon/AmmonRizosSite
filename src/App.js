@@ -6,6 +6,7 @@ import Directory from './components/Directory';
 import Calendar from './components/Calendar';
 import Crosses from './components/Crosses';
 import Diagrams from './components/Diagrams';
+import ToggleNavButton from './components/ToggleNavButton.js';
 
 class App extends Component {
     render() {
@@ -13,6 +14,7 @@ class App extends Component {
             <Router >
                 <Navigation />
                 <div id="content">
+                    <ToggleNavButton/>
                     <Switch>
                         <Route exact path="/" component={Home}/>
                         <Route path="/directory" component={Directory}/>
