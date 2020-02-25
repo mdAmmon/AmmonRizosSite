@@ -55,7 +55,6 @@ class Navigation extends Component {
     }
     
     render() {
-        console.log(this.props.location.pathname);
 
         const navHeader = (
             <div id="nav-header">
