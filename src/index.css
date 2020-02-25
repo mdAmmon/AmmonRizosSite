@@ -164,15 +164,15 @@ p {
   border-bottom: none;
   margin-bottom: calc(1px + 1rem);
 }
-/* 
-#content:not(.hovered){
+
+#navbar.nav-collapsed ~ #content:not(.hovered){
   margin-left: 65px;
   margin-right: 0 !important;
   width: calc(100% - 65px); 
 }
 
 
-@media (max-width: 770px) {
+/* @media (max-width: 770px) {
   #content:not(.hovered) {
       margin-left: 0px;
       width: 100%;
