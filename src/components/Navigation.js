@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import {NavLink, withRouter } from "react-router-dom";
 import Logo from '../img/arLogo.png';
 class Navigation extends Component {
-
+    constructor(props){
+        super(props);
+        this.state = {
+            isLogged: props.isLogged
+        }
+    }
 
     expandNav() {
         if(window.innerWidth<770){
@@ -56,15 +61,30 @@ class Navigation extends Component {
     }
 
     manageSession = () => {
-        const {cookies} = this.props;
-        if(cookies.get('name')){
-            alert("logged in");
-        } else{
-            this.props.showModal();
+        
+
+    }
+
+    logout = () => {
+        if(!this.props.logout()){
+            this.setState({isLogged: false});
         }
     }
+
+    componentDidUpdate(previousProps){
+        if(previousProps.isLogged !== this.props.isLogged){
+            this.setState({isLogged: this.props.isLogged});            
+        }
+
+    }
+
+
+
     
     render() {
+        const logButton = (this.state.isLogged)? 
+        <span className="login" id="loginBtn" onClick={this.logout}>Logout</span>:
+        <span className="login" id="loginBtn" onClick={this.manageSession}>Login</span>;
 
         const navHeader = (
             <div id="nav-header">
@@ -74,7 +94,7 @@ class Navigation extends Component {
         );
         const navBody = (
             <div id="nav-body">
-                <span className="login" id="loginBtn" onClick={this.manageSession}>Login</span>
+                {logButton}
                 <ul id="nav-links">
                     <li>
                         <NavLink exact to="/" activeStyle={{ color: '#F3F3F3' }}>
