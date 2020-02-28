@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 
 class Home extends Component {
 
-    state = {
-        name: ''
-    }
     setCookies = () => {
         const { cookies } = this.props;
         // now.setSeconds(now.getSeconds()+15);
         const hour = 3600;
         cookies.set('name', this.state.name, {maxAge: 3 * hour});
-
+        this.props.login(cookies.get('name'));
         alert(cookies.get('name'));
     }
     render() {
