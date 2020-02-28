@@ -60,10 +60,6 @@ class Navigation extends Component {
         }
     }
 
-    manageSession = () => {
-        
-
-    }
 
     logout = () => {
         if(!this.props.logout()){
@@ -78,13 +74,10 @@ class Navigation extends Component {
 
     }
 
-
-
-    
     render() {
         const logButton = (this.state.isLogged)? 
         <span className="login" id="loginBtn" onClick={this.logout}>Logout</span>:
-        <span className="login" id="loginBtn" onClick={this.manageSession}>Login</span>;
+        <span className="login" id="loginBtn" onClick={this.props.showModal}>Login</span>;
 
         const navHeader = (
             <div id="nav-header">
