@@ -75,7 +75,7 @@ class App extends Component {
                     <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.loginModalShown} hide={() => { this.handleModalHide("loginModal") }} />
                     <Switch>
                         <Route exact path="/" render={() => { return <Home cookies={this.props.cookies} /> }} />
-                        <Route path="/directory" component={Directory} />
+                        <Route path="/directory" render={()=>{return <Directory showModal={() => this.handleModalShow("loginModal")}/>}} />
                         <Route path="/calendar" component={Calendar} />
                         <Route path="/crosses" component={Crosses} />
                         <Route path="/diagrams" component={Diagrams}/>
