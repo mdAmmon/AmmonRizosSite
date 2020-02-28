@@ -43,21 +43,28 @@ class App extends Component {
         }
     }
 
-    logout = () =>{
-        const {cookies} = this.props;
+    logout = () => {
+        const { cookies } = this.props;
 
-        cookies.remove('name');
+        fetch('http://127.0.0.1/includes/logout.php', {
+            method: 'POST',
+            
+        }).then(res => {
+            cookies.remove('name');
+            alert("Godspeed my friend");
+            this.setState({ isLogged: false });
+        })
 
-        this.setState({isLogged: false});
 
         return this.state.isLogged;
 
     }
 
-    login = (name) =>{
-        const {cookies} = this.props;
-        this.setState({isLogged: true, user: {name}});
-
+    login = (name) => {
+        const { cookies } = this.props;
+        this.setState({ isLogged: true, user: { name } });
+        const hour = 3600;
+        cookies.set('name', name, { maxAge: 3 * hour });
     }
 
     render() {
@@ -66,9 +73,9 @@ class App extends Component {
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <div id="content">
                     <ToggleNavButton />
-                    <LoginForm isLogged={this.state.isLogged} show={this.state.loginModalShow} hide={() => { this.handleModalHide("loginModal") }} />
+                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.loginModalShown} hide={() => { this.handleModalHide("loginModal") }} />
                     <Switch>
-                        <Route exact path="/" render={() => { return <Home cookies={this.props.cookies} login={this.login}/> }} />
+                        <Route exact path="/" render={() => { return <Home cookies={this.props.cookies} /> }} />
                         <Route path="/directory" component={Directory} />
                         <Route path="/calendar" component={Calendar} />
                         <Route path="/crosses" component={Crosses} />
