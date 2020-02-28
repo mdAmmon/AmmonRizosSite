@@ -1,11 +1,11 @@
 html,
-body {
-    margin: 0;
-    background-color: #ccd2df;
-    width: 100%;
-    height: 100%;
-    font-family: 'Roboto', sans-serif;
-    color: #383838;
+body, #root {
+  margin: 0;
+  background-color: #ccd2df;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  color: #383838;
 }
 
 h1,
@@ -14,11 +14,11 @@ h3,
 h4,
 h5,
 h6 {
-    color: #383838;
+  color: #383838;
 }
 
 p {
-    text-align: justify;
+  text-align: justify;
 }
 
 
@@ -145,19 +145,20 @@ p {
 
 /* NavBar Collapsed */
 
-#navbar.nav-collapsed:not(.hovered) #title{
+#navbar.nav-collapsed:not(.hovered) #title {
   display: none;
 }
-#navbar.nav-collapsed:not(.hovered){
+
+#navbar.nav-collapsed:not(.hovered) {
   width: 65px;
 }
 
-#navbar.nav-collapsed #nav-links li{
+#navbar.nav-collapsed #nav-links li {
   overflow: hidden;
 }
 
-#navbar.nav-collapsed #nav-links .hide:not(.hovered){
-  display: none ;
+#navbar.nav-collapsed #nav-links .hide:not(.hovered) {
+  display: none;
 }
 
 #navbar.nav-collapsed #nav-links:not(.hovered) li:not(:last-child) {
@@ -165,19 +166,6 @@ p {
   margin-bottom: calc(1px + 1rem);
 }
 
-#navbar.nav-collapsed ~ #content:not(.hovered){
-  margin-left: 65px;
-  margin-right: 0 !important;
-  width: calc(100% - 65px); 
-}
-
-
-/* @media (max-width: 770px) {
-  #content:not(.hovered) {
-      margin-left: 0px;
-      width: 100%;
-  }
-} */
 
 /* Content */
 
@@ -194,4 +182,59 @@ p {
   -webkit-transition: all ease 0.3s;
   -o-transition: all ease 0.3s;
   transition: all ease 0.3s;
+}
+
+/* Content on collapse */
+
+#navbar.nav-collapsed~#content:not(.hovered){
+  margin-left: 65px;
+  margin-right: 0 !important;
+  width: calc(100% - 65px);
+}
+
+
+@media (max-width: 770px) {
+  #navbar {
+    margin-left: -220px;
+  }
+
+  #navbar.active {
+    margin-left: 0;
+    z-index: 2;
+  }
+
+  #content, #navbar.nav-collapsed~ #navbar.nav-collapsed~#content:not(.active) {
+    width: 100% ;
+    margin: auto 0px  !important;
+    padding: 0;
+  }
+
+  #navbarCollapse {
+    display: block;
+    z-index: 400;
+  }
+}
+
+
+/* Login Modal */
+/* .custom-dialog{
+  left: 200px;
+}
+
+.modal {
+  width: calc(100% - 200px) !important;
+}
+  */
+
+#loginModal label {
+  padding: 0;
+}
+
+#loginModal .fa-form.fa {
+  color: #002060;
+  margin-right: 10px;
+}
+
+#submitLogin {
+  background: #002060;
 }

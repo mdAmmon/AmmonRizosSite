@@ -9,9 +9,6 @@ class ToggleNavButton extends Component {
         navbar.classList.toggle('active');
         content.classList.toggle('active');
         document.querySelector('body').classList.toggle('active');
-        // $('#navbar').toggleClass('active');
-        // $('#content').toggleClass('active');
-        // $('body').toggleClass('active');
 
     }
 
