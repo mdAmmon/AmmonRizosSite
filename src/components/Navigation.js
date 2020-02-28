@@ -3,6 +3,7 @@ import {NavLink, withRouter } from "react-router-dom";
 import Logo from '../img/arLogo.png';
 class Navigation extends Component {
 
+
     expandNav() {
         if(window.innerWidth<770){
             return;
@@ -53,6 +54,15 @@ class Navigation extends Component {
             });
         }
     }
+
+    manageSession = () => {
+        const {cookies} = this.props;
+        if(cookies.get('name')){
+            alert("logged in");
+        } else{
+            this.props.showModal();
+        }
+    }
     
     render() {
 
@@ -64,7 +74,7 @@ class Navigation extends Component {
         );
         const navBody = (
             <div id="nav-body">
-                <span className="login" id="loginBtn">Login</span>
+                <span className="login" id="loginBtn" onClick={this.manageSession}>Login</span>
                 <ul id="nav-links">
                     <li>
                         <NavLink exact to="/" activeStyle={{ color: '#F3F3F3' }}>
