@@ -1,0 +1,22 @@
+
+#employeeDetailModal .modal-content{
+    width: 280px ;
+    height: 350px;
+    margin: auto;
+    height: 100%;
+    padding: 0 !important;
+}
+
+#employeeDetail {
+    width: calc(100% - 65px);
+    margin-left: 65px;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+    height: 100%;
+}
+
+#content.hovered #employeeDetail {
+    width: calc(100% - 200px) !important;
+    margin-left: 200px !important;
+}
