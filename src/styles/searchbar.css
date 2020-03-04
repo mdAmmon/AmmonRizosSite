@@ -1,0 +1,46 @@
+/* Searchbar */
+/* crossesComponent */
+
+.searchbar {
+    margin: 3% auto;
+  }
+  
+  
+  .searchbar *{
+    font-size: 0.8em;
+  }
+  
+  
+  .searchbar .btn{
+    background-color: #383838;
+    color: #f8f8f8;
+    margin-top: 0;
+  }
+  
+  .searchbar .btn:hover {
+    background-color: #504f4f;
+    margin-top: 1px;
+    margin-bottom: -1px;
+    color: #f8f8f8;
+  }
+  
+  .searchbar .btn:not(:last-of-type) {
+    margin-right: 1%;
+  }
+  
+  #searchCrossInput {
+    display: inline-block;
+    margin: 0 auto;
+    width: calc(95% - 137px);
+    margin-right: 1%;
+  }
+  
+  .searchbar input::-moz-placeholder, .searchbar input:-ms-input-placeholder, 
+  .searchbar input::-ms-input-placeholder, .searchbar input::placeholder,
+  .searchbar input::-webkit-input-placeholder {
+    color: #AAA;
+  }
+  
+  .searchbar input {
+    color: #383838;
+  }
