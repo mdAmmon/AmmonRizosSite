@@ -50,7 +50,7 @@ class App extends Component {
         const { cookies } = this.props;
 
         fetch('http://127.0.0.1/includes/logout.php', {
-            method: 'POST',   
+            method: 'POST',
         }).then(res => {
             cookies.remove('name');
             alert("Godspeed my friend");
@@ -72,13 +72,20 @@ class App extends Component {
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <div id="content">
                     <ToggleNavButton />
-                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.loginModalShown} hide={() => { this.handleModalHide("loginModal") }} />
+                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.loginModalShown}
+                        hide={() => { this.handleModalHide("loginModal") }} />
                     <Switch>
                         <Route exact path="/" render={() => { return <Home cookies={this.props.cookies} /> }} />
-                        <Route path="/directory" render={()=>{return <Directory showModal={() => this.handleModalShow("loginModal")}/>}} />
+                        <Route path="/directory" render={() => {
+                            return <Directory
+                                showModal={() => this.handleModalShow("employeeModal")}
+                                hide={() => { this.handleModalHide("employeeModal") }}
+                                show={this.state.employeeModalShown} />
+                        }} />
+
                         <Route path="/calendar" component={Calendar} />
                         <Route path="/crosses" component={Crosses} />
-                        <Route path="/diagrams" component={Diagrams}/>
+                        <Route path="/diagrams" component={Diagrams} />
                     </Switch>
 
                 </div>
