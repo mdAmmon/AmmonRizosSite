@@ -6,7 +6,7 @@ class DirectoryList extends Component {
             <div id="employeeRegistry">
                 {this.props.employees.map((employee)=>{
                     return (<EmployeeCard priority={employee.priority} key={employee.email} nombre={employee.nombre} 
-                    position={employee.position} email={employee.nombre} />)
+                    position={employee.position} email={employee.email} />)
                 })}
             </div>
         );
