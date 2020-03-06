@@ -1,0 +1,39 @@
+
+#tableCrosses {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    overflow-x: scroll;
+}
+
+#tableContainer {
+    width: 90%;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+th {
+    color: #6b6b6b;
+
+}
+
+th,
+td {
+    padding: 10px 2%;
+    margin-right: 10 px;
+    font-size: 12px;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #e6e8ee;
+}
+
+tbody tr {
+    width: 100%;
+}
+
+.firstRow {
+    border-bottom: 1px solid rgba(87, 85, 85, 0.25);
+}
