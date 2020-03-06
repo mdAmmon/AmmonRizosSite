@@ -8,7 +8,7 @@ class TableContainer extends Component {
             <div id="tableContainer">
                 <table id="tableCrosses">
                     <thead>
-                        <tr class="firstRow">
+                        <tr className="firstRow">
                             <th>Competitor</th>
                             <th>Part Number</th>
                             <th>A&R MFG</th>
