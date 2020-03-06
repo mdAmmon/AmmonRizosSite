@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
 import TableTools from '../components/TableTools';
+import TableContainer from '../components/TableContainer';
 
 class Crosses extends Component {
     render() {
@@ -13,6 +14,8 @@ class Crosses extends Component {
                 </SearchBar>
 
                 <TableTools/>
+
+                <TableContainer/>
             </div>
 
         );
