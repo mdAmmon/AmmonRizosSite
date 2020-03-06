@@ -96,3 +96,7 @@ p {
 body, .content {
   padding: 0 !important;
 }
+
+.centered{
+  text-align: center;
+}
