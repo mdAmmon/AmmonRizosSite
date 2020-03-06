@@ -5,6 +5,7 @@ import DirectoryList from '../components/DirectoryList';
 import SearchBar from '../components/SearchBar';
 import SearchFilters from '../components/SearchFilters';
 import EmployeeModal from '../components/EmployeeModal';
+import "../styles/directory.css"
 
 class Directory extends Component {
     state = {
