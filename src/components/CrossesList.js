@@ -6,22 +6,6 @@ class CrossesList extends Component {
     render() {
 
         const { currentPage, itemsPerPage, crosses } = this.props;
-        for (let i = 0; i < itemsPerPage; i++) {
-            let cross = crosses[itemsPerPage * (currentPage - 1) + i];
-
-
-            records.push(
-                <tr>
-                    <th>cross.COMPETITOR</th>
-                    <th>cross.COMPETITOR_PART</th>
-                    <th>cross.BRAND</th>
-                    <th>cross.GENERIC</th>
-                    <th>cross.direct</th>
-                    <th>cross.comments</th>
-                </tr>
-            );
-
-        }
 
         return (
             <tbody id="tableBody">
