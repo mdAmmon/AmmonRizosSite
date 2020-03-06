@@ -6,7 +6,6 @@ class CrossesList extends Component {
     render() {
 
         const { currentPage, itemsPerPage, crosses } = this.props;
-        const records = [];
         for (let i = 0; i < itemsPerPage; i++) {
             let cross = crosses[itemsPerPage * (currentPage - 1) + i];
 
