@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
+import TableTools from '../components/TableTools';
 
 class Crosses extends Component {
     render() {
@@ -10,6 +11,8 @@ class Crosses extends Component {
                     <button type="button" class="btn" id="searchButton">Search</button>
                     <button type="button" class="btn" id="fullSearchButton">Full List</button>
                 </SearchBar>
+
+                <TableTools/>
             </div>
 
         );
