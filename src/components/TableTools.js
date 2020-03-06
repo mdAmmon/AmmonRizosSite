@@ -5,12 +5,12 @@ class TableTools extends Component {
         return (
             <div id="tableTools">
                 <div id="pageContainer">
-                    <div className="leftTriangle" id="previousPage"></div>
-                    <input type="text" name="page" class="form-control" id="pageNumber" disabled value="1" />
-                    <div className="rightTriangle" id="nextPage"></div>
+                    <div className="leftTriangle" id="previousPage" onClick={()=>{this.props.turnPage(-1)}}></div>
+                    <input type="text" name="page" className="form-control" id="pageNumber" disabled value={this.props.currentPage} />
+                    <div className="rightTriangle" id="nextPage" onClick={()=>{this.props.turnPage(1)}}></div>
                 </div>
 
-                <select className="form-control" id="itemsPerPage">
+                <select className="form-control" id="itemsPerPage" onChange={this.props.updateNumOfItems}>
                     <option>10</option>
                     <option>25</option>
                     <option>50</option>

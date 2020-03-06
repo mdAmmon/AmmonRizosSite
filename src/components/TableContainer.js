@@ -4,7 +4,7 @@ import CrossesList from '../components/CrossesList';
 import "../styles/crosses.css"
 class TableContainer extends Component {
     render() {
-        return (
+        return (this.props.crosses.length)? (
             <div id="tableContainer">
                 <table id="tableCrosses">
                     <thead>
@@ -19,12 +19,15 @@ class TableContainer extends Component {
                     </thead>
 
 
-                    <CrossesList />
+                    <CrossesList
+                        currentPage={this.props.currentPage}
+                        itemsPerPage={this.props.itemsPerPage}
+                        crosses={this.props.crosses} />
 
                 </table>
 
             </div>
-        );
+        ): <h2 className="centered">No records found...</h2>;
 
     }
 }
