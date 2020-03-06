@@ -37,3 +37,85 @@ tbody tr {
 .firstRow {
     border-bottom: 1px solid rgba(87, 85, 85, 0.25);
 }
+
+
+.btn-AR,
+.btn-AR:hover {
+    background-color: #4c628f !important;
+    color: white !important;
+}
+
+#insertCrossBtn{
+    margin-left: 5%;
+}
+
+.btn-AR:hover {
+    margin-top: 1px;
+}
+
+@media (min-width: 1500px) {
+
+    th,
+    td {
+        padding: 0.8% 2%;
+        font-size: 16px;
+    }
+
+
+
+    #tableTools {
+        width: 85%;
+        margin: 1% auto;
+        height: 40px;
+    }
+    
+    #tableTools * {
+        font-size: 16px;
+    }
+    
+    .leftTriangle {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 8px solid #383838;
+    }
+    
+    .rightTriangle {
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid #383838;
+    }
+    
+    #itemsPerPage {
+        width: 60px;
+        height: 30px;
+    }
+    
+    #pageNumber {
+        width: 40px;
+        height: 30px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 770px) {
+
+
+    #searchInput {
+        font-size: 1em;
+        width: 100%;
+        margin: 0;
+    }
+
+    #searchbar .btn:not(:last-of-type) {
+        margin-right: 1%;
+    }
+
+    #itemsPerPage {
+        width: 45px;
+    }
+
+    #searchbar .btn {
+        width: 48.5%;
+        margin-top: 2%;
+    }
+}

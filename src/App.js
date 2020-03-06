@@ -84,7 +84,7 @@ class App extends Component {
                         }} />
 
                         <Route path="/calendar" component={Calendar} />
-                        <Route path="/crosses" component={Crosses} />
+                        <Route path="/crosses" render={() => { return <Crosses isLogged={this.state.isLogged} /> }}  />
                         <Route path="/diagrams" component={Diagrams} />
                     </Switch>
 

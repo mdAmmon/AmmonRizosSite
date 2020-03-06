@@ -3,7 +3,6 @@ import SearchBar from '../components/SearchBar';
 import TableTools from '../components/TableTools';
 import TableContainer from '../components/TableContainer';
 
-
 class Crosses extends Component {
     state = {
         crosses: [],
@@ -11,7 +10,6 @@ class Crosses extends Component {
         itemsPerPage: 10,
         currentPage: 1,
     }
-
 
     componentDidMount() {
         this.loadCrosses();
@@ -56,6 +54,7 @@ class Crosses extends Component {
     }
 
     render() {
+
         return (
             <div className="crossesComponent">
                 <SearchBar placeholder="Search Competitor's Part..."
@@ -74,7 +73,8 @@ class Crosses extends Component {
                     itemsPerPage={this.state.itemsPerPage}
                     crosses={this.state.crosses} />
 
-                <button className="btn btn-AR" onClick={this.loadCrosses}>Add Cross</button>
+                    {(this.props.isLogged)? <button className="btn btn-AR" id="insertCrossBtn" onClick={this.loadCrosses}>Add Cross</button>: (null)}
+
             </div>
 
         );
