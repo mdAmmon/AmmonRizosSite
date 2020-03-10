@@ -20,6 +20,7 @@ class App extends Component {
         user: {},
         loginModalShown: false,
         employeeModalShown: false,
+        insertCrossModalShown: false,
     }
 
     componentDidMount() {
@@ -34,6 +35,7 @@ class App extends Component {
         switch (modalId) {
             case "loginModal": this.setState({ loginModalShown: false }); break;
             case "employeeModal": this.setState({ employeeModalShown: false }); break;
+            case "crossModal": this.setState({ insertCrossModalShown: false }); break;
             default: break;
         }
     }
@@ -42,6 +44,7 @@ class App extends Component {
         switch (modalId) {
             case "loginModal": this.setState({ loginModalShown: true }); break;
             case "employeeModal": this.setState({ employeeModalShown: true }); break;
+            case "crossModal": this.setState({ insertCrossModalShown: true }); break;
             default: break;
         }
     }
@@ -84,7 +87,12 @@ class App extends Component {
                         }} />
 
                         <Route path="/calendar" component={Calendar} />
-                        <Route path="/crosses" render={() => { return <Crosses isLogged={this.state.isLogged} /> }}  />
+                        <Route path="/crosses" render={() => {
+                            return <Crosses isLogged={this.state.isLogged}
+                                showModal={() => this.handleModalShow("crossModal")}
+                                hide={() => { this.handleModalHide("crossModal") }}
+                                show={this.state.insertCrossModalShown} />
+                        }} />
                         <Route path="/diagrams" component={Diagrams} />
                     </Switch>
 

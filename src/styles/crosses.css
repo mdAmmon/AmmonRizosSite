@@ -51,7 +51,26 @@ tbody tr {
 
 .btn-AR:hover {
     margin-top: 1px;
+    margin-bottom: -1px;
 }
+
+#insertCrossModal {
+    padding-left: 65px;
+}
+
+#insertCrossModal .modal-header,
+#insertCrossModal .modal-body {
+    padding: 8px 16px;
+}
+
+#insertCrossModal .form-group {
+    margin-bottom: 8px;
+}
+
+#insertCrossModal button.btn#sendReg {
+    margin: 0;
+}
+
 
 @media (min-width: 1500px) {
 
@@ -96,6 +115,9 @@ tbody tr {
         font-size: 16px;
     }
 }
+
+
+
 
 @media (max-width: 770px) {
 

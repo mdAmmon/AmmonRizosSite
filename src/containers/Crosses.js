@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
 import TableTools from '../components/TableTools';
 import TableContainer from '../components/TableContainer';
+import InsertCrossModal from '../components/InsertCrossModal'
 
 class Crosses extends Component {
     state = {
@@ -39,6 +40,10 @@ class Crosses extends Component {
 
     }
 
+    displayInsertModal = () => {
+        alert("Modal needs to be shown");
+    }
+
     loadCrosses = () => {
         let url = "http://127.0.0.1/includes/crosses.php";
         url += (this.state.input !== "") ? "?input=" + this.state.input : "";
@@ -48,7 +53,7 @@ class Crosses extends Component {
             .then(res => res.json())
             .then(res => {
                 this.setState({ crosses: res, input: "", currentPage: 1 });
-                document.getElementById("searchCrossInput").value ="";
+                document.getElementById("searchCrossInput").value = "";
                 // console.log(res);
             });
     }
@@ -57,11 +62,13 @@ class Crosses extends Component {
 
         return (
             <div className="crossesComponent">
+                <InsertCrossModal show={this.props.show} hide={this.props.hide} />
+
                 <SearchBar placeholder="Search Competitor's Part..."
                     id="searchCrossInput"
                     onKeyUp={this.updateInput}>
                     <button type="button" className="btn" onClick={this.loadCrosses} id="searchButton">Search</button>
-                    <button type="button" className="btn" onClick={()=>{this.setState({input: ""}); this.loadCrosses()}} id="fullSearchButton">Full List</button>
+                    <button type="button" className="btn" onClick={() => { this.setState({ input: "" }); this.loadCrosses() }} id="fullSearchButton">Full List</button>
                 </SearchBar>
 
                 <TableTools
@@ -73,7 +80,7 @@ class Crosses extends Component {
                     itemsPerPage={this.state.itemsPerPage}
                     crosses={this.state.crosses} />
 
-                    {(this.props.isLogged)? <button className="btn btn-AR" id="insertCrossBtn" onClick={this.loadCrosses}>Add Cross</button>: (null)}
+                {(this.props.isLogged) ? <button className="btn btn-AR" onClick={this.props.showModal} id="insertCrossBtn">Add Cross</button> : (null)}
 
             </div>
 
