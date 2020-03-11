@@ -62,7 +62,7 @@ class Crosses extends Component {
 
         return (
             <div className="crossesComponent">
-                <InsertCrossModal show={this.props.show} hide={this.props.hide} />
+                <InsertCrossModal show={this.props.show} updateTable={this.loadCrosses} hide={this.props.hide} />
 
                 <SearchBar placeholder="Search Competitor's Part..."
                     id="searchCrossInput"
