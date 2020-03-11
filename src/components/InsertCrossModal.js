@@ -15,7 +15,7 @@ class InsertCrossModal extends React.Component {
         competitorPart: "",
         selectedPrincipal: "",
         principalPart: "",
-        direct: "",
+        direct: "YES",
         comments: "",
     }
 
@@ -32,31 +32,68 @@ class InsertCrossModal extends React.Component {
             .then(res => res.json())
             .then(res => {
                 mfgs = res;
-                this.setState({ manufacturers: mfgs, selectedPrincipal: mfgs[0].brand_id  });
+                this.setState({ manufacturers: mfgs, selectedPrincipal: mfgs[0].brand_id });
             });
 
     }
 
-    recordChange =(e)=>{
+    recordChange = (e) => {
         let obj = {};
         obj[e.target.id] = e.target.value;
         this.setState(obj);
 
-        if(e.target.id==="competitorPart" || e.target.id==="principalPart"){
+        if (e.target.id === "competitorPart" || e.target.id === "principalPart") {
             this.validateForm(e);
         }
     }
 
     validateForm = (e) => {
-        if(e.target.value===""){
+        if (e.target.value === "") {
             e.target.classList.add("redBorder");
-        }else{
+        } else {
             e.target.classList.remove("redBorder");
         }
     }
 
+    insertCross = (e) => {
+        if (this.state.competitorPart === "" || this.state.selectedCompetitor === "" || this.state.direct === "" ||
+            this.state.selectedPrincipal === "" || this.state.principalPart === "") {
+            alert("Error. Something went Wrong");
+            return;
+        }
+
+
+        let body = new FormData();
+
+        body.append('comp_id', this.state.selectedCompetitor);
+        body.append('comp_model', this.state.competitorPart);
+        body.append('brnd_id', this.state.selectedPrincipal);
+        body.append('brnd_model', this.state.principalPart);
+        body.append('direct', this.state.direct);
+        body.append('comments', this.state.comments);
+
+
+        let response = fetch("http://127.0.0.1/includes/insertCrossP.php", {
+            method: "POST",
+            body: body
+        })
+            .then(res => res.json())
+            .catch(error => alert("something went wrong. :("))
+            .then(response =>{
+                if(response.success){
+                    alert(response.success);
+                    this.props.updateTable();
+                } else if(response.error){
+                    alert(response.error);
+                }
+
+                this.props.hide();
+            });
+
+    }
+
     render() {
-        
+
         return (
             <Modal
                 dialogClassName='custom-dialog'
@@ -121,10 +158,10 @@ class InsertCrossModal extends React.Component {
                         <textarea className="form-control" onKeyUp={this.recordChange} id="comments" rows="2"></textarea>
                     </div>
 
-                    {(this.state.competitorPart!=="" && this.state.principalPart!=="")? <button className="btn btn-AR col-3"
-                        id="sendReg">Send</button>: <button disabled className="btn btn-AR col-3"
-                        id="sendReg">Send</button>}
-                    
+                    {(this.state.competitorPart !== "" && this.state.principalPart !== "") ? <button className="btn btn-AR col-3"
+                        id="sendReg" onClick={this.insertCross}>Send</button> : <button disabled className="btn btn-AR col-3"
+                            id="sendReg">Send</button>}
+
                 </ModalBody>
             </Modal>
         );
