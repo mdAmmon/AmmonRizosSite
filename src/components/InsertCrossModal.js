@@ -73,7 +73,7 @@ class InsertCrossModal extends React.Component {
         body.append('comments', this.state.comments);
 
 
-        let response = fetch("http://127.0.0.1/includes/insertCrossP.php", {
+        fetch("http://127.0.0.1/includes/insertCrossP.php", {
             method: "POST",
             body: body
         })
