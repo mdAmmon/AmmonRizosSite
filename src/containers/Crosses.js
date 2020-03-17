@@ -14,6 +14,7 @@ class Crosses extends Component {
 
     componentDidMount() {
         this.loadCrosses();
+        document.title = "A&R Crosses"
     }
 
     updateInput = (e) => {

@@ -5,6 +5,10 @@ class Home extends Component {
         name: ''
     }
 
+    componentDidMount() {
+        document.title = "Ammon & Rizos"
+    }
+
 
     render() {
         return (

@@ -35,11 +35,13 @@ class Directory extends Component {
             priority: priority
         }, this.props.showModal());
 
-        
+
 
     }
     componentDidMount() {
         this.loadEmployees();
+        document.title = "A&R Directory"
+
     }
 
     setFilter = (filter) => {
