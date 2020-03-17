@@ -13,12 +13,12 @@ class CrossesList extends Component {
                     crosses.slice(itemsPerPage * (currentPage - 1), itemsPerPage * (currentPage)).map(cross => {
                         return (
                             <tr key={cross.COMPETITOR_PART+","+cross.GENERIC}>
-                                <th>{cross.COMPETITOR}</th>
-                                <th>{cross.COMPETITOR_PART}</th>
-                                <th>{cross.BRAND}</th>
-                                <th>{cross.GENERIC}</th>
-                                <th>{cross.direct}</th>
-                                <th>{cross.comments}</th>
+                                <td>{cross.COMPETITOR}</td>
+                                <td>{cross.COMPETITOR_PART}</td>
+                                <td>{cross.BRAND}</td>
+                                <td>{cross.GENERIC}</td>
+                                <td>{cross.direct}</td>
+                                <td>{cross.comments}</td>
                             </tr>
                         );
                     })
