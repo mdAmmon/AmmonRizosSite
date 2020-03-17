@@ -1,0 +1,99 @@
+#dateHeader {
+    margin-left: 5%;
+    margin-top: 1%;
+    display: inline-block;
+}
+
+.today {
+    background-color: #4c628f !important;
+    color: white !important;
+}
+
+#jumpLabel {
+    justify-content: start;
+
+}
+
+#jumpTo {
+    display: block;
+    width: 50%;
+    float: right;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+#calendarContainer {
+    height: 100%;
+}
+
+#calendarTable {
+    height: 80%;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 1%;
+}
+
+
+#calendarTable thead tr th {
+    text-align: left;
+    color: #383838;
+    font-size: 0.9em;
+}
+
+#calendarTable td,
+th {
+    background-color: #ffffff;
+    position: relative;
+}
+
+#calendarTable td {
+    cursor: pointer;
+    color: #383838;
+}
+
+#calendarTable td p {
+    text-align: right;
+}
+
+#calendarTable.table-bordered>tbody>tr>td,
+.table-bordered>tbody>tr>th,
+#calendarTable.table-bordered>tfoot>tr>td,
+.table-bordered>tfoot>tr>th,
+.table-bordered>thead>tr>td,
+.table-bordered>thead>tr>th {
+    border: 1px solid #002060;
+    width: 12.3%;
+}
+
+.calendarNavBtn {
+    margin-left: 5%;
+}
+
+@media (max-width: 770px) {
+    #jumpTo {
+        float: none;
+        width: 95%;
+        margin-left: 5%;
+        margin-top: 1%;
+    }
+
+    #dateHeader {
+        width: 80%;
+        margin-left: 5%;
+        margin-top: 1%;
+        display: inline-block;
+    }
+
+    #jumpLabel {
+        padding-left: 0;
+        width: fit-content;
+        justify-content: start;
+    }
+
+    #calendarTable,
+    #calendarContainer {
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 1%;
+    }
+}

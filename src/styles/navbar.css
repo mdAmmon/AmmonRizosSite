@@ -153,8 +153,8 @@
     }
   
     #content, #navbar.nav-collapsed~ #navbar.nav-collapsed~#content:not(.active) {
-      width: 100% ;
-      margin: auto 0px  !important;
+      width: 100% !important;
+      margin: 0 auto  !important;
       padding: 0;
     }
   
