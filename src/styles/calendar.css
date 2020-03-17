@@ -48,11 +48,24 @@ th {
 
 #calendarTable td {
     cursor: pointer;
+    padding: 5px 0 0 0;
+
     color: #383838;
+    box-sizing: border-box;
+    height: 17%;
 }
 
 #calendarTable td p {
+    margin: 0;
+    margin-right: 5px;
     text-align: right;
+}
+
+#calendarTable td h7 {
+    display: block;
+    padding-left: 5%;
+    width: 100%;
+    text-align: center;
 }
 
 #calendarTable.table-bordered>tbody>tr>td,
@@ -68,6 +81,9 @@ th {
 .calendarNavBtn {
     margin-left: 5%;
 }
+
+
+
 
 @media (max-width: 770px) {
     #jumpTo {
