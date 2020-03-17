@@ -16,6 +16,9 @@ class CalendarBody extends Component {
     render() {
         let rowArr = [];
         let cells = [];
+        let keyV;
+        let idV;
+        let innerContent = "";
         let day = 1;
         const firstDay = (new Date(this.props.year, this.props.month)).getDay();
         let classList = "";
@@ -25,10 +28,12 @@ class CalendarBody extends Component {
             for (let j = 0; j < 7; j++) {
                 if (day > daysInMonth(this.props.month, this.props.year)) break;
 
-                if (i === 0 && j < firstDay) {
-                    cells.push(<td key={"" + i + j}></td>)
-                } else {
-                    classList = "";
+                keyV = "" + i + j;
+                idV = "";
+                classList = "";
+                innerContent = "";
+
+                if (!(i === 0 && j < firstDay)) {
                     if (day === this.props.today.getDate() && this.props.year === this.props.today.getFullYear()
                         && this.props.month === this.props.today.getMonth()) {
                         classList += "today ";
@@ -36,15 +41,16 @@ class CalendarBody extends Component {
                     if (j === 0 || j === 6) {
                         classList += "weekend";
                     }
-                    cells.push(<td
-                        key={"" + i + j}
-                        id={this.props.year + "-" + pad("" + parseInt(this.props.month + 1), 2) + "-" + pad("" + parseInt(day), 2)}
-                        className={classList}>
-                        <p>{day}</p>
-                    </td>);
 
+                    innerContent = (<>
+                        <p>{day}</p>
+                        <h6>{day*2}</h6>
+                    </>);
+                    idV = this.props.year + "-" + pad("" + parseInt(this.props.month + 1), 2) + "-" + pad("" + parseInt(day), 2);
                     day++;
                 }
+
+                cells.push(<td key={keyV} id={idV} className={classList}>{innerContent}</td>);
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
             if (day > daysInMonth(this.props.month, this.props.year)) break;
