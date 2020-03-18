@@ -13,6 +13,18 @@ function pad(s, size) {
 
 
 class CalendarBody extends Component {
+    state = {
+        events: [],
+    }
+    
+    componentDidMount(){
+
+    }
+    
+    printEvent = (day) =>{
+        return <h6>{day*2-1}</h6>
+    }
+    
     render() {
         let rowArr = [];
         let cells = [];
@@ -38,14 +50,12 @@ class CalendarBody extends Component {
                         && this.props.month === this.props.today.getMonth()) {
                         classList += "today ";
                     }
-                    if (j === 0 || j === 6) {
-                        classList += "weekend";
-                    }
-
+                    innerContent = (j === 0 || j === 6) ? "": this.printEvent(day); 
                     innerContent = (<>
                         <p>{day}</p>
-                        <h6>{day*2}</h6>
+                        {innerContent}
                     </>);
+
                     idV = this.props.year + "-" + pad("" + parseInt(this.props.month + 1), 2) + "-" + pad("" + parseInt(day), 2);
                     day++;
                 }
