@@ -6,7 +6,7 @@ class TableTools extends Component {
             <div id="tableTools">
                 <div id="pageContainer">
                     <div className="leftTriangle" id="previousPage" onClick={()=>{this.props.turnPage(-1)}}></div>
-                    <input type="text" name="page" className="form-control" id="pageNumber" disabled value={this.props.currentPage} />
+                    <input type="text" name="page" className="form-control disable-selection" id="pageNumber" disabled value={this.props.currentPage} />
                     <div className="rightTriangle" id="nextPage" onClick={()=>{this.props.turnPage(1)}}></div>
                 </div>
 

@@ -1,5 +1,6 @@
 html,
-body, #root {
+body,
+#root {
   margin: 0;
   padding: 0;
   background-color: #ccd2df;
@@ -72,7 +73,7 @@ p {
 
 /* Content on collapse */
 
-#navbar.nav-collapsed~#content:not(.hovered){
+#navbar.nav-collapsed~#content:not(.hovered) {
   margin-left: 65px;
   margin-right: 0 !important;
   width: calc(100% - 65px);
@@ -93,10 +94,24 @@ p {
 }
 
 
-body, .content {
+body,
+.content {
   padding: 0 !important;
 }
 
-.centered{
+.centered {
   text-align: center;
+}
+
+.disable-selection {
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer */
+  -khtml-user-select: none;
+  /* KHTML browsers (e.g. Konqueror) */
+  -webkit-user-select: none;
+  /* Chrome, Safari, and Opera */
+  -webkit-touch-callout: none;
+  /* Disable Android and iOS callouts*/
 }
