@@ -13,14 +13,21 @@ function pad(s, size) {
 
 
 class CalendarBody extends Component {
-    state = {
-        events: [],
+    constructor() {
+        super();
+        this.state = {
+            events: [],
+        }
     }
-    
-    componentDidMount(){
+    componentDidUpdate(nextProps){
+        if(nextProps.year !== this.props.year || nextProps.month !== this.props.month) {
+            // console.log(this.props.year);
+            let url = "http://127.0.0.1/includes/calendarP.php?month="+pad(this.props.month+1,2)+"&year="+this.props.year;
+            console.log(url);
+            fetch(url).then(res => res.json()).then(res => this.setState({events: res}));
+        }
+    }
 
-    }
-    
     printEvent = (day) =>{
         return <h6>{day*2-1}</h6>
     }
