@@ -51,7 +51,7 @@ class CalendarBody extends Component {
 
         // console.log(eventsForTheMonth);
         return eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
-    .map(element => { return <h6 key={element.id}className={element.principal}>{ICONS[element.tipo]} &nbsp;&nbsp; {element.nombre}</h6> });
+    .map(element => { return <h6 key={element.id}className={element.principal}>{ICONS[element.tipo]} &nbsp; {element.nombre}</h6> });
     }
 
     render() {
