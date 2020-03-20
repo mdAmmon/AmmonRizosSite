@@ -58,15 +58,19 @@ th {
 #calendarTable td p {
     margin: 0;
     margin-right: 5px;
+    font-size: 1.5em;
     text-align: right;
 }
 
 #calendarTable td h6 {
     display: block;
-    margin: 0 0 2px 0;
-    font-size: 14px;
+    margin: 0 auto;
+    margin-bottom: 2px;
+    padding: 2px 0;
+    font-size: 12px;
     padding-left: 5%;
-    width: 100%;
+    width: 80%;
+    
     text-align: center;
 }
 
@@ -117,5 +121,10 @@ th {
         width: 95%;
         margin: 0 auto;
         margin-top: 1%;
+    }
+
+    #calendarTable td h6 {
+        margin: 0;
+        font-size: 10px;
     }
 }
