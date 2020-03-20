@@ -49,7 +49,7 @@ th {
 #calendarTable td {
     cursor: pointer;
     padding: 5px 0 0 0;
-
+    position: relative;
     color: #383838;
     box-sizing: border-box;
     height: 17%;
@@ -74,9 +74,6 @@ th {
     text-align: center;
 }
 
-.green{
-    background-color: lightgreen;
-}
 
 #calendarTable.table-bordered>tbody>tr>td,
 .table-bordered>tbody>tr>th,
@@ -90,6 +87,16 @@ th {
 
 .calendarNavBtn {
     margin-left: 5%;
+}
+
+.seeMoreEvents{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: calc(100% - 25px);
+    left: calc(50% - 5px);
+    background-color: darkslateblue;
+    border-radius: 5px;
 }
 
 
@@ -126,5 +133,17 @@ th {
     #calendarTable td h6 {
         /* margin: 0; */
         font-size: 8px;
+    }
+
+    .hideOnSmallDevice{
+        display: none;
+    }
+
+    .seeMoreEvents{
+        width: 6px;
+        height: 6px;
+        top: calc(100% - 15px);
+        left: calc(50% - 3px);
+
     }
 }
