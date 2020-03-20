@@ -63,12 +63,15 @@ th {
 
 #calendarTable td h6 {
     display: block;
-    margin-top: 1px;
-    font-size: 11px;
-    background-color: lightcoral;
+    margin: 0 0 2px 0;
+    font-size: 14px;
     padding-left: 5%;
     width: 100%;
     text-align: center;
+}
+
+.green{
+    background-color: lightgreen;
 }
 
 #calendarTable.table-bordered>tbody>tr>td,
