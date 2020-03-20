@@ -56,12 +56,15 @@ class App extends Component {
     logout = () => {
         const { cookies } = this.props;
 
+
         fetch('http://127.0.0.1/includes/logout.php', {
             method: 'POST',
         }).then(res => {
             cookies.remove('name');
             alert("Godspeed my friend");
-            this.setState({ isLogged: false });
+            let modals = Object.assign({}, this.state.modalStates);
+            modals.crossModal = false;
+            this.setState({ isLogged: false, modalStates: modals });
         })
         return this.state.isLogged;
     }
