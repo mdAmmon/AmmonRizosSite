@@ -69,13 +69,9 @@ class Calendar extends Component {
 
     showFirst3Events = (day, month, year, events) => {
         let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
-        // console.log(str);
         let eventsForTheMonth = events.filter(element => {
             if (str === element.fechaInicio) return true;
 
-            if (day === 16) {
-                console.log(element.fechaInicio);
-            }
             if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
             return false;
         });
@@ -85,7 +81,7 @@ class Calendar extends Component {
 
 
         if (eventsForTheMonth.length > 3) {
-            calendarEvents.push(<div className="seeMoreEvents"></div>)
+            calendarEvents.push(<div key={4} className="seeMoreEvents"></div>)
         }
         return calendarEvents;
     }
