@@ -124,7 +124,7 @@ th {
     }
 
     #calendarTable td h6 {
-        margin: 0;
-        font-size: 10px;
+        /* margin: 0; */
+        font-size: 8px;
     }
 }
