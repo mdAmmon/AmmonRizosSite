@@ -52,12 +52,12 @@ class CalendarBody extends Component {
                         <p>{day}</p>
                         {innerContent}
                     </>);
-
                     idV = this.props.year + "-" + this.props.pad("" + parseInt(this.props.month + 1), 2) + "-" + this.props.pad("" + parseInt(day), 2);
                     day++;
                 }
 
-                cells.push(<td key={keyV} id={idV} className={classList}>{innerContent}</td>);
+                let date
+                cells.push(<td key={keyV} id={idV} onClick={()=>alert(date)} className={classList}>{innerContent}</td>);
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
             if (day > daysInMonth(this.props.month, this.props.year)) break;
