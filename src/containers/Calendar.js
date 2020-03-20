@@ -8,6 +8,23 @@ import '../styles/principalsColors.css';
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+const ICONS = {
+    vacation: <i className="fas fa-cocktail"></i>,
+    medical: <i className="fas fa-notes-medical"></i>,
+    home_office: <i className="fas fa-home"></i>,
+    visit: <i className="far fa-building"></i>,
+    business_trip: <i className="fas fa-plane-departure"></i>,
+    meeting: <i className="fas fa-users"></i>
+}
+
+function pad(s, size) {
+    while (s.length < (size || 2)) {
+        s = "0" + s;
+    }
+    return s;
+}
+
+
 
 class Calendar extends Component {
     state = {
@@ -50,6 +67,29 @@ class Calendar extends Component {
         this.setState({year: updatedYear, month: updatedMonth});
     }
 
+    showFirst3Events = (day, month, year, events) => {
+        let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
+        // console.log(str);
+        let eventsForTheMonth = events.filter(element => {
+            if (str === element.fechaInicio) return true;
+
+            if (day === 16) {
+                console.log(element.fechaInicio);
+            }
+            if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
+            return false;
+        });
+
+        let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
+            .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
+
+
+        if (eventsForTheMonth.length > 3) {
+            calendarEvents.push(<div className="seeMoreEvents"></div>)
+        }
+        return calendarEvents;
+    }
+
     componentDidMount() {
         document.title = "A&R Calendar";
         this.goToToday();
@@ -62,7 +102,7 @@ class Calendar extends Component {
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth}/>
             
-                <CalendarTable today={this.state.today} year={this.state.year} month={this.state.month}/>
+                <CalendarTable today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} ICONS={ICONS} pad={pad}/>
 
                 <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth}/>                
             </div>

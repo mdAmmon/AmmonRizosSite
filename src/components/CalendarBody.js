@@ -4,23 +4,6 @@ function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
-function pad(s, size) {
-    while (s.length < (size || 2)) {
-        s = "0" + s;
-    }
-    return s;
-}
-
-const ICONS = {
-    vacation: <i className="fas fa-cocktail"></i>,
-    medical: <i className="fas fa-notes-medical"></i>,
-    home_office: <i className="fas fa-home"></i>,
-    visit: <i className="far fa-building"></i>,
-    business_trip: <i className="fas fa-plane-departure"></i>,
-    meeting: <i className="fas fa-users"></i>
-}
-
-
 class CalendarBody extends Component {
     constructor() {
         super();
@@ -30,7 +13,7 @@ class CalendarBody extends Component {
     }
     componentDidUpdate(nextProps) {
         if (nextProps.year !== this.props.year || nextProps.month !== this.props.month) {
-            let url = "http://192.168.1.112/includes/calendarP.php?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
+            let url = "http://192.168.1.112/includes/calendarP.php?month=" + this.props.pad(this.props.month + 1, 2) + "&year=" + this.props.year;
             fetch(url).then(res => res.json()).then(res => this.setState({ events: res }, () => {
                 console.log(this.state.events);
             })
@@ -38,28 +21,6 @@ class CalendarBody extends Component {
         }
     }
 
-    printEvents = (day, month, year) => {
-        let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
-        // console.log(str);
-        let eventsForTheMonth = this.state.events.filter(element => {
-            if (str === element.fechaInicio) return true;
-
-            if (day === 16) {
-                console.log(element.fechaInicio);
-            }
-            if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
-            return false;
-        });
-
-        let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
-            .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
-
-
-        if (eventsForTheMonth.length > 3) {
-            calendarEvents.push(<div className="seeMoreEvents"></div>)
-        }
-        return calendarEvents;
-    }
 
     render() {
         let rowArr = [];
@@ -86,13 +47,13 @@ class CalendarBody extends Component {
                         && this.props.month === this.props.today.getMonth()) {
                         classList += "today ";
                     }
-                    innerContent = (j === 0 || j === 6) ? "" : this.printEvents(day, this.props.month, this.props.year);
+                    innerContent = (j === 0 || j === 6) ? "" : this.props.printEvents(day, this.props.month, this.props.year, this.state.events);
                     innerContent = (<>
                         <p>{day}</p>
                         {innerContent}
                     </>);
 
-                    idV = this.props.year + "-" + pad("" + parseInt(this.props.month + 1), 2) + "-" + pad("" + parseInt(day), 2);
+                    idV = this.props.year + "-" + this.props.pad("" + parseInt(this.props.month + 1), 2) + "-" + this.props.pad("" + parseInt(day), 2);
                     day++;
                 }
 
