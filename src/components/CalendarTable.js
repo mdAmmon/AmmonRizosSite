@@ -19,7 +19,7 @@ class CalendarTable extends Component {
                     </tr>
                 </thead>
 
-                <CalendarBody year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.props.printEvents} ICONS={this.props.ICONS} pad={this.props.pad}/>
+                <CalendarBody year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.props.printEvents} pad={this.props.pad}/>
 
             </table>
         )

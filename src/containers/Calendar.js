@@ -102,7 +102,7 @@ class Calendar extends Component {
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth}/>
             
-                <CalendarTable today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} ICONS={ICONS} pad={pad}/>
+                <CalendarTable today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad}/> 
 
                 <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth}/>                
             </div>
