@@ -30,7 +30,7 @@ class CalendarBody extends Component {
     }
     componentDidUpdate(nextProps) {
         if (nextProps.year !== this.props.year || nextProps.month !== this.props.month) {
-            let url = "http://127.0.0.1/includes/calendarP.php?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
+            let url = "http://192.168.1.112/includes/calendarP.php?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
             fetch(url).then(res => res.json()).then(res => this.setState({ events: res }, () => {
                 console.log(this.state.events);
             })
@@ -39,19 +39,25 @@ class CalendarBody extends Component {
     }
 
     printEvents = (day, month, year) => {
-        let str = year + "-" + pad(month+1+"", 2) + "-" + pad("" + day, 2);
+        let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
         // console.log(str);
         let eventsForTheMonth = this.state.events.filter(element => {
-            let [yearE, monthE, dayE] = element.fechaInicio.split('-');
-            if (day === parseInt(dayE) && parseInt(monthE) == month && parseInt(yearE) === year) return true;
+            if (str === element.fechaInicio) return true;
+
+            if (day === 16) {
+                console.log(element.fechaInicio);
+            }
             if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
             return false;
         });
 
-
-        // console.log(eventsForTheMonth);
+        if (day === 16) {
+            console.log(str);
+            console.log(eventsForTheMonth);
+            console.log("");
+        }
         return eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
-    .map(element => { return <h6 key={element.id}className={element.principal}>{ICONS[element.tipo]} &nbsp; {element.nombre}</h6> });
+            .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; {element.nombre}</h6> });
     }
 
     render() {
