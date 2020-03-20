@@ -60,7 +60,7 @@ class Directory extends Component {
 
     loadEmployees = () => {
 
-        fetch('http://127.0.0.1/includes/directory.php?filter=' + this.state.filter + '&input=' + this.state.input, {
+        fetch('http://192.168.1.112/includes/directory.php?filter=' + this.state.filter + '&input=' + this.state.input, {
             method: 'GET',
         })
             .then(res => res.json())
