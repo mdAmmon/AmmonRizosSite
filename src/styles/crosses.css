@@ -4,9 +4,14 @@
     margin: 0 auto;
     margin-bottom: 1%;
     background-color: #f8f8f8;
-    border-radius: 5px;
+    border-radius: 5px; 
     overflow-x: scroll;
 }
+
+#tableCrosses th{
+    border-radius: 5px 5px 0 0;
+}
+
 
 #tableContainer {
     width: 90%;
