@@ -51,13 +51,14 @@ class CalendarBody extends Component {
             return false;
         });
 
-        if (day === 16) {
-            console.log(str);
-            console.log(eventsForTheMonth);
-            console.log("");
+        let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
+            .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
+
+
+        if (eventsForTheMonth.length > 3) {
+            calendarEvents.push(<div className="seeMoreEvents"></div>)
         }
-        return eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
-            .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; {element.nombre}</h6> });
+        return calendarEvents;
     }
 
     render() {
