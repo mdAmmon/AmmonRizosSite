@@ -18,9 +18,12 @@ class App extends Component {
     state = {
         isLogged: false,
         user: {},
-        loginModalShown: false,
-        employeeModalShown: false,
-        insertCrossModalShown: false,
+        modalStates: {
+            loginModal: false,
+            employeeModal: false,
+            crossModal: false,
+        }
+
     }
 
     componentDidMount() {
@@ -32,21 +35,22 @@ class App extends Component {
     }
 
     handleModalHide = (modalId) => {
-        switch (modalId) {
-            case "loginModal": this.setState({ loginModalShown: false }); break;
-            case "employeeModal": this.setState({ employeeModalShown: false }); break;
-            case "crossModal": this.setState({ insertCrossModalShown: false }); break;
-            default: break;
-        }
+        let modals = Object.assign({}, this.state.modalStates);
+        
+        modals[modalId] = false;
+
+        this.setState({modalStates: modals})
     }
 
     handleModalShow = (modalId) => {
-        switch (modalId) {
-            case "loginModal": this.setState({ loginModalShown: true }); break;
-            case "employeeModal": this.setState({ employeeModalShown: true }); break;
-            case "crossModal": this.setState({ insertCrossModalShown: true }); break;
-            default: break;
+        let modals = Object.assign({}, this.state.modalStates);
+        const keys = Object.keys(modals);
+        
+        for(const key of keys){
+            modals[key] = (key===modalId)? true: false;
         }
+
+        this.setState({modalStates: modals})
     }
 
     logout = () => {
@@ -75,7 +79,7 @@ class App extends Component {
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <div id="content">
                     <ToggleNavButton />
-                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.loginModalShown}
+                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.modalStates.loginModal}
                         hide={() => { this.handleModalHide("loginModal") }} />
                     <Switch>
                         <Route exact path="/" render={() => { return <Home cookies={this.props.cookies} /> }} />
@@ -83,7 +87,7 @@ class App extends Component {
                             return <Directory
                                 showModal={() => this.handleModalShow("employeeModal")}
                                 hide={() => { this.handleModalHide("employeeModal") }}
-                                show={this.state.employeeModalShown} />
+                                show={this.state.modalStates.employeeModal} />
                         }} />
 
                         <Route path="/calendar" component={Calendar} />
@@ -91,7 +95,7 @@ class App extends Component {
                             return <Crosses isLogged={this.state.isLogged}
                                 showModal={() => this.handleModalShow("crossModal")}
                                 hide={() => { this.handleModalHide("crossModal") }}
-                                show={this.state.insertCrossModalShown} />
+                                show={this.state.modalStates.crossModal} />
                         }} />
                         <Route path="/diagrams" component={Diagrams} />
                     </Switch>
