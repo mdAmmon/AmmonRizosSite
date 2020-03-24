@@ -22,6 +22,7 @@ class App extends Component {
             loginModal: false,
             employeeModal: false,
             crossModal: false,
+            calendarModal: false,
         }
 
     }
@@ -36,21 +37,21 @@ class App extends Component {
 
     handleModalHide = (modalId) => {
         let modals = Object.assign({}, this.state.modalStates);
-        
+
         modals[modalId] = false;
 
-        this.setState({modalStates: modals})
+        this.setState({ modalStates: modals })
     }
 
     handleModalShow = (modalId) => {
         let modals = Object.assign({}, this.state.modalStates);
         const keys = Object.keys(modals);
-        
-        for(const key of keys){
-            modals[key] = (key===modalId)? true: false;
+
+        for (const key of keys) {
+            modals[key] = (key === modalId) ? true : false;
         }
 
-        this.setState({modalStates: modals})
+        this.setState({ modalStates: modals })
     }
 
     logout = () => {
@@ -93,9 +94,17 @@ class App extends Component {
                                 show={this.state.modalStates.employeeModal} />
                         }} />
 
-                        <Route path="/calendar" component={Calendar} />
+                        <Route path="/calendar" render={() => {
+                            return <Calendar
+                                isLogged={this.state.isLogged}
+                                showModal={() => this.handleModalShow("calendarModal")}
+                                hide={() => this.handleModalHide("calendarModal")}
+                                show={this.state.modalStates.calendarModal} />
+                        }} />
+
                         <Route path="/crosses" render={() => {
-                            return <Crosses isLogged={this.state.isLogged}
+                            return <Crosses
+                                isLogged={this.state.isLogged}
                                 showModal={() => this.handleModalShow("crossModal")}
                                 hide={() => { this.handleModalHide("crossModal") }}
                                 show={this.state.modalStates.crossModal} />
