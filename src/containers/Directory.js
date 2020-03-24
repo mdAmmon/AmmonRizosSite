@@ -1,10 +1,10 @@
 import React, {
     Component
 } from 'react';
-import DirectoryList from '../components/DirectoryList';
+import DirectoryList from '../components/Directory/DirectoryList';
 import SearchBar from '../components/SearchBar';
-import SearchFilters from '../components/SearchFilters';
-import EmployeeModal from '../components/EmployeeModal';
+import SearchFilters from '../components/Directory/SearchFilters';
+import EmployeeModal from '../components/Directory/EmployeeModal';
 import "../styles/directory.css"
 
 class Directory extends Component {
@@ -43,7 +43,8 @@ class Directory extends Component {
 
     setFilter = (filter) => {
         this.setState({
-            filter: filter
+            filter: filter,
+            input: ''
         }, () => { this.loadEmployees() });
     }
 

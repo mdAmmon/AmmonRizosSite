@@ -12,8 +12,6 @@ class SearchFilters extends Component {
         event.target.classList.add('activeFilter');
         active.classList.remove('activeFilter');
     
-        /* To be implemented: modifies the query and calls function (to be created) to do query on db. */
-        // let currentFilter = document.querySelector(".activeFilter");
         document.getElementById("searchEmployee").value = "";
 
         this.props.setFilter(event.target.textContent);

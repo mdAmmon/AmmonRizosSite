@@ -3,7 +3,7 @@ import React from 'react';
 import Modal from "react-bootstrap/Modal";
 
 import ModalBody from "react-bootstrap/ModalBody";
-import "../styles/employeeModal.css"
+import "../../styles/employeeModal.css"
 class EmployeeModal extends React.Component {
 
     render() {
