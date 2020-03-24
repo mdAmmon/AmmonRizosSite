@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DateHeader from '../components/Calendar/DateHeader';
 import JumpToDate from '../components/Calendar/JumpToDate';
 import CalendarTable from '../components/Calendar/CalendarTable';
+import CalendarEventsModal from '../components/Calendar/CalendarEventsModal';
 import CalendarNavButtons from '../components/Calendar/CalendarNavButtons';
 import '../styles/calendar.css';
 import '../styles/principalsColors.css';
@@ -31,41 +32,43 @@ class Calendar extends Component {
         day: "",
         month: "",
         year: "",
-        today: new Date()
+        today: new Date(),
+        modalDate: "",
+        modalEvents: [],
     }
 
-    goToToday(){
-        this.setState({month: this.state.today.getMonth(), year: this.state.today.getFullYear(), day: this.state.today.getDay()}); 
+    goToToday() {
+        this.setState({ month: this.state.today.getMonth(), year: this.state.today.getFullYear(), day: this.state.today.getDay() });
     }
 
-    changeMonth = (e) =>{
-        this.setState({month: parseInt(e.target.value)});
+    changeMonth = (e) => {
+        this.setState({ month: parseInt(e.target.value) });
     }
 
-    changeYear = (e) =>{
-        this.setState({year: parseInt(e.target.value)});
+    changeYear = (e) => {
+        this.setState({ year: parseInt(e.target.value) });
     }
 
-    goToNextMonth = ()=>{
-        const updatedYear = (this.state.month === 11)? this.state.year+1: this.state.year;
-        if(updatedYear > this.state.today.getFullYear()+2) return;
-        const updatedMonth = (this.state.month +1 ) % 12;
+    goToNextMonth = () => {
+        const updatedYear = (this.state.month === 11) ? this.state.year + 1 : this.state.year;
+        if (updatedYear > this.state.today.getFullYear() + 2) return;
+        const updatedMonth = (this.state.month + 1) % 12;
 
-        this.setState({year: updatedYear, month: updatedMonth});
+        this.setState({ year: updatedYear, month: updatedMonth });
     }
 
-    goToPreviousMonth = () =>{
-        const updatedYear = (this.state.month === 0)? this.state.year-1: this.state.year;
+    goToPreviousMonth = () => {
+        const updatedYear = (this.state.month === 0) ? this.state.year - 1 : this.state.year;
 
-        if(updatedYear<this.state.today.getFullYear()-1) return;
+        if (updatedYear < this.state.today.getFullYear() - 1) return;
 
-        const updatedMonth = (this.state.month === 0)? 11: this.state.month -1;
+        const updatedMonth = (this.state.month === 0) ? 11 : this.state.month - 1;
 
-        this.setState({year: updatedYear, month: updatedMonth});
+        this.setState({ year: updatedYear, month: updatedMonth });
     }
 
     //Takes date and event array to determine which events happen within the specified date.
-    getEventsforDate = (day, month, year, events) =>{
+    getEventsforDate = (day, month, year, events) => {
         let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
         let eventsForTheMonth = events.filter(element => {
             if (str === element.fechaInicio) return true;
@@ -76,6 +79,12 @@ class Calendar extends Component {
         return eventsForTheMonth;
     }
 
+    displayEventsModal = (date, events) => {
+        date = date.split("-").reverse();
+        console.log(date);
+        let dateEvents = this.getEventsforDate(date[0], date[1], date[2], events);
+        this.setState({modalDate: date.join("/"), modalEvents: dateEvents}, this.props.showModal());
+    }
     //Function that shows at most 3 of the events that happen in a date in the calendar. Defined here so calendar body can take any other function.
     showFirst3Events = (day, month, year, events) => {
         let eventsForTheMonth = this.getEventsforDate(day, month, year, events);
@@ -93,16 +102,19 @@ class Calendar extends Component {
         this.goToToday();
     }
 
+
     render() {
         return (
             <div id="calendarContainer">
+                <CalendarEventsModal date={this.state.modalDate} events={this.state.modalEvents} isLogged={this.props.isLogged} show={this.props.show} hide={this.props.hide} />
                 <DateHeader month={months[this.state.month]} year={this.state.year} />
 
-                <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth}/>
-            
-                <CalendarTable today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad}/> 
+                <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
 
-                <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth}/>                
+                <CalendarTable displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad} />
+
+                <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth} />
+
             </div>
         );
 
