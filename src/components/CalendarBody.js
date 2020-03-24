@@ -56,7 +56,7 @@ class CalendarBody extends Component {
                     day++;
                 }
 
-                let date
+                let date = idV;
                 cells.push(<td key={keyV} id={idV} onClick={()=>alert(date)} className={classList}>{innerContent}</td>);
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
