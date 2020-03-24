@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../styles/tableTools.css"
+import "../../styles/tableTools.css"
 class TableTools extends Component {
     render() {
         return (

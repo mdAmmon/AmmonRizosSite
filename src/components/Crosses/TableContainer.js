@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
-import CrossesList from '../components/CrossesList';
-import "../styles/crosses.css"
+import CrossesList from './CrossesList';
+import "../../styles/crosses.css"
 class TableContainer extends Component {
     render() {
         return (this.props.crosses.length)? (

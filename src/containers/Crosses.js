@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import SearchBar from '../components/SearchBar';
-import TableTools from '../components/TableTools';
-import TableContainer from '../components/TableContainer';
-import InsertCrossModal from '../components/InsertCrossModal'
+import TableTools from '../components/Crosses/TableTools';
+import TableContainer from '../components/Crosses/TableContainer';
+import InsertCrossModal from '../components/Crosses/InsertCrossModal'
 
 class Crosses extends Component {
     state = {
