@@ -93,7 +93,7 @@ th {
     width: 10px;
     height: 10px;
     position: absolute;
-    top: calc(100% - 25px);
+    top: calc(100% - 12px);
     left: calc(50% - 5px);
     background-color: darkslateblue;
     border-radius: 5px;
@@ -142,7 +142,7 @@ th {
     .seeMoreEvents{
         width: 6px;
         height: 6px;
-        top: calc(100% - 15px);
+        top: calc(100% - 10px);
         left: calc(50% - 3px);
 
     }
