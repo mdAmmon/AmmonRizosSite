@@ -16,9 +16,7 @@ class CalendarBody extends Component {
     componentDidUpdate(nextProps) {
         if (nextProps.year !== this.props.year || nextProps.month !== this.props.month) {
             let url = "http://192.168.1.112/includes/calendarP.php?month=" + this.props.pad(this.props.month + 1, 2) + "&year=" + this.props.year;
-            fetch(url).then(res => res.json()).then(res => this.setState({ events: res }, () => {
-                console.log(this.state.events);
-            })
+            fetch(url).then(res => res.json()).then(res => this.setState({ events: res })
             );
         }
     }
@@ -59,7 +57,7 @@ class CalendarBody extends Component {
                 }
 
                 let date = idV;
-                cells.push(<td key={keyV} id={idV} onClick={()=>alert(date)} className={classList}>{innerContent}</td>);
+                cells.push(<td key={keyV} id={idV} onClick={()=> this.props.displayEventsModal(date, this.state.events)} className={classList}>{innerContent}</td>);
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
             if (day > daysInMonth(this.props.month, this.props.year)) break;
