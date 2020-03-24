@@ -4,7 +4,6 @@ import CalendarBody from './CalendarBody';
 class CalendarTable extends Component {
     
     render() {
-
         return (
             <table className="table table-bordered" id="calendarTable">
                 <thead>
@@ -20,7 +19,6 @@ class CalendarTable extends Component {
                 </thead>
 
                 <CalendarBody year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.props.printEvents} pad={this.props.pad}/>
-
             </table>
         )
     }

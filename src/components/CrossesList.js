@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 
 class CrossesList extends Component {
-
-
     render() {
-
         const { currentPage, itemsPerPage, crosses } = this.props;
 
         return (

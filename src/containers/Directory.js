@@ -22,6 +22,7 @@ class Directory extends Component {
         priority: ''
     }
 
+    //Updates state data and shows modal right after
     modalSetup = (name, position, email, phone, mobile, extension, manager, priority) => {
         console.log(name + ' ' + position);
         this.setState({
@@ -34,14 +35,10 @@ class Directory extends Component {
             manager: manager,
             priority: priority
         }, this.props.showModal());
-
-
-
     }
     componentDidMount() {
         this.loadEmployees();
         document.title = "A&R Directory"
-
     }
 
     setFilter = (filter) => {
@@ -59,7 +56,6 @@ class Directory extends Component {
     }
 
     loadEmployees = () => {
-
         fetch('http://192.168.1.112/includes/directory.php?filter=' + this.state.filter + '&input=' + this.state.input, {
             method: 'GET',
         })
@@ -68,7 +64,6 @@ class Directory extends Component {
                 this.setState({ employees: res })
             });
     }
-
 
     render() {
         return (<div >
@@ -82,9 +77,7 @@ class Directory extends Component {
             <SearchFilters setFilter={this.setFilter} />
             <DirectoryList showModal={this.modalSetup} employees={this.state.employees} />
         </div>
-
         );
-
     }
 }
 
