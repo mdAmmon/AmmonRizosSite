@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import DateHeader from '../components/DateHeader';
-import JumpToDate from '../components/JumpToDate';
-import CalendarTable from '../components/CalendarTable';
-import CalendarNavButtons from '../components/CalendarNavButtons';
+import DateHeader from '../components/Calendar/DateHeader';
+import JumpToDate from '../components/Calendar/JumpToDate';
+import CalendarTable from '../components/Calendar/CalendarTable';
+import CalendarNavButtons from '../components/Calendar/CalendarNavButtons';
 import '../styles/calendar.css';
 import '../styles/principalsColors.css';
 
