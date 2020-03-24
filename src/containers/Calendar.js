@@ -17,14 +17,13 @@ const ICONS = {
     meeting: <i className="fas fa-users"></i>
 }
 
+//Given a number parsed as string if it is a single digit with the second argument set to 2, it adds zeroes to the left.
 function pad(s, size) {
     while (s.length < (size || 2)) {
         s = "0" + s;
     }
     return s;
 }
-
-
 
 class Calendar extends Component {
     state = {
@@ -35,15 +34,12 @@ class Calendar extends Component {
     }
 
     goToToday(){
-        let today = new Date();
-        this.setState({month: today.getMonth(), year: today.getFullYear(), day: today.getDay()});
-        
+        this.setState({month: this.state.today.getMonth(), year: this.state.today.getFullYear(), day: this.state.today.getDay()}); 
     }
 
     changeMonth = (e) =>{
         this.setState({month: parseInt(e.target.value)});
     }
-
 
     changeYear = (e) =>{
         this.setState({year: parseInt(e.target.value)});
@@ -67,7 +63,7 @@ class Calendar extends Component {
         this.setState({year: updatedYear, month: updatedMonth});
     }
 
-    showFirst3Events = (day, month, year, events) => {
+    getEventsforDate = (day, month, year, events) =>{
         let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
         let eventsForTheMonth = events.filter(element => {
             if (str === element.fechaInicio) return true;
@@ -75,6 +71,12 @@ class Calendar extends Component {
             if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
             return false;
         });
+
+        return eventsForTheMonth;
+    }
+
+    showFirst3Events = (day, month, year, events) => {
+        let eventsForTheMonth = this.getEventsforDate(day, month, year, events);
 
         let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
             .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
