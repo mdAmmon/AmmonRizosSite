@@ -8,6 +8,7 @@ import '../styles/principalsColors.css';
 
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+//Icons that show the type of an event on the calendar.
 const ICONS = {
     vacation: <i className="fas fa-cocktail"></i>,
     medical: <i className="fas fa-notes-medical"></i>,
@@ -63,11 +64,11 @@ class Calendar extends Component {
         this.setState({year: updatedYear, month: updatedMonth});
     }
 
+    //Takes date and event array to determine which events happen within the specified date.
     getEventsforDate = (day, month, year, events) =>{
         let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
         let eventsForTheMonth = events.filter(element => {
             if (str === element.fechaInicio) return true;
-
             if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
             return false;
         });
@@ -75,12 +76,11 @@ class Calendar extends Component {
         return eventsForTheMonth;
     }
 
+    //Function that shows at most 3 of the events that happen in a date in the calendar. Defined here so calendar body can take any other function.
     showFirst3Events = (day, month, year, events) => {
         let eventsForTheMonth = this.getEventsforDate(day, month, year, events);
-
         let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
             .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
-
 
         if (eventsForTheMonth.length > 3) {
             calendarEvents.push(<div key={4} className="seeMoreEvents"></div>)
