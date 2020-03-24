@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withCookies } from 'react-cookie';
 
-import Navigation from './components/Navigation';
+import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home';
 import Directory from './containers/Directory';
 import Calendar from './containers/Calendar';
 import Crosses from './containers/Crosses';
 import Diagrams from './containers/Diagrams';
 import ToggleNavButton from './components/ToggleNavButton.js';
-import LoginForm from './components/LoginForm';
+import LoginForm from './components/Navigation/LoginForm';
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
