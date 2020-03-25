@@ -23,6 +23,7 @@ class App extends Component {
             employeeModal: false,
             crossModal: false,
             calendarModal: false,
+            addEventModal: false,
         }
 
     }
@@ -99,7 +100,11 @@ class App extends Component {
                                 isLogged={this.state.isLogged}
                                 showModal={() => this.handleModalShow("calendarModal")}
                                 hide={() => this.handleModalHide("calendarModal")}
-                                show={this.state.modalStates.calendarModal} />
+                                show={this.state.modalStates.calendarModal} 
+                                showModalAddEvent={() => this.handleModalShow("addEventModal")}
+                                hideAddEvent={() => { this.handleModalHide("addEventModal") }}
+                                showAddEvent={this.state.modalStates.addEventModal}
+                                />
                         }} />
 
                         <Route path="/crosses" render={() => {

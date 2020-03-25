@@ -37,7 +37,7 @@ class CalendarEventsModal extends React.Component {
                     <button type="button" className="btn btn-secondary" id="closeEvents"
                         onClick={this.props.hide}>Close</button>
 
-                    {(this.props.isLogged) ? <button type="submit" className="btn btn-primary" id="addEventButton">Add Event</button> : <></>}
+                    {(this.props.isLogged) ? <button type="submit" className="btn btn-primary" onClick={this.props.showModalAddEvent} id="addEventButton">Add Event</button> : <></>}
                 </ModalFooter>
             </Modal>
         );

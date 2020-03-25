@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import DateHeader from '../components/Calendar/DateHeader';
 import JumpToDate from '../components/Calendar/JumpToDate';
 import CalendarTable from '../components/Calendar/CalendarTable';
+import AddEventModal from '../components/Calendar/AddEventModal';
 import CalendarEventsModal from '../components/Calendar/CalendarEventsModal';
 import CalendarNavButtons from '../components/Calendar/CalendarNavButtons';
 import '../styles/calendar.css';
@@ -112,21 +113,29 @@ class Calendar extends Component {
         })
             .then(res => res.json())
             .catch(error => alert("something went wrong. :("))
-            .then(response =>{
-                if(response){
+            .then(response => {
+                if (response) {
                     alert(response);
                     this.props.hide();
                     this.goToToday();
-                } 
+                }
             });
-            
+
     }
 
 
     render() {
         return (
             <div id="calendarContainer">
-                <CalendarEventsModal deleteEvent={this.deleteEvent} date={this.state.modalDate} events={this.state.modalEvents} isLogged={this.props.isLogged} show={this.props.show} hide={this.props.hide} />
+                <CalendarEventsModal
+                    deleteEvent={this.deleteEvent}
+                    date={this.state.modalDate}
+                    events={this.state.modalEvents}
+                    isLogged={this.props.isLogged}
+                    show={this.props.show} hide={this.props.hide}
+                    showModalAddEvent={this.props.showModalAddEvent} />
+
+                <AddEventModal show={this.props.showAddEvent} hide={this.props.hideAddEvent} date={this.state.modalDate} />
                 <DateHeader month={months[this.state.month]} year={this.state.year} />
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
@@ -134,6 +143,8 @@ class Calendar extends Component {
                 <CalendarTable displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad} />
 
                 <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth} />
+
+
 
             </div>
         );
