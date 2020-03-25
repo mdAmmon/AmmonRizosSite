@@ -9,6 +9,7 @@ import ModalEventDetail from './ModalEventDetail';
 import "../../styles/CalendarEventsModal.css"
 
 class CalendarEventsModal extends React.Component {
+
     render() {
         // console.log(this.props.events);
         return (
@@ -26,7 +27,7 @@ class CalendarEventsModal extends React.Component {
 
                 <ModalBody>
                     <div id="eventsContent">
-                        {this.props.events.map( (element, id) => <ModalEventDetail key={element.id} element={element}/>)}
+                        {this.props.events.map( (element, id) => <ModalEventDetail deleteEvent={this.props.deleteEvent} key={element.id} element={element}/>)}
 
                     </div>
 
