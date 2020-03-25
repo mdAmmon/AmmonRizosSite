@@ -101,11 +101,32 @@ class Calendar extends Component {
         this.goToToday();
     }
 
+    deleteEvent = (id) => {
+        let body = new FormData();
+
+        body.append('id', id);
+
+        fetch("http://192.168.1.112/includes/calendarP.php", {
+            method: "POST",
+            body: body
+        })
+            .then(res => res.json())
+            .catch(error => alert("something went wrong. :("))
+            .then(response =>{
+                if(response){
+                    alert(response);
+                    this.props.hide();
+                    this.goToToday();
+                } 
+            });
+            
+    }
+
 
     render() {
         return (
             <div id="calendarContainer">
-                <CalendarEventsModal date={this.state.modalDate} events={this.state.modalEvents} isLogged={this.props.isLogged} show={this.props.show} hide={this.props.hide} />
+                <CalendarEventsModal deleteEvent={this.deleteEvent} date={this.state.modalDate} events={this.state.modalEvents} isLogged={this.props.isLogged} show={this.props.show} hide={this.props.hide} />
                 <DateHeader month={months[this.state.month]} year={this.state.year} />
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
