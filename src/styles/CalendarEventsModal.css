@@ -2,8 +2,25 @@
     height:300px;
     overflow-y: scroll;
 }
- 
 
+.modalEventDetail{
+    height: 146px;
+}
+
+.modalEventData{
+    margin-left: 40px;
+}
+
+.modalEventData p{
+    margin-bottom: .5rem;
+}
+
+.principalTag {
+    width: 30px;
+    height: 50px;
+    float: left;
+    margin: 0;
+  }
 
 
 input[type="date"] {
