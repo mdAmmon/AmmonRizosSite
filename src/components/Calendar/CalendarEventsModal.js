@@ -9,6 +9,7 @@ import "../../styles/CalendarEventsModal.css"
 
 class CalendarEventsModal extends React.Component {
     render() {
+        // console.log(this.props.events);
         return (
             <Modal
                 dialogClassName='custom-dialog'

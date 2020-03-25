@@ -69,7 +69,7 @@ class Calendar extends Component {
 
     //Takes date and event array to determine which events happen within the specified date.
     getEventsforDate = (day, month, year, events) => {
-        let str = year + "-" + pad(month + 1 + "", 2) + "-" + pad("" + day, 2);
+        let str = year + "-" + pad(month + "", 2) + "-" + pad("" + day, 2);
         let eventsForTheMonth = events.filter(element => {
             if (str === element.fechaInicio) return true;
             if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
@@ -81,9 +81,8 @@ class Calendar extends Component {
 
     displayEventsModal = (date, events) => {
         date = date.split("-").reverse();
-        console.log(date);
-        let dateEvents = this.getEventsforDate(date[0], date[1], date[2], events);
-        this.setState({modalDate: date.join("/"), modalEvents: dateEvents}, this.props.showModal());
+        let dateEvents = this.getEventsforDate(date[0], parseInt(date[1]), date[2], events);
+        this.setState({ modalDate: date.join("/"), modalEvents: dateEvents }, this.props.showModal());
     }
     //Function that shows at most 3 of the events that happen in a date in the calendar. Defined here so calendar body can take any other function.
     showFirst3Events = (day, month, year, events) => {

@@ -47,7 +47,7 @@ class CalendarBody extends Component {
                         && this.props.month === this.props.today.getMonth()) {
                         classList += "today ";
                     }
-                    innerContent = (j === 0 || j === 6) ? "" : this.props.printEvents(day, this.props.month, this.props.year, this.state.events);
+                    innerContent = (j === 0 || j === 6) ? "" : this.props.printEvents(day, this.props.month+1, this.props.year, this.state.events);
                     innerContent = (<>
                         <p>{day}</p>
                         {innerContent}
