@@ -7,9 +7,9 @@ import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 
 class AddEventModal extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state  = {
+        this.state = {
             eventName: "",
             principal: "AmmonRizos",
             eventType: "vacation",
@@ -17,15 +17,14 @@ class AddEventModal extends React.Component {
             startDate: "",
             endDate: "",
             validForm: false,
-    
+
         }
 
-        this.endDate = React.createRef;
+        this.endDate = React.createRef();
     }
-    
+
 
     componentDidMount() {
-
     }
 
     componentDidUpdate(oldProps) {
@@ -52,9 +51,8 @@ class AddEventModal extends React.Component {
         }
     }
 
-    activateEndDate = (e) =>{
-        this.setState({moreThanOneDay: !this.state.moreThanOneDay});
-
+    activateEndDate = (e) => {
+        this.setState({ moreThanOneDay: !this.state.moreThanOneDay });
     }
 
     render() {
@@ -117,7 +115,7 @@ class AddEventModal extends React.Component {
                     </div>
 
                     <div className="form-group" id="singleDay">
-                        <div id="checkDia" className="checkbox form-group" onClick={()=>this.setState({moreThanOneDay: !this.state.moreThanOneDay})}>
+                        <div id="checkDia" className="checkbox form-group" onClick={this.activateEndDate}>
                             <label>Más de un día <input id="multipleDay" type="checkbox" value="" /></label>
                         </div>
                     </div>
@@ -131,7 +129,7 @@ class AddEventModal extends React.Component {
                             </div>
 
                             <div className="col-6">
-                                <label htmlFor="fechaFin">Fecha Fin</label>
+                                {(this.state.moreThanOneDay) ? <label htmlFor="fechaFin">Fecha Fin</label> : ""}
                             </div>
                         </div>
 
@@ -141,8 +139,9 @@ class AddEventModal extends React.Component {
                             </div>
 
                             <div className="col-6">
-                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="endDate" /> :
-                                    <input type="date" className="form-control" name="fin" id="endDate" onChange={this.recordChange} disabled />}
+                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="endDate" onChange={this.recordChange} disabled={!this.state.moreThanOneDay} /> : ""}
+
+
                             </div>
                         </div>
 
