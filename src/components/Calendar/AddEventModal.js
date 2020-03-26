@@ -8,6 +8,7 @@ import ModalTitle from "react-bootstrap/ModalTitle";
 
 class AddEventModal extends React.Component {
     constructor(props){
+        super(props);
         this.state  = {
             eventName: "",
             principal: "AmmonRizos",
