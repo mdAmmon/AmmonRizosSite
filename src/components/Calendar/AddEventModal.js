@@ -7,16 +7,21 @@ import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
 
 class AddEventModal extends React.Component {
-    state = {
-        eventName: "",
-        principal: "AmmonRizos",
-        eventType: "vacation",
-        moreThanOneDay: false,
-        startDate: "",
-        endDate: "",
-        validForm: false,
+    constructor(props){
+        this.state  = {
+            eventName: "",
+            principal: "AmmonRizos",
+            eventType: "vacation",
+            moreThanOneDay: false,
+            startDate: "",
+            endDate: "",
+            validForm: false,
+    
+        }
 
+        this.endDate = React.createRef;
     }
+    
 
     componentDidMount() {
 
@@ -39,13 +44,17 @@ class AddEventModal extends React.Component {
     validateForm = (e) => {
         if (e.target.value === "") {
             e.target.classList.add("redBorder");
-            this.setState({ validForm: false });
+            this.setState({ validForm: false, eventName: "" });
         } else {
             e.target.classList.remove("redBorder");
-            this.setState({ validForm: true });
+            this.setState({ validForm: true, eventName: e.target.value });
         }
     }
 
+    activateEndDate = (e) =>{
+        this.setState({moreThanOneDay: !this.state.moreThanOneDay});
+
+    }
 
     render() {
         // console.log(this.props.events);
@@ -69,7 +78,7 @@ class AddEventModal extends React.Component {
                                 placeholder="Nombre Completo" aria-describedby="helpId" required />
                         </div>
                         <div className="col-6">
-                            <select id="principal" className="custom-select" defaultValue="AmmonRizos">
+                            <select id="principal" onChange={this.recordChange} className="custom-select" defaultValue="AmmonRizos">
                                 <option value="AmmonRizos">Ammon & Rizos</option>
                                 <option value="Astrodyne">Astrodyne</option>
                                 <option value="AVX">AVX</option>
@@ -90,7 +99,7 @@ class AddEventModal extends React.Component {
 
                     <div className="form-group">
                         <label htmlFor="eventType">Event Type</label>
-                        <select id="eventType" className="custom-select" defaultValue="vacation">
+                        <select id="eventType" onChange={this.recordChange} className="custom-select" defaultValue="vacation">
                             <option value="vacation">Vacation</option>
                             <option value="medical">Medical</option>
                             <option value="home_office">Home Office</option>
@@ -103,11 +112,11 @@ class AddEventModal extends React.Component {
 
                     <div className="form-group">
                         <label htmlFor="description">Description</label>
-                        <textarea className="form-control" id="description" rows="3"></textarea>
+                        <textarea className="form-control" id="description" onChange={this.recordChange} rows="3"></textarea>
                     </div>
 
                     <div className="form-group" id="singleDay">
-                        <div id="checkDia" className="checkbox form-group">
+                        <div id="checkDia" className="checkbox form-group" onClick={()=>this.setState({moreThanOneDay: !this.state.moreThanOneDay})}>
                             <label>Más de un día <input id="multipleDay" type="checkbox" value="" /></label>
                         </div>
                     </div>
@@ -127,14 +136,12 @@ class AddEventModal extends React.Component {
 
                         <div className="row" id="fechaInp">
                             <div className="col-6">
-                                <input type="date" className="form-control" name="inicio" id="fechaInit" onChange={(e) => console.log(e.target.value)} required />
+                                <input type="date" value={this.state.startDate} className="form-control" name="inicio" id="startDate" onChange={this.recordChange} required />
                             </div>
 
                             <div className="col-6">
-                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="fechaFin" /> :
-                                    <input type="date" className="form-control" name="fin" id="fechaFin" disabled />}
-
-
+                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="endDate" /> :
+                                    <input type="date" className="form-control" name="fin" id="endDate" onChange={this.recordChange} disabled />}
                             </div>
                         </div>
 
