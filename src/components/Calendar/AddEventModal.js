@@ -115,8 +115,8 @@ class AddEventModal extends React.Component {
                     </div>
 
                     <div className="form-group" id="singleDay">
-                        <div id="checkDia" className="checkbox form-group" onClick={this.activateEndDate}>
-                            <label>Más de un día <input id="multipleDay" type="checkbox" value="" /></label>
+                        <div id="checkDia" className="checkbox form-group" >
+                            <label forHtml="multipleDay">Más de un día <input id="multipleDay" onChange={this.activateEndDate} type="checkbox" value="" /></label>
                         </div>
                     </div>
 
