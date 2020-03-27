@@ -27,7 +27,7 @@ class CalendarEventsModal extends React.Component {
 
                 <ModalBody>
                     <div id="eventsContent">
-                        {this.props.events.map( (element, id) => <ModalEventDetail deleteEvent={this.props.deleteEvent} key={element.id} element={element}/>)}
+                        {this.props.events.map( (element, id) => <ModalEventDetail isLogged={this.props.isLogged} deleteEvent={this.props.deleteEvent} key={element.id} element={element}/>)}
 
                     </div>
 

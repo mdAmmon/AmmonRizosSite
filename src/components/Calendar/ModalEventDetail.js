@@ -6,7 +6,7 @@ class ModalEventDetail extends Component {
 
             return (
                 <div className="modalEventDetail">
-                    <span className="del" id={id} onClick={()=>this.props.deleteEvent(id)} >&times;</span>
+                    {(this.props.isLogged)?<span className="del" id={id} onClick={()=>this.props.deleteEvent(id)} >&times;</span>: ""}
                     <div className={"principalTag " + principal}></div>
                     <div className="modalEventData">
                         <p><b>Nombre</b>: {nombre}</p>
