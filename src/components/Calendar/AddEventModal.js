@@ -10,17 +10,23 @@ class AddEventModal extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            eventName: "",
+            actorOfEvent: "",
             principal: "AmmonRizos",
             eventType: "vacation",
             moreThanOneDay: false,
             startDate: "",
-            endDate: "",
+            endDate: "NULL",
             validForm: false,
 
         }
 
         this.endDate = React.createRef();
+    }
+
+    addEventRequest = (e) => {
+        let obj = {}
+
+        obj.nombre = this.state.actorOfEvent;
     }
 
 
@@ -38,21 +44,35 @@ class AddEventModal extends React.Component {
         let obj = {};
         obj[e.target.id] = e.target.value;
         this.setState(obj);
+    }
 
+    recordEndDateChange = (e) => {
+        let value = "";
+        if (e.target.value <= this.state.startDate) {
+            e.target.classList.add("redBorder");
+            e.target.value = "";
+            value = "NULL";
+
+        } else {
+            e.target.classList.remove("redBorder");
+            value = e.target.value;
+        }
+
+        this.setState({ endDate: value });
     }
 
     validateForm = (e) => {
         if (e.target.value === "") {
             e.target.classList.add("redBorder");
-            this.setState({ validForm: false, eventName: "" });
+            this.setState({ validForm: false, actorOfEvent: "" });
         } else {
             e.target.classList.remove("redBorder");
-            this.setState({ validForm: true, eventName: e.target.value });
+            this.setState({ validForm: true, actorOfEvent: e.target.value });
         }
     }
 
     activateEndDate = (e) => {
-        this.setState({ moreThanOneDay: !this.state.moreThanOneDay });
+        this.setState({ moreThanOneDay: !this.state.moreThanOneDay, endDate: "NULL" });
     }
 
     render() {
@@ -116,7 +136,7 @@ class AddEventModal extends React.Component {
 
                     <div className="form-group" id="singleDay">
                         <div id="checkDia" className="checkbox form-group" >
-                            <label forHtml="multipleDay">Más de un día <input id="multipleDay" onChange={this.activateEndDate} type="checkbox" value="" /></label>
+                            <label htmlFor="multipleDay">Más de un día <input id="multipleDay" onChange={this.activateEndDate} type="checkbox" value="" /></label>
                         </div>
                     </div>
 
@@ -139,7 +159,7 @@ class AddEventModal extends React.Component {
                             </div>
 
                             <div className="col-6">
-                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="endDate" onChange={this.recordChange} disabled={!this.state.moreThanOneDay} /> : ""}
+                                {(this.state.moreThanOneDay) ? <input type="date" className="form-control" name="fin" id="endDate" onChange={this.recordEndDateChange} /> : ""}
 
 
                             </div>
@@ -151,9 +171,7 @@ class AddEventModal extends React.Component {
                 </ModalBody>
 
                 <ModalFooter>
-                    {(this.state.validForm) ? <button type="submit" className="btn btn-success mt-3"
-                        id="registroBtn">Guardar</button> : <button type="submit" className="btn btn-success mt-3"
-                            id="registroBtn" disabled>Guardar</button>}
+                    <button type="submit" className="btn btn-success mt-3" id="registroBtn" disabled={this.state.validForm}>Guardar</button>
 
                 </ModalFooter>
             </Modal>
