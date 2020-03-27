@@ -13,20 +13,38 @@ class AddEventModal extends React.Component {
             actorOfEvent: "",
             principal: "AmmonRizos",
             eventType: "vacation",
+            description: "",
             moreThanOneDay: false,
             startDate: "",
             endDate: "NULL",
             validForm: false,
 
         }
-
-        this.endDate = React.createRef();
     }
 
     addEventRequest = (e) => {
         let obj = {}
 
         obj.nombre = this.state.actorOfEvent;
+        obj.principal = this.state.principal;
+        obj.tipo = this.state.eventType;
+        obj.descripcion = this.state.description;
+        obj.fechaInicio = this.state.startDate;
+        obj.fechaFin = this.state.endDate;
+
+        this.props.addEvent(JSON.stringify(obj));
+
+        this.setState({
+            actorOfEvent: "",
+            principal: "AmmonRizos",
+            eventType: "vacation",
+            description: "",
+            moreThanOneDay: false,
+            startDate: "",
+            endDate: "NULL",
+            validForm: false,
+        }, this.props.hide());
+        
     }
 
 
@@ -171,7 +189,7 @@ class AddEventModal extends React.Component {
                 </ModalBody>
 
                 <ModalFooter>
-                    <button type="submit" className="btn btn-success mt-3" id="registroBtn" disabled={this.state.validForm}>Guardar</button>
+                    <button type="submit" className="btn btn-success mt-3" id="registroBtn" disabled={!this.state.validForm} onClick={this.addEventRequest}>Guardar</button>
 
                 </ModalFooter>
             </Modal>

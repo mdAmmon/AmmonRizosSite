@@ -36,6 +36,7 @@ class Calendar extends Component {
         today: new Date(),
         modalDate: "",
         modalEvents: [],
+        updatePage: false,
     }
 
     goToToday() {
@@ -118,9 +119,27 @@ class Calendar extends Component {
                     alert(response);
                     this.props.hide();
                     this.goToToday();
+                    this.setState({updatePage: !this.state.updatePage});
                 }
             });
 
+    }
+
+
+    addEvent = (object) => {
+        const url = "http://192.168.1.112/includes/calendarP.php";
+
+        fetch(url, {
+            method: "POST",
+            body: object,
+            headers: { "Content-Type": "application/json" }
+        })
+            .then(res => res.json())
+            .then(response => {
+                alert(response);
+                this.setState({updatePage: !this.state.updatePage});
+            })
+            .catch(error => alert(error));      
     }
 
 
@@ -135,12 +154,12 @@ class Calendar extends Component {
                     show={this.props.show} hide={this.props.hide}
                     showModalAddEvent={this.props.showModalAddEvent} />
 
-                <AddEventModal show={this.props.showAddEvent} hide={this.props.hideAddEvent} date={this.state.modalDate} />
+                <AddEventModal addEvent={this.addEvent} show={this.props.showAddEvent} hide={this.props.hideAddEvent} date={this.state.modalDate} />
                 <DateHeader month={months[this.state.month]} year={this.state.year} />
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
 
-                <CalendarTable displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad} />
+                <CalendarTable updatePage={this.state.updatePage} displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad} />
 
                 <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth} />
 
