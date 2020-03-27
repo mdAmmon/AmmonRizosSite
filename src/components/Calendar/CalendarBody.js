@@ -14,7 +14,7 @@ class CalendarBody extends Component {
 
     //Checks if current month is different from updated month and if it is, it fetches the events for the new month-year date.
     componentDidUpdate(nextProps) {
-        if (nextProps.year !== this.props.year || nextProps.month !== this.props.month) {
+        if (nextProps.year !== this.props.year || nextProps.month !== this.props.month || nextProps.updatePage !== this.props.updatePage) {
             let url = "http://192.168.1.112/includes/calendarP.php?month=" + this.props.pad(this.props.month + 1, 2) + "&year=" + this.props.year;
             fetch(url).then(res => res.json()).then(res => this.setState({ events: res })
             );

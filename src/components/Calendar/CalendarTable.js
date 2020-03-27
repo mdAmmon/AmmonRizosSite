@@ -18,7 +18,7 @@ class CalendarTable extends Component {
                     </tr>
                 </thead>
 
-                <CalendarBody displayEventsModal={this.props.displayEventsModal} year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.props.printEvents} pad={this.props.pad}/>
+                <CalendarBody updatePage={this.props.updatePage} displayEventsModal={this.props.displayEventsModal} year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.props.printEvents} pad={this.props.pad}/>
             </table>
         )
     }
