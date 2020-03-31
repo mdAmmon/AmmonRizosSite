@@ -82,8 +82,8 @@ class App extends Component {
         return (
             <Router >
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
+                <ToggleNavButton />
                 <div id="content">
-                    <ToggleNavButton />
                     <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.modalStates.loginModal}
                         hide={() => { this.handleModalHide("loginModal") }} />
                     <Switch>
