@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import BoxTitle from '../components/DashBoard/BoxTitle';
 
 class Home extends Component {
     state = {
@@ -13,7 +14,9 @@ class Home extends Component {
     render() {
         return (
             <div>
-                <h1>Home</h1>
+                <BoxTitle>
+                    <h2>Adios Mundo</h2>
+                </BoxTitle>
             </div>
 
         );
