@@ -7,9 +7,11 @@ class BoxTitle extends Component {
 
     render() {
         return (
-            <div>
-                <h1>Hola mundo</h1>
-                {this.props.children}
+            <div id={this.props.id} className="shadowing roundEdges boxTitle" style={{backgroundImage: `url(${this.props.imageUrl})`}}>
+                <div>
+                    {this.props.children}
+                </div>
+                <h1>{this.props.title}</h1>
             </div>
         );
 
