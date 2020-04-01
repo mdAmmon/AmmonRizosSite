@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BoxTitle from '../components/DashBoard/BoxTitle';
 import '../styles/dashboard.css';
 import LineCards from '../components/DashBoard/LineCards';
+import EmbeddedCalendar from '../components/DashBoard/EmbeddedCalendar';
 
 class Home extends Component {
     state = {
@@ -26,6 +27,7 @@ class Home extends Component {
 
                 <LineCards id="lineCards"/>
 
+                <EmbeddedCalendar id="embeddedCalendar"/>
 
 
             </div>
