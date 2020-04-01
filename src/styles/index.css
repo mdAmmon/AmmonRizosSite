@@ -124,6 +124,17 @@ body,
   cursor: pointer;
 }
 
+.leftTriangle {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #383838;
+}
+
+.rightTriangle {
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid #383838;
+}
 
 
 @media (max-width: 770px) {
