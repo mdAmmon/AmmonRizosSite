@@ -24,44 +24,12 @@ const ICONS = {
 
 class Calendar extends Component {
     state = {
-        day: "",
-        month: "",
-        year: "",
-        today: new Date(),
         modalDate: "",
         modalEvents: [],
         updatePage: false,
     }
 
-    goToToday() {
-        this.setState({ month: this.state.today.getMonth(), year: this.state.today.getFullYear(), day: this.state.today.getDay() });
-    }
-
-    changeMonth = (e) => {
-        this.setState({ month: parseInt(e.target.value) });
-    }
-
-    changeYear = (e) => {
-        this.setState({ year: parseInt(e.target.value) });
-    }
-
-    goToNextMonth = () => {
-        const updatedYear = (this.state.month === 11) ? this.state.year + 1 : this.state.year;
-        if (updatedYear > this.state.today.getFullYear() + 2) return;
-        const updatedMonth = (this.state.month + 1) % 12;
-
-        this.setState({ year: updatedYear, month: updatedMonth });
-    }
-
-    goToPreviousMonth = () => {
-        const updatedYear = (this.state.month === 0) ? this.state.year - 1 : this.state.year;
-
-        if (updatedYear < this.state.today.getFullYear() - 1) return;
-
-        const updatedMonth = (this.state.month === 0) ? 11 : this.state.month - 1;
-
-        this.setState({ year: updatedYear, month: updatedMonth });
-    }
+    
 
     displayEventsModal = (events) => {  
         let date = events[1].split("-");  
@@ -82,7 +50,7 @@ class Calendar extends Component {
 
     componentDidMount() {
         document.title = "A&R Calendar";
-        this.goToToday();
+        this.props.goToToday();
     }
 
     deleteEvent = (id) => {
@@ -100,7 +68,7 @@ class Calendar extends Component {
                 if (response) {
                     alert(response);
                     this.props.hide();
-                    this.goToToday();
+                    this.props.goToToday();
                     this.setState({updatePage: !this.state.updatePage});
                 }
             });
@@ -137,13 +105,13 @@ class Calendar extends Component {
                     showModalAddEvent={this.props.showModalAddEvent} />
 
                 <AddEventModal addEvent={this.addEvent} show={this.props.showAddEvent} hide={this.props.hideAddEvent} date={this.state.modalDate} />
-                <DateHeader month={months[this.state.month]} year={this.state.year} />
+                <DateHeader month={months[this.props.month]} year={this.props.year} />
 
-                <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
+                <JumpToDate today={this.props.today} year={this.props.year} month={this.props.month} changeYear={this.props.changeYear} changeMonth={this.props.changeMonth} />
 
-                <CalendarTable updatePage={this.state.updatePage} displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} />
+                <CalendarTable updatePage={this.state.updatePage} displayEventsModal={this.displayEventsModal} today={this.props.today} year={this.props.year} month={this.props.month} printEvents={this.showFirst3Events} />
 
-                <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth} />
+                <CalendarNavButtons next={this.props.goToNextMonth} previous={this.props.goToPreviousMonth} />
 
 
 

@@ -18,6 +18,10 @@ class App extends Component {
     state = {
         isLogged: false,
         user: {},
+        day: "",
+        month: "",
+        year: "",
+        today: new Date(),
         modalStates: {
             loginModal: false,
             employeeModal: false,
@@ -78,6 +82,36 @@ class App extends Component {
         cookies.set('name', name, { maxAge: 3 * hour });
     }
 
+    goToToday = ()=> {
+        this.setState({ month: this.state.today.getMonth(), year: this.state.today.getFullYear(), day: this.state.today.getDay() });
+    }
+
+    changeMonth = (e) => {
+        this.setState({ month: parseInt(e.target.value) });
+    }
+
+    changeYear = (e) => {
+        this.setState({ year: parseInt(e.target.value) });
+    }
+
+    goToNextMonth = () => {
+        const updatedYear = (this.state.month === 11) ? this.state.year + 1 : this.state.year;
+        if (updatedYear > this.state.today.getFullYear() + 2) return;
+        const updatedMonth = (this.state.month + 1) % 12;
+
+        this.setState({ year: updatedYear, month: updatedMonth });
+    }
+
+    goToPreviousMonth = () => {
+        const updatedYear = (this.state.month === 0) ? this.state.year - 1 : this.state.year;
+
+        if (updatedYear < this.state.today.getFullYear() - 1) return;
+
+        const updatedMonth = (this.state.month === 0) ? 11 : this.state.month - 1;
+
+        this.setState({ year: updatedYear, month: updatedMonth });
+    }
+
     render() {
         return (
             <Router >
@@ -104,6 +138,13 @@ class App extends Component {
                                 showModalAddEvent={() => this.handleModalShow("addEventModal")}
                                 hideAddEvent={() => { this.handleModalHide("addEventModal") }}
                                 showAddEvent={this.state.modalStates.addEventModal}
+                                day={this.state.day} month={this.state.month} year={this.state.year}
+                                today={this.state.today}
+                                goToToday={this.goToToday}
+                                goToNextMonth={this.goToNextMonth}
+                                goToPreviousMonth={this.goToPreviousMonth}
+                                changeMonth={this.changeMonth}
+                                changeYear={this.changeYear}
                                 />
                         }} />
 
@@ -113,6 +154,8 @@ class App extends Component {
                                 showModal={() => this.handleModalShow("crossModal")}
                                 hide={() => { this.handleModalHide("crossModal") }}
                                 show={this.state.modalStates.crossModal} />
+                                
+
                         }} />
                         <Route path="/diagrams" component={Diagrams} />
                     </Switch>
