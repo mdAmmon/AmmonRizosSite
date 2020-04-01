@@ -3,9 +3,6 @@ import Mexico from "../../img/mexico-flag.svg"
 import US from "../../img/united-states-of-america-flag.svg"
 
 class LineCards extends Component {
-    componentDidMount() {
-        document.title = "A&R Diagrams"
-    }
 
     render() {
         return (
