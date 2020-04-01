@@ -21,12 +21,6 @@ const ICONS = {
 }
 
 //Given a number parsed as string if it is a single digit with the second argument set to 2, it adds zeroes to the left.
-function pad(s, size) {
-    while (s.length < (size || 2)) {
-        s = "0" + s;
-    }
-    return s;
-}
 
 class Calendar extends Component {
     state = {
@@ -69,26 +63,14 @@ class Calendar extends Component {
         this.setState({ year: updatedYear, month: updatedMonth });
     }
 
-    //Takes date and event array to determine which events happen within the specified date.
-    getEventsforDate = (day, month, year, events) => {
-        let str = year + "-" + pad(month + "", 2) + "-" + pad("" + day, 2);
-        let eventsForTheMonth = events.filter(element => {
-            if (str === element.fechaInicio) return true;
-            if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
-            return false;
-        });
-
-        return eventsForTheMonth;
-    }
-
-    displayEventsModal = (date, events) => {
-        date = date.split("-").reverse();
-        let dateEvents = this.getEventsforDate(date[0], parseInt(date[1]), date[2], events);
-        this.setState({ modalDate: date.join("/"), modalEvents: dateEvents }, this.props.showModal());
+    displayEventsModal = (events) => {  
+        let date = events[1].split("-");  
+        
+        this.setState({ modalDate: date.reverse().join("/"), modalEvents: events[0] }, this.props.showModal());
     }
     //Function that shows at most 3 of the events that happen in a date in the calendar. Defined here so calendar body can take any other function.
-    showFirst3Events = (day, month, year, events) => {
-        let eventsForTheMonth = this.getEventsforDate(day, month, year, events);
+    showFirst3Events = (events) => {
+        let eventsForTheMonth = events[0];
         let calendarEvents = eventsForTheMonth.filter((element, index) => { return (index < 3) ? true : false })
             .map(element => { return <h6 key={element.id} className={element.principal}>{ICONS[element.tipo]} &nbsp; <span className="hideOnSmallDevice">{element.nombre}</span></h6> });
 
@@ -159,7 +141,7 @@ class Calendar extends Component {
 
                 <JumpToDate today={this.state.today} year={this.state.year} month={this.state.month} changeYear={this.changeYear} changeMonth={this.changeMonth} />
 
-                <CalendarTable updatePage={this.state.updatePage} displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} pad={pad} />
+                <CalendarTable updatePage={this.state.updatePage} displayEventsModal={this.displayEventsModal} today={this.state.today} year={this.state.year} month={this.state.month} printEvents={this.showFirst3Events} />
 
                 <CalendarNavButtons next={this.goToNextMonth} previous={this.goToPreviousMonth} />
 

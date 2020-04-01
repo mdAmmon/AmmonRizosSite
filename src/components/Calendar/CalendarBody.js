@@ -4,6 +4,14 @@ function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
 }
 
+function pad(s, size) {
+    while (s.length < (size || 2)) {
+        s = "0" + s;
+    }
+    return s;
+}
+
+
 class CalendarBody extends Component {
     constructor() {
         super();
@@ -15,10 +23,23 @@ class CalendarBody extends Component {
     //Checks if current month is different from updated month and if it is, it fetches the events for the new month-year date.
     componentDidUpdate(nextProps) {
         if (nextProps.year !== this.props.year || nextProps.month !== this.props.month || nextProps.updatePage !== this.props.updatePage) {
-            let url = "http://192.168.1.112/includes/calendarP.php?month=" + this.props.pad(this.props.month + 1, 2) + "&year=" + this.props.year;
+            let url = "http://192.168.1.112/includes/calendarP.php?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
             fetch(url).then(res => res.json()).then(res => this.setState({ events: res })
             );
         }
+    }
+
+    getEventsforDate = (day, month, year) => {
+        let str = year + "-" + pad(month + "", 2) + "-" + pad("" + day, 2);
+
+        let eventsForTheMonth = this.state.events.filter(element => {
+            if (str === element.fechaInicio) return true;
+            if (element.fechaFin != null && element.fechaFin >= str && element.fechaInicio <= str) return true;
+            return false;
+        });
+        // return eventsForTheMonth;
+
+        return [eventsForTheMonth, str];
     }
 
     //Generates calendar table with days and events for each day.
@@ -26,7 +47,6 @@ class CalendarBody extends Component {
         let rowArr = [];
         let cells = [];
         let keyV;
-        let idV;
         let innerContent = "";
         let day = 1;
         const firstDay = (new Date(this.props.year, this.props.month)).getDay();
@@ -38,7 +58,6 @@ class CalendarBody extends Component {
                 if (day > daysInMonth(this.props.month, this.props.year)) break;
 
                 keyV = "" + i + j;
-                idV = "";
                 classList = "";
                 innerContent = "";
 
@@ -47,17 +66,20 @@ class CalendarBody extends Component {
                         && this.props.month === this.props.today.getMonth()) {
                         classList += "today ";
                     }
-                    innerContent = (j === 0 || j === 6) ? "" : this.props.printEvents(day, this.props.month+1, this.props.year, this.state.events);
+                    let funcDay = day;
+                    let eventsForDate = this.getEventsforDate(funcDay, this.props.month+1, this.props.year);
+                    innerContent = (j === 0 || j === 6) ? "" : this.props.printEvents(eventsForDate);
                     innerContent = (<>
                         <p>{day}</p>
                         {innerContent}
                     </>);
-                    idV = this.props.year + "-" + this.props.pad("" + parseInt(this.props.month + 1), 2) + "-" + this.props.pad("" + parseInt(day), 2);
-                    day++;
-                }
 
-                let date = idV;
-                cells.push(<td key={keyV} id={idV} onClick={()=> this.props.displayEventsModal(date, this.state.events)} className={classList}>{innerContent}</td>);
+                    cells.push(<td key={keyV} id={eventsForDate[1]} onClick={()=> this.props.onClickFunc(eventsForDate)} className={classList}>{innerContent}</td>);
+                    day++;
+                } else{
+                    cells.push(<td key={keyV}></td>);
+                }
+                
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
             if (day > daysInMonth(this.props.month, this.props.year)) break;
