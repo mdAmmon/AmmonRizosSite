@@ -92,7 +92,7 @@ class Navigation extends Component {
                 {logButton}
                 <ul id="nav-links">
                     <li>
-                        <NavLink exact to="/" activeStyle={{ color: '#F3F3F3' }}>
+                        <NavLink exact to="/" onClick={()=>{}} activeStyle={{ color: '#F3F3F3' }}>
                             <i className="fas fa-home fa-fw"></i>
                             <span className="hide">Dashboard</span>
                         </NavLink>
