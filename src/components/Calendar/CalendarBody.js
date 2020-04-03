@@ -54,10 +54,17 @@ class CalendarBody extends Component {
 
         for (let i = 0; i < 6; i++) {
             cells = [];
+            if(day>daysInMonth(this.props.month, this.props.year)) break;
             for (let j = 0; j < 7; j++) {
-                if (day > daysInMonth(this.props.month, this.props.year)) break;
 
                 keyV = "" + i + j;
+
+                if (day > daysInMonth(this.props.month, this.props.year)) {
+                    cells.push(<td key={keyV}></td>);
+                    continue;
+                };
+
+
                 classList = "";
                 innerContent = "";
 
@@ -82,7 +89,6 @@ class CalendarBody extends Component {
                 
             }
             rowArr.push(<tr key={i}>{cells}</tr>);
-            if (day > daysInMonth(this.props.month, this.props.year)) break;
         }
 
         return (
