@@ -10,7 +10,7 @@ class Home extends Component {
     }
 
     componentDidMount() {
-        document.title = "Ammon & Rizos"
+        document.title = "Ammon & Rizos";
     }
 
 
@@ -25,9 +25,15 @@ class Home extends Component {
                     </a>
                 </div>
 
-                <LineCards id="lineCards"/>
+                <LineCards id="lineCards" />
 
-                <EmbeddedCalendar id="embeddedCalendar"/>
+                <EmbeddedCalendar id="embeddedCalendar"
+                    day={this.props.day} month={this.props.month} year={this.props.year}
+                    today={this.props.today}
+                    goToToday={this.props.goToToday}
+                    goToNextMonth={this.props.goToNextMonth}
+                    goToPreviousMonth={this.props.goToPreviousMonth}
+                />
 
 
             </div>

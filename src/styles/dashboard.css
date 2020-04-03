@@ -38,9 +38,8 @@
 #weather {
     width: 40%;
     height: 20%;
-    float: right;
     margin-top: 2%;
-    margin-right: 3%;
+    margin-left: 4%;
     overflow: hidden;
 
 }
@@ -50,17 +49,16 @@
     display: inline-block;
 }
 
-#lineCards{
+#lineCards {
     width: 40%;
     height: calc(20% - 10px);
-    float: right;
     margin-top: 10px;
-    margin-right: 3%;
+    margin-left: 4%;
 }
 
-#lineCards img{
-    width: 42%;
-    margin-left: 5%;
+#lineCards img {
+    width: 30%;
+    margin-left: 13%;
 }
 
 #lineCards h6 {
@@ -69,16 +67,52 @@
     font-size: 18px;
 }
 
-#embeddedCalendar{
+#embeddedCalendar {
     margin-left: 3%;
     margin-top: 2%;
     width: 35%;
     height: 30%;
 }
 
-#calendarEmbeddedTable{
+#calendarEmbeddedTable {
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    /* table-layout: fixed; */
+}
+
+#calendarEmbeddedTable tr, #calendarEmbeddedTable thead, #calendarEmbeddedTable tbody{
+    width: 100% !important;
+}
+
+#calendarEmbeddedTable tr{
+    height: 12.3%;
+}
+
+#calendarEmbeddedTable td, 
+#calendarEmbeddedTable th{
+    box-sizing: border-box;
+    width: 12.3%;
+    padding: 1px;
+    background-color: #fff;
     text-align: center;
 }
+
+#calendarEmbeddedTable p{
+    text-align: center;
+    height: auto;
+    margin: 0;
+}
+
+.calendarCircle{
+    height: 4px;
+    width: 4px;
+    margin: 0 auto;
+    background-color: #4c628f;
+    border: none;
+    border-radius: 100%;
+}
+
 
 @media (max-width: 770px) {
     #welcoming {
@@ -99,23 +133,34 @@
         float: none;
         margin-top: 3%;
         width: 50%;
-    
+        height: 23%;
     }
 
-    #lineCards{
-        height: 20%;
-        float: right;
+    #lineCards {
+        height: 23%;
+        /* float: right; */
         margin-top: 3%;
+        vertical-align: top;
     }
 
     #lineCards img {
         margin: 3% auto;
         display: block;
+        width: 40%;
     }
-    
+
     #lineCards h6 {
         margin: 1% 0 1% 5%;
         height: 12%;
     }
 
+
+    #embeddedCalendar {
+        width: 94%;
+    }
+
+    .calendarCircle{
+        height: 6px;
+        width: 6px;
+    }
 }
