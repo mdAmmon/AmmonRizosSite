@@ -63,7 +63,7 @@ class App extends Component {
         const { cookies } = this.props;
 
 
-        fetch('http://127.0.0.1/includes/logout.php', {
+        fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
             method: 'POST',
         }).then(res => {
             cookies.remove('name');

@@ -58,7 +58,7 @@ class Calendar extends Component {
 
         body.append('id', id);
 
-        fetch("http://192.168.1.112/includes/calendarP.php", {
+        fetch("https://arizoslocal.herokuapp.com/includes/calendarP.php", {
             method: "POST",
             body: body
         })
@@ -77,7 +77,7 @@ class Calendar extends Component {
 
 
     addEvent = (object) => {
-        const url = "http://192.168.1.112/includes/calendarP.php";
+        const url = "https://arizoslocal.herokuapp.com/includes/calendarP.php";
 
         fetch(url, {
             method: "POST",

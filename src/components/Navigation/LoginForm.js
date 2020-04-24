@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
         body.append('pwd', this.state.pwd);
 
 
-        fetch('http://192.168.1.112/includes/loginP.php', {
+        fetch('https://arizoslocal.herokuapp.com/includes/loginP.php', {
             method: 'POST',
             body: body
         })

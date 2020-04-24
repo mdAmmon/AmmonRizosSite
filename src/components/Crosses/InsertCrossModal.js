@@ -21,14 +21,14 @@ class InsertCrossModal extends React.Component {
 
     componentDidMount() {
         let comps, mfgs;
-        fetch("http://192.168.1.112/includes/getCompetitors.php")
+        fetch("https://arizoslocal.herokuapp.com/includes/getCompetitors.php")
             .then(res => res.json())
             .then(res => {
                 comps = res;
                 this.setState({ competitors: comps, selectedCompetitor: comps[0].competitor_id });
             });
 
-        fetch("http://192.168.1.112/includes/getPrincipals.php")
+        fetch("https://arizoslocal.herokuapp.com/includes/getPrincipals.php")
             .then(res => res.json())
             .then(res => {
                 mfgs = res;
@@ -73,7 +73,7 @@ class InsertCrossModal extends React.Component {
         body.append('comments', this.state.comments);
 
 
-        fetch("http://192.168.1.112/includes/insertCrossP.php", {
+        fetch("https://arizoslocal.herokuapp.com/includes/insertCrossP.php", {
             method: "POST",
             body: body
         })
