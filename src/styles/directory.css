@@ -123,7 +123,6 @@ Directory
     min-width: 70px;
     margin: 15px auto;
     z-index: 1;
-    background-image: url("../img/gray_square.png");
     background-position: center;
     background-size: cover;
   }
