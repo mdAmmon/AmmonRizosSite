@@ -3,6 +3,7 @@ import BoxTitle from '../components/DashBoard/BoxTitle';
 import '../styles/dashboard.css';
 import LineCards from '../components/DashBoard/LineCards';
 import EmbeddedCalendar from '../components/DashBoard/EmbeddedCalendar';
+import ProductOfMonth from '../components/DashBoard/ProductOfMonth';
 
 class Home extends Component {
     state = {
@@ -27,17 +28,28 @@ class Home extends Component {
 
                 <LineCards id="lineCards" />
 
-                <EmbeddedCalendar id="embeddedCalendar"
-                    day={this.props.day} month={this.props.month} year={this.props.year}
-                    today={this.props.today}
-                    goToToday={this.props.goToToday}
-                    goToNextMonth={this.props.goToNextMonth}
-                    goToPreviousMonth={this.props.goToPreviousMonth}
-                />
+
+                <div className="flexContainerRow">
+                    <EmbeddedCalendar id="embeddedCalendar"
+                        day={this.props.day} month={this.props.month} year={this.props.year}
+                        today={this.props.today}
+                        goToToday={this.props.goToToday}
+                        goToNextMonth={this.props.goToNextMonth}
+                        goToPreviousMonth={this.props.goToPreviousMonth}
+                    />
+
+                    <ProductOfMonth
+                        backgroundColor='#0A471F'
+                        principal="ON Semiconductor&#174;"
+                        productInfo="NCV-RSL 10: Industry's Lowest Power BLE"
+                        img="logo_On.png"
+                    />
+
+
+                </div>
 
 
             </div>
-
         );
 
     }
