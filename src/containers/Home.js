@@ -4,6 +4,8 @@ import '../styles/dashboard.css';
 import LineCards from '../components/DashBoard/LineCards';
 import EmbeddedCalendar from '../components/DashBoard/EmbeddedCalendar';
 import ProductOfMonth from '../components/DashBoard/ProductOfMonth';
+import Birthdays from '../components/DashBoard/Birthdays';
+import ColParagraph from '../components/DashBoard/ColParagraph';
 
 class Home extends Component {
     state = {
@@ -29,7 +31,7 @@ class Home extends Component {
                 <LineCards id="lineCards" />
 
 
-                <div className="flexContainerRow">
+                <div className="flexContainerRow" id="secondRow">
                     <EmbeddedCalendar id="embeddedCalendar"
                         day={this.props.day} month={this.props.month} year={this.props.year}
                         today={this.props.today}
@@ -45,7 +47,37 @@ class Home extends Component {
                         img="logo_On.png"
                     />
 
+                    <Birthdays id="birthdays" />
+                </div>
 
+
+                <div id="coreValues" className="flexContainerRow">
+
+                    <ColParagraph title="Our Mission" id="Mission">
+                        <p>
+                            Bring our principal’s market share to the top of the supply chain position in our territories as
+                            well as be the number one solution provider for demand creation solutions. Meet and exceed our
+                            customer’s support service needs.
+                        </p>
+                    </ColParagraph>
+
+                    <ColParagraph title="Our Vision" id="Vision">
+                        <p>To be the first choice for electronic manufacturers representation
+                        in our territories based on honesty, technical knowledge and service support.
+                        </p>
+                    </ColParagraph>
+
+                    <ColParagraph title="Our Values" id="Values">
+                        <ul>
+                            <li>&#8211; Customer Driven</li>
+                            <li>&#8211; Integrity</li>
+                            <li>&#8211; Passion for Excellence</li>
+                            <li>&#8211; People Focused</li>
+                            <li>&#8211; Innovative Problem Solving</li>
+                            <li>&#8211; Innovative Problem Solving</li>
+                            <li>&#8211; Teamwork</li>
+                        </ul>
+                    </ColParagraph>
                 </div>
 
 

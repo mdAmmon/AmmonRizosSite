@@ -67,13 +67,25 @@
     font-size: 18px;
 }
 
-.flexContainerRow{
-    height: 25%;
-    margin: 2% 3%;
+.flexContainerRow {
     width: 94%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+#secondRow {
+    height: 28%;
+    margin: 2% 3%;
+}
+
+#coreValues {
+    height: 20%;
+    margin: 2% 3% 0;
+}
+
+#coreValues p {
+    margin-bottom: 0;
 }
 
 #embeddedCalendar {
@@ -88,16 +100,18 @@
     /* table-layout: fixed; */
 }
 
-#calendarEmbeddedTable tr, #calendarEmbeddedTable thead, #calendarEmbeddedTable tbody{
+#calendarEmbeddedTable tr,
+#calendarEmbeddedTable thead,
+#calendarEmbeddedTable tbody {
     width: 100% !important;
 }
 
-#calendarEmbeddedTable tr{
+#calendarEmbeddedTable tr {
     height: 12.3%;
 }
 
-#calendarEmbeddedTable td, 
-#calendarEmbeddedTable th{
+#calendarEmbeddedTable td,
+#calendarEmbeddedTable th {
     box-sizing: border-box;
     width: 12.3%;
     padding: 1px;
@@ -105,13 +119,13 @@
     text-align: center;
 }
 
-#calendarEmbeddedTable p{
+#calendarEmbeddedTable p {
     text-align: center;
     height: auto;
     margin: 0;
 }
 
-.calendarCircle{
+.calendarCircle {
     height: 4px;
     width: 4px;
     margin: 0 auto;
@@ -120,6 +134,18 @@
     border-radius: 100%;
 }
 
+p,
+#Values li {
+    font-size: 12px;
+}
+
+#Values ul {
+    list-style: none;
+    padding-left: 0;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+}
 
 @media (max-width: 770px) {
     #welcoming {
@@ -163,10 +189,33 @@
 
 
     #embeddedCalendar {
-        width: 94%;
+        width: 100%;
+        height: 45%;
     }
 
-    .calendarCircle{
+    #birthdays {
+        display: none !important;
+    }
+
+    .flexContainerRow {
+        flex-direction: column;
+    }
+
+    #secondRow {
+        height: 65%;
+    }
+
+    #coreValues {
+        height: 45%;
+        margin: 5% 3% 0;
+    }
+
+    p,
+    #Values li {
+        font-size: 13px;
+    }
+
+    .calendarCircle {
         height: 6px;
         width: 6px;
     }
