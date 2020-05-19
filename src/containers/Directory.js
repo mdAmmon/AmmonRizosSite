@@ -19,11 +19,12 @@ class Directory extends Component {
         mobile: '',
         extension: '',
         manager: '',
-        priority: ''
+        priority: '',
+        url: 'gray_square.png',
     }
 
     //Updates state data and shows modal right after
-    modalSetup = (name, position, email, phone, mobile, extension, manager, priority) => {
+    modalSetup = (name, position, email, phone, mobile, extension, manager, priority, url) => {
         console.log(name + ' ' + position);
         this.setState({
             name: name,
@@ -33,10 +34,11 @@ class Directory extends Component {
             mobile: mobile,
             extension: extension,
             manager: manager,
-            priority: priority
+            priority: priority,
+            url: url
         }, this.props.showModal());
     }
-    componentDidMount() {
+    componentWillMount() {
         this.loadEmployees();
         document.title = "A&R Directory"
     }
@@ -70,7 +72,7 @@ class Directory extends Component {
         return (<div >
             <EmployeeModal show={this.props.show} hide={this.props.hide} priority={this.state.priority}
                 name={this.state.name} position={this.state.position} email={this.state.email} phone={this.state.phone}
-                extension={this.state.extension} mobile={this.state.mobile} manager={this.state.manager} />
+                extension={this.state.extension} mobile={this.state.mobile} manager={this.state.manager} url={this.state.url}/>
 
             <SearchBar placeholder="Search Name..."
                 onKeyUp={this.onKeyUp}
