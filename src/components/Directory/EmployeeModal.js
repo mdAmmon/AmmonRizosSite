@@ -9,6 +9,7 @@ class EmployeeModal extends React.Component {
     render() {
         const { name, position, email, phone, mobile, extension, manager, priority } = this.props;
 
+        const img = require(`../../img/${this.props.url}`);
         return (
             <Modal
                 dialogClassName='custom-dialog'
@@ -21,7 +22,16 @@ class EmployeeModal extends React.Component {
                     <button type="button" id="closeModal" className="close" aria-label="Close" onClick={this.props.hide}>
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    <div className={"employeeImage priority"+priority}  id="modalEmpImage"></div>
+                    {/* <div className={cardImageClass} style={{backgroundImage: `url(${img})`}}></div> */}
+                    <div className={"employeeImage priority" + priority}
+                        style={{ backgroundImage: `url(${img})` }}
+                        id="modalEmpImage"
+                    >
+
+                    </div>
+
+
+
                     <div className="employeeInfo">
                         <div className="row"><label>Name:</label>
                             <p id="EmpName">{name}</p>
