@@ -1,5 +1,5 @@
 #productOfTheMonth {
-    width: 30%;
+    width: 35%;
     height: 100%;
     display: inline-block;
     overflow: hidden;
@@ -54,4 +54,56 @@
     display: inline-block;
     padding-left: 5%;
     width: auto;
+}
+
+
+
+@media (max-width: 770px) {
+    #productOfTheMonth {
+        width: 100%;
+        height: 50%;
+    }
+
+
+    #productInfo {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 2% 0 0 0;
+        width: 100%;
+        height: 70%;
+    }
+    
+    
+    #productLabel {
+        width: 100%;
+        height: 30%;
+        background-color: rgb(196, 196, 196, 0.7);
+    }
+    
+    #productImage {
+        width: 10%;
+    }
+    
+    #productLabel h2 {
+        font-size: 24px;
+        padding-top: 3%;
+    }
+    
+    
+    #productInfo h4 {
+
+        font-size: 20px;
+    }
+    
+    
+    #productInfo h4:not(#principal) {
+        width: 100%;
+    }
+    
+    #principal {
+        font-weight: 700;
+        display: inline-block;
+        padding-left: 5%;
+        width: auto;
+    }
 }
