@@ -38,7 +38,7 @@ class Directory extends Component {
             url: url
         }, this.props.showModal());
     }
-    componentWillMount() {
+    componentDidMount() {
         this.loadEmployees();
         document.title = "A&R Directory"
     }
