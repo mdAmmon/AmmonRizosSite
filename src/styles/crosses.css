@@ -114,15 +114,18 @@ tbody tr {
 
 
 @media (max-width: 770px) {
-
-
-    #searchInput {
-        font-size: 1em;
-        width: 100%;
-        margin: 0;
+    div.searchbar{
+        margin-top: 50px;
+        padding: 0;
     }
 
-    #searchbar .btn:not(:last-of-type) {
+    #searchCrossInput {
+        font-size: 1em;
+        width: 100%;
+        margin: 0 0 1%;
+    }
+
+    .searchbar .btn:not(:last-of-type) {
         margin-right: 1%;
     }
 
@@ -130,7 +133,7 @@ tbody tr {
         width: 45px;
     }
 
-    #searchbar .btn {
+    .searchbar .btn {
         width: 48.5%;
         margin-top: 2%;
     }

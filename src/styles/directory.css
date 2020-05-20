@@ -1,4 +1,3 @@
-Directory
 
 #employeeRegister {
     margin-top: 2%;
@@ -202,6 +201,9 @@ Directory
   
   
   @media (max-width: 770px) {
+    #searchEmployee{
+      margin-top: 50px;
+    }
     #searchFilters {
         width: 60%;
     }

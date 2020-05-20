@@ -1,6 +1,4 @@
-import React, {
-    Component
-} from 'react';
+import React, { Component } from 'react';
 import DirectoryList from '../components/Directory/DirectoryList';
 import SearchBar from '../components/SearchBar';
 import SearchFilters from '../components/Directory/SearchFilters';
@@ -72,7 +70,7 @@ class Directory extends Component {
         return (<div >
             <EmployeeModal show={this.props.show} hide={this.props.hide} priority={this.state.priority}
                 name={this.state.name} position={this.state.position} email={this.state.email} phone={this.state.phone}
-                extension={this.state.extension} mobile={this.state.mobile} manager={this.state.manager} url={this.state.url}/>
+                extension={this.state.extension} mobile={this.state.mobile} manager={this.state.manager} url={this.state.url} />
 
             <SearchBar placeholder="Search Name..."
                 onKeyUp={this.onKeyUp}
