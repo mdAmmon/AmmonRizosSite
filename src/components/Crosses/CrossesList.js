@@ -9,7 +9,7 @@ class CrossesList extends Component {
                 {
                     crosses.slice(itemsPerPage * (currentPage - 1), itemsPerPage * (currentPage)).map(cross => {
                         return (
-                            <tr key={cross.COMPETITOR_PART+","+cross.GENERIC}>
+                            <tr id={cross.CROSS_ID} key={cross.COMPETITOR_PART+","+cross.GENERIC}>
                                 <td>{cross.COMPETITOR}</td>
                                 <td>{cross.COMPETITOR_PART}</td>
                                 <td>{cross.BRAND}</td>
