@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "07216f49d09bc61d764d60bb053cff82",
+    "revision": "50301ff01ea0d22eb6669b242ec04cef",
     "url": "/AmmonRizosSite/index.html"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/css/5.5c6e873d.chunk.css"
   },
   {
-    "revision": "e7b7c1a3c9412b708fe7",
-    "url": "/AmmonRizosSite/static/css/main.0b32a58b.chunk.css"
+    "revision": "6d2e842202936875d7bf",
+    "url": "/AmmonRizosSite/static/css/main.7781de85.chunk.css"
   },
   {
     "revision": "f254b4b5b688d163633f",
@@ -48,7 +48,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/js/6.83ef30af.chunk.js"
   },
   {
-    "revision": "e7b7c1a3c9412b708fe7",
+    "revision": "6d2e842202936875d7bf",
     "url": "/AmmonRizosSite/static/js/main.a33a2716.chunk.js"
   },
   {
