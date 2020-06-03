@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e9dce96395794f5c8b97e800748260e",
+    "revision": "8ebdbcc891aeb75c852a65abfbccc6db",
     "url": "/AmmonRizosSite/index.html"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/css/5.5c6e873d.chunk.css"
   },
   {
-    "revision": "4fba5198f35003d499ed",
+    "revision": "55433f1ba854698d17af",
     "url": "/AmmonRizosSite/static/css/main.520b175c.chunk.css"
   },
   {
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/js/6.83ef30af.chunk.js"
   },
   {
-    "revision": "4fba5198f35003d499ed",
-    "url": "/AmmonRizosSite/static/js/main.d674b6d0.chunk.js"
+    "revision": "55433f1ba854698d17af",
+    "url": "/AmmonRizosSite/static/js/main.5ea0e639.chunk.js"
   },
   {
     "revision": "eba0e913969f59c000da",
@@ -60,11 +60,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/media/logo_On.a330b6e5.png"
   },
   {
-    "revision": "a5688a0baa76ba4e39329e3f3edf5dbb",
-    "url": "/AmmonRizosSite/static/media/mexico-flag.a5688a0b.svg"
+    "revision": "c7b3942d291c79c42b5cfd5865f9fba0",
+    "url": "/AmmonRizosSite/static/media/mexico-flag.c7b3942d.svg"
   },
   {
-    "revision": "2c35bd94daf38f8f26243c29e0809d49",
-    "url": "/AmmonRizosSite/static/media/united-states-of-america-flag.2c35bd94.svg"
+    "revision": "0ea087428ffb06c09a0900f474e0de88",
+    "url": "/AmmonRizosSite/static/media/united-states-of-america-flag.0ea08742.svg"
   }
 ]);
