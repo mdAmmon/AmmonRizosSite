@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/AmmonRizosSite/precache-manifest.fa837aa91da2e3fc33d95897e46a1358.js"
+  "/AmmonRizosSite/precache-manifest.52f101c952d5e86f92e2b016ecddacdd.js"
 );
 
 self.addEventListener('message', (event) => {
