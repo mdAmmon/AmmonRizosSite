@@ -6,7 +6,7 @@
     "node": "^12.13.0",
     "npm": "^6.12.0"
   },
-  "homepage": "http://mdAmmon.github.io/AmmonRizosSite",
+  "homepage": "http://mdAmmon.github.io/AmmonRizosSite/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

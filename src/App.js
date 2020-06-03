@@ -62,7 +62,6 @@ class App extends Component {
     logout = () => {
         const { cookies } = this.props;
 
-
         fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
             method: 'POST',
         }).then(res => {
@@ -114,7 +113,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router >
+            <Router basename={process.env.PUBLIC_URL} >
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <ToggleNavButton />
                 <div id="content">
@@ -166,8 +165,6 @@ class App extends Component {
                                 showModal={() => this.handleModalShow("crossModal")}
                                 hide={() => { this.handleModalHide("crossModal") }}
                                 show={this.state.modalStates.crossModal} />
-
-
                         }} />
                         <Route path="/diagrams" component={Diagrams} />
                     </Switch>

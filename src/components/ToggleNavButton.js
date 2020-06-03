@@ -5,7 +5,6 @@ class ToggleNavButton extends Component {
         const navbar = document.getElementById("navbar");
         const content = document.getElementById("content");
         
-        
         navbar.classList.toggle('active');
         content.classList.toggle('active');
         document.querySelector('body').classList.toggle('active');
@@ -14,7 +13,7 @@ class ToggleNavButton extends Component {
 
     render() {
         return (
-            <button id="navbarCollapse" onClick={this.toggleNav} type="button" className="btn bg-white rounded-pill shadow-sm">
+            <button id="navbarCollapse" aria-label="Toggle Nav" onClick={this.toggleNav} type="button" className="btn bg-white rounded-pill shadow-sm">
                 <i className="fa fa-bars"></i>
             </button>
         );
