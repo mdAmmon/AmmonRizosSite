@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/AmmonRizosSite/static/css/main.7781de85.chunk.css",
+    "main.css": "/AmmonRizosSite/static/css/main.5f86e704.chunk.css",
     "main.js": "/AmmonRizosSite/static/js/main.a33a2716.chunk.js",
     "main.js.map": "/AmmonRizosSite/static/js/main.a33a2716.chunk.js.map",
     "runtime-main.js": "/AmmonRizosSite/static/js/runtime-main.7b9003a4.js",
@@ -20,13 +20,13 @@
     "static/js/6.83ef30af.chunk.js": "/AmmonRizosSite/static/js/6.83ef30af.chunk.js",
     "static/js/6.83ef30af.chunk.js.map": "/AmmonRizosSite/static/js/6.83ef30af.chunk.js.map",
     "index.html": "/AmmonRizosSite/index.html",
-    "precache-manifest.3705a67c5c87b345b163168504e234ad.js": "/AmmonRizosSite/precache-manifest.3705a67c5c87b345b163168504e234ad.js",
+    "precache-manifest.b0f785040b88173a4713d2a500ea9995.js": "/AmmonRizosSite/precache-manifest.b0f785040b88173a4713d2a500ea9995.js",
     "service-worker.js": "/AmmonRizosSite/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css.map",
     "static/css/3.f62d1f00.chunk.css.map": "/AmmonRizosSite/static/css/3.f62d1f00.chunk.css.map",
     "static/css/4.9d8601a7.chunk.css.map": "/AmmonRizosSite/static/css/4.9d8601a7.chunk.css.map",
     "static/css/5.5c6e873d.chunk.css.map": "/AmmonRizosSite/static/css/5.5c6e873d.chunk.css.map",
-    "static/css/main.7781de85.chunk.css.map": "/AmmonRizosSite/static/css/main.7781de85.chunk.css.map",
+    "static/css/main.5f86e704.chunk.css.map": "/AmmonRizosSite/static/css/main.5f86e704.chunk.css.map",
     "static/js/2.e5ad2a17.chunk.js.LICENSE.txt": "/AmmonRizosSite/static/js/2.e5ad2a17.chunk.js.LICENSE.txt",
     "static/media/logo_On.png": "/AmmonRizosSite/static/media/logo_On.a330b6e5.png",
     "static/media/mexico-flag.svg": "/AmmonRizosSite/static/media/mexico-flag.c7b3942d.svg",
@@ -36,7 +36,7 @@
     "static/js/runtime-main.7b9003a4.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.e5ad2a17.chunk.js",
-    "static/css/main.7781de85.chunk.css",
+    "static/css/main.5f86e704.chunk.css",
     "static/js/main.a33a2716.chunk.js"
   ]
 }
