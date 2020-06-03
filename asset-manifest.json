@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/AmmonRizosSite/static/css/main.f87eeb37.chunk.css",
+    "main.js": "/AmmonRizosSite/static/js/main.8e511fa3.chunk.js",
+    "main.js.map": "/AmmonRizosSite/static/js/main.8e511fa3.chunk.js.map",
+    "runtime-main.js": "/AmmonRizosSite/static/js/runtime-main.75c4a95b.js",
+    "runtime-main.js.map": "/AmmonRizosSite/static/js/runtime-main.75c4a95b.js.map",
+    "static/css/2.af3c1da9.chunk.css": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css",
+    "static/js/2.b8489f41.chunk.js": "/AmmonRizosSite/static/js/2.b8489f41.chunk.js",
+    "static/js/2.b8489f41.chunk.js.map": "/AmmonRizosSite/static/js/2.b8489f41.chunk.js.map",
+    "index.html": "/AmmonRizosSite/index.html",
+    "precache-manifest.0698abdaddab35c58e42bb92b6dbc326.js": "/AmmonRizosSite/precache-manifest.0698abdaddab35c58e42bb92b6dbc326.js",
+    "service-worker.js": "/AmmonRizosSite/service-worker.js",
+    "static/css/2.af3c1da9.chunk.css.map": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css.map",
+    "static/css/main.f87eeb37.chunk.css.map": "/AmmonRizosSite/static/css/main.f87eeb37.chunk.css.map",
+    "static/js/2.b8489f41.chunk.js.LICENSE.txt": "/AmmonRizosSite/static/js/2.b8489f41.chunk.js.LICENSE.txt",
+    "static/media/arLogo.png": "/AmmonRizosSite/static/media/arLogo.bc927d2a.png",
+    "static/media/logo_On.png": "/AmmonRizosSite/static/media/logo_On.de95dec3.png",
+    "static/media/mexico-flag.svg": "/AmmonRizosSite/static/media/mexico-flag.a5688a0b.svg",
+    "static/media/united-states-of-america-flag.svg": "/AmmonRizosSite/static/media/united-states-of-america-flag.2c35bd94.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.75c4a95b.js",
+    "static/css/2.af3c1da9.chunk.css",
+    "static/js/2.b8489f41.chunk.js",
+    "static/css/main.f87eeb37.chunk.css",
+    "static/js/main.8e511fa3.chunk.js"
+  ]
+}
