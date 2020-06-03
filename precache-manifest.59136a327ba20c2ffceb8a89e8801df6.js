@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97bcf6096be0f08ce3a10b224beccf2a",
+    "revision": "7e9dce96395794f5c8b97e800748260e",
     "url": "/AmmonRizosSite/index.html"
   },
   {
@@ -20,7 +20,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/css/5.5c6e873d.chunk.css"
   },
   {
-    "revision": "cce5b2ce812e78344637",
+    "revision": "4fba5198f35003d499ed",
     "url": "/AmmonRizosSite/static/css/main.520b175c.chunk.css"
   },
   {
@@ -48,20 +48,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/js/6.83ef30af.chunk.js"
   },
   {
-    "revision": "cce5b2ce812e78344637",
-    "url": "/AmmonRizosSite/static/js/main.88aadc4e.chunk.js"
+    "revision": "4fba5198f35003d499ed",
+    "url": "/AmmonRizosSite/static/js/main.d674b6d0.chunk.js"
   },
   {
     "revision": "eba0e913969f59c000da",
     "url": "/AmmonRizosSite/static/js/runtime-main.7b9003a4.js"
   },
   {
-    "revision": "bc927d2a525d448f00f01d99aee98a3f",
-    "url": "/AmmonRizosSite/static/media/arLogo.bc927d2a.png"
-  },
-  {
-    "revision": "de95dec3752eb382a6c21d39845ba370",
-    "url": "/AmmonRizosSite/static/media/logo_On.de95dec3.png"
+    "revision": "a330b6e5f0d00ba3dbd5b4bef6aa5e37",
+    "url": "/AmmonRizosSite/static/media/logo_On.a330b6e5.png"
   },
   {
     "revision": "a5688a0baa76ba4e39329e3f3edf5dbb",
