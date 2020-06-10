@@ -6,10 +6,10 @@ class ProductOfMonth extends Component {
         return (
             <div id="productOfTheMonth" style={{ backgroundColor: this.props.backgroundColor}} className="shadowing roundEdges">
                 <div id="productInfo">
-                    <h4 id="principal">{this.props.principal}</h4>
+                    <h1 id="principal">{this.props.principal}</h1>
                     <img src={require(`../../img/principals/${this.props.img}`)} id="productImage" alt="ON Semi" />
 
-                    <h4>{this.props.productInfo}</h4>
+                    <h1>{this.props.productInfo}</h1>
                 </div>
 
                 <div id="productLabel">

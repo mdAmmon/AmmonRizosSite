@@ -21,14 +21,15 @@ class InsertCrossModal extends React.Component {
 
     componentDidMount() {
         let comps, mfgs;
-        fetch("https://arizoslocal.herokuapp.com/includes/getCompetitors.php")
+        // https://arizoslocal.herokuapp.com/includes/getCompetitors.php
+        fetch("http://localhost:3001/competitors")
             .then(res => res.json())
             .then(res => {
                 comps = res;
                 this.setState({ competitors: comps, selectedCompetitor: comps[0].competitor_id });
             });
-
-        fetch("https://arizoslocal.herokuapp.com/includes/getPrincipals.php")
+        // https://arizoslocal.herokuapp.com/includes/getPrincipals.php
+        fetch("http://localhost:3001/principals")
             .then(res => res.json())
             .then(res => {
                 mfgs = res;
@@ -62,20 +63,35 @@ class InsertCrossModal extends React.Component {
             return;
         }
 
+        const {selectedCompetitor, competitorPart, selectedPrincipal, principalPart, direct, comments} = this.state;
 
-        let body = new FormData();
+        let body = {
+            comp_id: selectedCompetitor,
+            comp_model: competitorPart,
+            brnd_id: selectedPrincipal,
+            brnd_model: principalPart,
+            direct: direct,
+            comments: comments
+        }
 
-        body.append('comp_id', this.state.selectedCompetitor);
-        body.append('comp_model', this.state.competitorPart);
-        body.append('brnd_id', this.state.selectedPrincipal);
-        body.append('brnd_model', this.state.principalPart);
-        body.append('direct', this.state.direct);
-        body.append('comments', this.state.comments);
+        console.log(JSON.stringify(body));
+        // let body = new FormData();
 
+        // body.append('comp_id', this.state.selectedCompetitor);
+        // body.append('comp_model', this.state.competitorPart);
+        // body.append('brnd_id', this.state.selectedPrincipal);
+        // body.append('brnd_model', this.state.principalPart);
+        // body.append('direct', this.state.direct);
+        // body.append('comments', this.state.comments);
 
-        fetch("https://arizoslocal.herokuapp.com/includes/insertCrossP.php", {
+        // "https://arizoslocal.herokuapp.com/includes/insertCrossP.php"
+        fetch("http://localhost:3001/crosses", {
+            headers: {
+                'Content-Type': 'application/json'
+            },
             method: "POST",
-            body: body
+            body: JSON.stringify(body)
+
         })
             .then(res => res.json())
             .catch(error => alert("something went wrong. :("))

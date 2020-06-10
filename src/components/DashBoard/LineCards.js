@@ -7,7 +7,7 @@ class LineCards extends Component {
     render() {
         return (
             <div id={this.props.id} className="shadowing roundEdges dashboardBox">
-                <h6>Line Cards</h6>
+                <h1>Line Cards</h1>
                 <a href="#"><img id="Mexico" className="roundEdges" src={Mexico} alt="Mexico" /></a>
                 <a href="#"><img id="US" className="roundEdges" src={US} alt="United States" /></a>
             </div>

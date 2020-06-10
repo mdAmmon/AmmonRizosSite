@@ -26,15 +26,21 @@ class LoginForm extends React.Component {
             return;
         }
 
-        let body = new FormData();
+        // let body = new FormData();
 
-        body.append('usr', this.state.usr);
-        body.append('pwd', this.state.pwd);
+        // body.append('usr', this.state.usr);
+        // body.append('pwd', this.state.pwd);
 
+        let body = {
+            usr: this.state.usr,
+            pwd: this.state.pwd
+        }
 
-        fetch('https://arizoslocal.herokuapp.com/includes/loginP.php', {
+        // 'https://arizoslocal.herokuapp.com/includes/loginP.php'
+        fetch('http://localhost:3001/session/login', {
+            headers: {'Content-Type': 'application/json'},
             method: 'POST',
-            body: body
+            body: JSON.stringify(body)
         })
             .then(res =>res.json())
             .then(res => {

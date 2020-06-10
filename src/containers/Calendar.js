@@ -54,16 +54,16 @@ class Calendar extends Component {
     }
 
     deleteEvent = (id) => {
-        let body = new FormData();
+        // let body = new FormData();
 
-        body.append('id', id);
+        // body.append('id', id);
 
-        fetch("https://arizoslocal.herokuapp.com/includes/calendarP.php", {
-            method: "POST",
-            body: body
+        // https://arizoslocal.herokuapp.com/includes/calendarP.php
+        fetch(`http://localhost:3001/calendar/${id}`, {
+            method: "DELETE" //,
+            // body: body
         })
             .then(res => res.json())
-            .catch(error => alert("something went wrong. :("))
             .then(response => {
                 if (response) {
                     alert(response);
@@ -71,13 +71,15 @@ class Calendar extends Component {
                     this.props.goToToday();
                     this.setState({updatePage: !this.state.updatePage});
                 }
-            });
+            })
+            .catch(error => alert("something went wrong. :("));
 
     }
 
 
     addEvent = (object) => {
-        const url = "https://arizoslocal.herokuapp.com/includes/calendarP.php";
+        // https://arizoslocal.herokuapp.com/includes/calendarP.php
+        const url = "http://localhost:3001/calendar";
 
         fetch(url, {
             method: "POST",

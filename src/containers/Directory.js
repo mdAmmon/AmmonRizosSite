@@ -57,7 +57,8 @@ class Directory extends Component {
     }
 
     loadEmployees = () => {
-        fetch('https://arizoslocal.herokuapp.com/includes/directory.php?filter=' + this.state.filter + '&input=' + this.state.input, {
+        // https://arizoslocal.herokuapp.com/includes/directory.php
+        fetch('http://localhost:3001/directory?filter=' + this.state.filter + '&input=' + this.state.input, {
             method: 'GET',
         })
             .then(res => res.json())

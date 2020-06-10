@@ -46,7 +46,8 @@ class Crosses extends Component {
     }
 
     loadCrosses = () => {
-        let url = "https://arizoslocal.herokuapp.com/includes/crosses.php";
+        //https://arizoslocal.herokuapp.com/includes/crosses.php
+        let url = "http://localhost:3001/crosses";
         url += (this.state.input !== "") ? "?input=" + this.state.input : "";
         fetch(url, {
             method: 'GET',

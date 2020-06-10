@@ -61,10 +61,11 @@
     margin-left: 13%;
 }
 
-#lineCards h6 {
+#lineCards h1 {
     margin: 3% 0 0% 5%;
     height: 20%;
     font-size: 18px;
+    font-weight: 500;
 }
 
 .flexContainerRow {
