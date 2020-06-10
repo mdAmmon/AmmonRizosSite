@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { withCookies } from 'react-cookie';
-
 import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home';
-import Directory from './containers/Directory';
-import Calendar from './containers/Calendar';
-import Crosses from './containers/Crosses';
-import Diagrams from './containers/Diagrams';
 import ToggleNavButton from './components/ToggleNavButton.js';
 import LoginForm from './components/Navigation/LoginForm';
 
+
+//Should look into this
 import "bootstrap/dist/css/bootstrap.min.css";
+
+
+const Directory = React.lazy(() => import('./containers/Directory'));
+const Calendar = React.lazy(() => import('./containers/Calendar'));
+const Crosses = React.lazy(() => import('./containers/Crosses'));
+const Diagrams = React.lazy(() => import('./containers/Diagrams'));
 
 class App extends Component {
 
@@ -62,15 +65,15 @@ class App extends Component {
     logout = () => {
         const { cookies } = this.props;
 
-        fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
-            method: 'POST',
-        }).then(res => {
+        // fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
+        //     method: 'POST',
+        // }).then(res => {
             cookies.remove('name');
             alert("Godspeed my friend");
             let modals = Object.assign({}, this.state.modalStates);
             modals.crossModal = false;
             this.setState({ isLogged: false, modalStates: modals });
-        })
+        // })
         return this.state.isLogged;
     }
 
@@ -119,56 +122,57 @@ class App extends Component {
                 <div id="content">
                     <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.modalStates.loginModal}
                         hide={() => { this.handleModalHide("loginModal") }} />
-                    <Switch>
-                        <Route exact path="/" render={() => {
-                            return <Home
-                                cookies={this.props.cookies}
-                                day={this.state.day} month={this.state.month} year={this.state.year}
-                                today={this.state.today}
-                                goToToday={this.goToToday}
-                                goToNextMonth={this.goToNextMonth}
-                                goToPreviousMonth={this.goToPreviousMonth}
-                            />
+                    <Suspense fallback={<div>Loading...</div>}>
+                        <Switch>
+                            <Route exact path="/" render={() => {
+                                return <Home
+                                    cookies={this.props.cookies}
+                                    day={this.state.day} month={this.state.month} year={this.state.year}
+                                    today={this.state.today}
+                                    goToToday={this.goToToday}
+                                    goToNextMonth={this.goToNextMonth}
+                                    goToPreviousMonth={this.goToPreviousMonth}
+                                />
 
-                        }} />
+                            }} />
 
-                        <Route path="/directory" render={() => {
-                            return <Directory
-                                showModal={() => this.handleModalShow("employeeModal")}
-                                hide={() => { this.handleModalHide("employeeModal") }}
-                                show={this.state.modalStates.employeeModal}
-                            />
-                        }} />
+                            <Route path="/directory" render={() => {
+                                return <Directory
+                                    showModal={() => this.handleModalShow("employeeModal")}
+                                    hide={() => { this.handleModalHide("employeeModal") }}
+                                    show={this.state.modalStates.employeeModal}
+                                />
+                            }} />
 
-                        <Route path="/calendar" render={() => {
-                            return <Calendar
-                                isLogged={this.state.isLogged}
-                                showModal={() => this.handleModalShow("calendarModal")}
-                                hide={() => this.handleModalHide("calendarModal")}
-                                show={this.state.modalStates.calendarModal}
-                                showModalAddEvent={() => this.handleModalShow("addEventModal")}
-                                hideAddEvent={() => { this.handleModalHide("addEventModal") }}
-                                showAddEvent={this.state.modalStates.addEventModal}
-                                day={this.state.day} month={this.state.month} year={this.state.year}
-                                today={this.state.today}
-                                goToToday={this.goToToday}
-                                goToNextMonth={this.goToNextMonth}
-                                goToPreviousMonth={this.goToPreviousMonth}
-                                changeMonth={this.changeMonth}
-                                changeYear={this.changeYear}
-                            />
-                        }} />
+                            <Route path="/calendar" render={() => {
+                                return <Calendar
+                                    isLogged={this.state.isLogged}
+                                    showModal={() => this.handleModalShow("calendarModal")}
+                                    hide={() => this.handleModalHide("calendarModal")}
+                                    show={this.state.modalStates.calendarModal}
+                                    showModalAddEvent={() => this.handleModalShow("addEventModal")}
+                                    hideAddEvent={() => { this.handleModalHide("addEventModal") }}
+                                    showAddEvent={this.state.modalStates.addEventModal}
+                                    day={this.state.day} month={this.state.month} year={this.state.year}
+                                    today={this.state.today}
+                                    goToToday={this.goToToday}
+                                    goToNextMonth={this.goToNextMonth}
+                                    goToPreviousMonth={this.goToPreviousMonth}
+                                    changeMonth={this.changeMonth}
+                                    changeYear={this.changeYear}
+                                />
+                            }} />
 
-                        <Route path="/crosses" render={() => {
-                            return <Crosses
-                                isLogged={this.state.isLogged}
-                                showModal={() => this.handleModalShow("crossModal")}
-                                hide={() => { this.handleModalHide("crossModal") }}
-                                show={this.state.modalStates.crossModal} />
-                        }} />
-                        <Route path="/diagrams" component={Diagrams} />
-                    </Switch>
-
+                            <Route path="/crosses" render={() => {
+                                return <Crosses
+                                    isLogged={this.state.isLogged}
+                                    showModal={() => this.handleModalShow("crossModal")}
+                                    hide={() => { this.handleModalHide("crossModal") }}
+                                    show={this.state.modalStates.crossModal} />
+                            }} />
+                            <Route path="/diagrams" component={Diagrams} />
+                        </Switch>
+                    </Suspense>
                 </div>
             </Router >
         );
