@@ -33,7 +33,7 @@
 }
 
 
-#productInfo h4 {
+#productInfo h1 {
     color: #f8f8f8;
     font-size: 14px;
     display: inline-block;
@@ -45,7 +45,7 @@
 }
 
 
-#productInfo h4:not(#principal) {
+#productInfo h1:not(#principal) {
     width: 100%;
 }
 
@@ -90,13 +90,12 @@
     }
     
     
-    #productInfo h4 {
-
-        font-size: 20px;
+    #productInfo h1 {
+        font-size: 20px !important;
     }
     
     
-    #productInfo h4:not(#principal) {
+    #productInfo h1:not(#principal) {
         width: 100%;
     }
     
