@@ -15,6 +15,8 @@ const Directory = React.lazy(() => import('./containers/Directory'));
 const Calendar = React.lazy(() => import('./containers/Calendar'));
 const Crosses = React.lazy(() => import('./containers/Crosses'));
 const Diagrams = React.lazy(() => import('./containers/Diagrams'));
+const Test = React.lazy(() => import('./components/Diagrams/Test'));
+
 
 class App extends Component {
 
@@ -68,11 +70,11 @@ class App extends Component {
         // fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
         //     method: 'POST',
         // }).then(res => {
-            cookies.remove('name');
-            alert("Godspeed my friend");
-            let modals = Object.assign({}, this.state.modalStates);
-            modals.crossModal = false;
-            this.setState({ isLogged: false, modalStates: modals });
+        cookies.remove('name');
+        alert("Godspeed my friend");
+        let modals = Object.assign({}, this.state.modalStates);
+        modals.crossModal = false;
+        this.setState({ isLogged: false, modalStates: modals });
         // })
         return this.state.isLogged;
     }
@@ -170,7 +172,9 @@ class App extends Component {
                                     hide={() => { this.handleModalHide("crossModal") }}
                                     show={this.state.modalStates.crossModal} />
                             }} />
-                            <Route path="/diagrams" component={Diagrams} />
+                            <Route exact path="/diagrams" component={Diagrams} />
+                            <Route path="/diagrams/automotive/:test" component={Test} />
+
                         </Switch>
                     </Suspense>
                 </div>

@@ -7,7 +7,7 @@ class BoxTitle extends Component {
 
     render() {
         return (
-            <div id={this.props.id} className="shadowing roundEdges boxTitle" style={{backgroundImage: `url(${this.props.imageUrl})`}}>
+            <div id={this.props.id} className="shadowing roundEdges boxTitle" style={{backgroundImage: `url(${process.env.PUBLIC_URL+this.props.imageUrl})`}}>
                 <div>
                     {this.props.children}
                 </div>
