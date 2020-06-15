@@ -59,7 +59,7 @@ class Calendar extends Component {
         // body.append('id', id);
 
         // https://arizoslocal.herokuapp.com/includes/calendarP.php
-        fetch(`http://localhost:3001/calendar/${id}`, {
+        fetch(`https://arback-node.herokuapp.com/calendar/${id}`, {
             method: "DELETE" //,
             // body: body
         })
@@ -79,7 +79,7 @@ class Calendar extends Component {
 
     addEvent = (object) => {
         // https://arizoslocal.herokuapp.com/includes/calendarP.php
-        const url = "http://localhost:3001/calendar";
+        const url = "https://arback-node.herokuapp.com/calendar";
 
         fetch(url, {
             method: "POST",

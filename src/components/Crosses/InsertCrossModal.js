@@ -22,14 +22,14 @@ class InsertCrossModal extends React.Component {
     componentDidMount() {
         let comps, mfgs;
         // https://arizoslocal.herokuapp.com/includes/getCompetitors.php
-        fetch("http://localhost:3001/competitors")
+        fetch("https://arback-node.herokuapp.com/competitors")
             .then(res => res.json())
             .then(res => {
                 comps = res;
                 this.setState({ competitors: comps, selectedCompetitor: comps[0].competitor_id });
             });
         // https://arizoslocal.herokuapp.com/includes/getPrincipals.php
-        fetch("http://localhost:3001/principals")
+        fetch("https://arback-node.herokuapp.com/principals")
             .then(res => res.json())
             .then(res => {
                 mfgs = res;
@@ -85,7 +85,7 @@ class InsertCrossModal extends React.Component {
         // body.append('comments', this.state.comments);
 
         // "https://arizoslocal.herokuapp.com/includes/insertCrossP.php"
-        fetch("http://localhost:3001/crosses", {
+        fetch("https://arback-node.herokuapp.com/crosses", {
             headers: {
                 'Content-Type': 'application/json'
             },

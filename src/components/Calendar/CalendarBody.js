@@ -33,7 +33,7 @@ class CalendarBody extends Component {
 
     loadEvents() {
         // https://arizoslocal.herokuapp.com/includes/calendarP.php
-        let url = "http://localhost:3001/calendar/?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
+        let url = "https://arback-node.herokuapp.com/calendar/?month=" + pad(this.props.month + 1, 2) + "&year=" + this.props.year;
         fetch(url).then(res => res.json()).then(res => this.setState({ events: res }));
     }
 

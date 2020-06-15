@@ -37,7 +37,7 @@ class LoginForm extends React.Component {
         }
 
         // 'https://arizoslocal.herokuapp.com/includes/loginP.php'
-        fetch('http://localhost:3001/session/login', {
+        fetch('https://arback-node.herokuapp.com/session/login', {
             headers: {'Content-Type': 'application/json'},
             method: 'POST',
             body: JSON.stringify(body)
