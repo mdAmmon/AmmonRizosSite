@@ -55,7 +55,6 @@ class Crosses extends Component {
             .then(res => res.json())
             .then(res => {
                 this.setState({ crosses: res, input: "", currentPage: 1 });
-                document.getElementById("searchCrossInput").value = "";
                 // console.log(res);
             });
     }
@@ -68,7 +67,8 @@ class Crosses extends Component {
 
                 <SearchBar placeholder="Search Competitor's Part..."
                     id="searchCrossInput"
-                    onKeyUp={this.updateInput}>
+                    onKeyUp={this.updateInput}
+                    value={this.state.input}>
                     <button type="button" className="btn" onClick={this.loadCrosses} id="searchButton">Search</button>
                     <button type="button" className="btn" onClick={() => { this.setState({ input: "" }); this.loadCrosses() }} id="fullSearchButton">Full List</button>
                 </SearchBar>
