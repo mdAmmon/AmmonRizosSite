@@ -9,13 +9,14 @@ import LoginForm from './components/Navigation/LoginForm';
 
 //Should look into this
 import "bootstrap/dist/css/bootstrap.min.css";
+import ApplicationSubFields from './components/Diagrams/ApplicationSubFields';
 
 
 const Directory = React.lazy(() => import('./containers/Directory'));
 const Calendar = React.lazy(() => import('./containers/Calendar'));
 const Crosses = React.lazy(() => import('./containers/Crosses'));
 const Diagrams = React.lazy(() => import('./containers/Diagrams'));
-const Test = React.lazy(() => import('./components/Diagrams/Test'));
+const Diagram = React.lazy(() => import('./components/Diagrams/Diagram'));
 
 
 class App extends Component {
@@ -173,8 +174,8 @@ class App extends Component {
                                     show={this.state.modalStates.crossModal} />
                             }} />
                             <Route exact path="/diagrams" component={Diagrams} />
-                            <Route path="/diagrams/automotive/:test" component={Test} />
-
+                            <Route path="/diagrams/:field/:diagram" component={Diagram} />
+                            <Route path="/diagrams/:field" component={ApplicationSubFields} />
                         </Switch>
                     </Suspense>
                 </div>
