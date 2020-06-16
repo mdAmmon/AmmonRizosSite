@@ -7,7 +7,7 @@ h1 {
     font-weight: bolder;
 }
 
-#main-block-diagrams{
+#main-block-diagrams, #block-diagrams{
     width: 65%;
     height: 80%;
     margin: 2% auto;
@@ -19,14 +19,35 @@ h1 {
     flex-wrap: wrap;
 }
 
+
+
+
 section > *{
     background-color: #FFF;
-    width: 45%;
-    height: 30%;
     color: #383838;
     border-radius: 2%;
     display: flex;
     align-items: center;
+    margin-bottom: 5%;
+}
+
+
+section.subfields > *{
+    flex-basis: 28%;
+    height: 100px;
+}
+
+section.subfields > * h2 {
+    text-align: center;
+    margin: auto;
+    width: 90%;
+    font-weight: bolder;
+    font-size: 1.3em;
+}
+
+section.fields > *{
+    width: 45%;
+    height: 30%;
 }
 
 section > * h2 {
@@ -46,26 +67,36 @@ section > *:hover{
 section > *:hover h2 {
     color: white;
 }
-
+/* 
 section > *:nth-child(n + 3){
     margin-top: 10%;
-}
+} */
 
 @media (max-width: 770px) {
 
-    section > *{
-        width: 60%;
+    section.fields > *{
+        width: 65%;
         height: 20%;
         margin: 0;
     }
 
-    section > *:nth-child(n + 3){
-        margin-top: 0;
+    section.subfields > *{
+        width: 65%;
+        /* margin: 0; */
+        flex-basis: 40%;
+
     }
 
-    #main-block-diagrams{
+    #main-block-diagrams, #block-diagrams{ 
         flex-direction: column;
         margin-top: 5%;
+        height: 80%;
+    }
+
+    #block-diagrams{ 
+        flex-direction: row;
+        margin-top: 5%;
+        height: 80%;
     }
 
     
