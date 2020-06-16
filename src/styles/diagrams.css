@@ -70,3 +70,9 @@ section > *:nth-child(n + 3){
 
     
 }
+
+#svgDiagram {
+    margin: 5% auto;
+    display: block;
+    width: 75%;
+}
