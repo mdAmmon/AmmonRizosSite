@@ -36,7 +36,7 @@ class EmbeddedCalendar extends Component {
                         </tr>
                     </thead>
 
-                    <CalendarBody updatePage={false} onClickFunc={this.onClickFunc} year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.showEventsMark} />
+                    <CalendarBody updatePage={true} onClickFunc={this.onClickFunc} year={this.props.year} month={this.props.month} today={this.props.today} printEvents={this.showEventsMark} />
 
                 </table>
             </div>
