@@ -12,9 +12,9 @@ const applicationFields = {
         "Automotive HVAC",
         "Front Lighting"
     ],
-    dcdc: [],
-    motorcontrol: [],
-    ledlighting: []
+    'DC-DC': [],
+    'Motor Control': [],
+    'Led Lighting': []
 
 }
 
