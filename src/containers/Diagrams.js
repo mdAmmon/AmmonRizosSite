@@ -18,16 +18,16 @@ class Diagrams extends Component {
                             <h2>AUTOMOTIVE</h2>
                     </Link>
 
-                    <Link to='/diagrams/dc-dc' className="shadowing">
+                    <Link to='/diagrams/dcdc' className="shadowing">
                             <h2>DC-DC</h2>
                     </Link>
 
-                    <Link to='/diagrams/motor-control' className="shadowing">
+                    <Link to='/diagrams/motorcontrol' className="shadowing">
                             <h2>MOTOR CONTROL</h2>
                     </Link>
 
-                    <Link to='/diagrams/led-lightning' className="shadowing">
-                            <h2>LED LIGHTNING</h2>
+                    <Link to='/diagrams/ledlighting' className="shadowing">
+                            <h2>LED LIGHTING</h2>
                     </Link>
 
                 </section>
