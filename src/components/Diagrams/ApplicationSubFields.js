@@ -2,14 +2,17 @@ import React from 'react'
 import applicationFields from './apps-block-diagrams-list';
 import { Link, withRouter } from "react-router-dom";
 
+import '../../styles/diagrams.css';
+
 const ApplicationSubFields = ({ match }) => {
     const subfields = applicationFields[match.params.field]
+    const field = match.params.field.charAt(0).toUpperCase() + match.params.field.slice(1)
     return (
-        <div>
-            <h1>{match.params.field}</h1>
-            <section id="block-diagrams" >
+        <div style={{height: '90%'}}>
+            <h1>{field}</h1>
+            <section id="block-diagrams" className="subfields">
                 {(subfields) ? subfields.map((subfield) => {
-                    return (<Link to={`/diagrams/${match.params.field}/${subfield}`} className="shadowing">
+                    return (<Link key={subfield} to={`/diagrams/${match.params.field}/${subfield}`} className="shadowing">
                         <h2>{subfield}</h2>
                     </Link>)
                 }) : ""}
