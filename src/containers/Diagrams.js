@@ -13,20 +13,20 @@ class Diagrams extends Component {
         return (
             <div style={{ height: '90%', width: '95%', margin: '0 auto' }}>
                 <h1>Applications Block Diagrams</h1>
-                <section id="main-block-diagrams" >
+                <section id="main-block-diagrams" className="fields">
                     <Link to="/diagrams/automotive" className="shadowing">
                             <h2>AUTOMOTIVE</h2>
                     </Link>
 
-                    <Link to='/diagrams/dcdc' className="shadowing">
+                    <Link to='/diagrams/DC-DC' className="shadowing">
                             <h2>DC-DC</h2>
                     </Link>
 
-                    <Link to='/diagrams/motorcontrol' className="shadowing">
+                    <Link to='/diagrams/Motor Control' className="shadowing">
                             <h2>MOTOR CONTROL</h2>
                     </Link>
 
-                    <Link to='/diagrams/ledlighting' className="shadowing">
+                    <Link to='/diagrams/Led Lighting' className="shadowing">
                             <h2>LED LIGHTING</h2>
                     </Link>
 
