@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d0392746348fef9e6769fe21dfd48da0",
+    "revision": "d1b9108321770b8bf2fad80944db36c9",
     "url": "/AmmonRizosSite/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css"
   },
   {
-    "revision": "add6097036b334b643cc",
+    "revision": "96d56b9487d953c95e4c",
     "url": "/AmmonRizosSite/static/css/3.77133e30.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/css/5.114a5353.chunk.css"
   },
   {
-    "revision": "591c2406a2c08ee615ec",
-    "url": "/AmmonRizosSite/static/css/main.a9bf89b2.chunk.css"
+    "revision": "233fda4b1077e43771a9",
+    "url": "/AmmonRizosSite/static/css/main.2ca6bba8.chunk.css"
   },
   {
     "revision": "a93de2b62afeda14e3f2",
@@ -32,8 +32,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/js/2.de992117.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "add6097036b334b643cc",
-    "url": "/AmmonRizosSite/static/js/3.c5ef55b4.chunk.js"
+    "revision": "96d56b9487d953c95e4c",
+    "url": "/AmmonRizosSite/static/js/3.b4f62008.chunk.js"
   },
   {
     "revision": "b1a743b16da674c14f72",
@@ -52,12 +52,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/AmmonRizosSite/static/js/7.fe30e465.chunk.js"
   },
   {
-    "revision": "591c2406a2c08ee615ec",
+    "revision": "233fda4b1077e43771a9",
     "url": "/AmmonRizosSite/static/js/main.b8cc98f6.chunk.js"
   },
   {
-    "revision": "afaddd0637d0c23e24a8",
-    "url": "/AmmonRizosSite/static/js/runtime-main.521f377f.js"
+    "revision": "1de58e6531c876805ae5",
+    "url": "/AmmonRizosSite/static/js/runtime-main.6d877495.js"
   },
   {
     "revision": "f15cccb0b8f766b9d6990f1a250c508b",
