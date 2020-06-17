@@ -1,3 +1,656 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1237px" height="651px" viewBox="-0.5 -0.5 1237 651" content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2020-06-11T22:01:07.992Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&quot; etag=&quot;W39BjLd0c4CRzpJK7hN7&quot; version=&quot;13.2.3&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;RIbi7QDPcms-ajzvR4J6&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;"><defs/><g><path d="M 556 285 L 639.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 644.88 285 L 637.88 288.5 L 639.63 285 L 637.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 486 243.63 L 486 70" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 486 248.88 L 482.5 241.88 L 486 243.63 L 489.5 241.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 486 326.37 L 486 525" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 486 321.12 L 489.5 328.12 L 486 326.37 L 482.5 328.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="416" y="250" width="140" height="70" rx="10.5" ry="10.5" fill="#647687" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 285px; margin-left: 417px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Microcontroller</div></div></div></foreignObject><text x="486" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Microcontroller</text></switch></g><path d="M 562.37 560 L 607.63 560" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 557.12 560 L 564.12 556.5 L 562.37 560 L 564.12 563.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 612.88 560 L 605.88 563.5 L 607.63 560 L 605.88 556.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 409.63 560 L 365.37 560" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 414.88 560 L 407.88 563.5 L 409.63 560 L 407.88 556.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 360.12 560 L 367.12 556.5 L 365.37 560 L 367.12 563.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="416" y="525" width="140" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 560px; margin-left: 417px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Voltage<br />Regulation</div></div></div></foreignObject><text x="486" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Voltage...</text></switch></g><rect x="252" y="525" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 560px; margin-left: 253px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Power<br />Protection</div></div></div></foreignObject><text x="306" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Power...</text></switch></g><rect x="614" y="525" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 560px; margin-left: 615px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Supervisory</div></div></div></foreignObject><text x="668" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Supervisory</text></switch></g><rect x="411" y="0" width="150" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 35px; margin-left: 412px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Thermal<br />Management</div></div></div></foreignObject><text x="486" y="39" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Thermal...</text></switch></g><path d="M 756 285 L 929.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 934.88 285 L 927.88 288.5 L 929.63 285 L 927.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="646" y="250" width="110" height="70" rx="10.5" ry="10.5" fill="#647687" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 285px; margin-left: 647px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Interface<br />and Control</div></div></div></foreignObject><text x="701" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Interface...</text></switch></g><path d="M 1046 285 L 1102.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1107.88 285 L 1100.88 288.5 L 1102.63 285 L 1100.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><a href="https://www.onsemi.com/products/power-management/led-drivers" target="_parent"><rect x="936" y="250" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 285px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LED<br />Driver</div></div></div></foreignObject><text x="991" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">LED...</text></switch></g></a><rect x="576" y="100" width="120" height="60" rx="9" ry="9" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 577px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Memory</div></div></div></foreignObject><text x="636" y="134" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Memory</text></switch></g><rect x="276" y="100" width="120" height="60" rx="9" ry="9" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 130px; margin-left: 277px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Signal<br />Conditioning</div></div></div></foreignObject><text x="336" y="134" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Signal...</text></switch></g><path d="M 516.23 243.49 L 516.02 140 Q 516 130 522.5 130 L 525.75 130 Q 529 130 539 130 L 569.63 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 516.24 248.74 L 512.72 241.75 L 516.23 243.49 L 519.72 241.74 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 574.88 130 L 567.88 133.5 L 569.63 130 L 567.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 457.28 243.63 L 457.71 140 Q 457.75 130 447.75 130 L 402.37 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 457.25 248.88 L 453.78 241.87 L 457.28 243.63 L 460.78 241.9 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 397.12 130 L 404.12 126.5 L 402.37 130 L 404.12 133.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 929.63 175 L 836 175" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 934.88 175 L 927.88 178.5 L 929.63 175 L 927.88 171.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 1046 175 L 1102.63 175" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1107.88 175 L 1100.88 178.5 L 1102.63 175 L 1100.88 171.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="936" y="140" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 175px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LCD<br />Backlight</div></div></div></foreignObject><text x="991" y="179" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">LCD...</text></switch></g><rect x="936" y="30" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 65px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Stepper Motor<br />Controller &amp;<br />Driver</div></div></div></foreignObject><text x="991" y="69" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Stepper Motor...</text></switch></g><path d="M 929.63 395 L 836 395" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 934.88 395 L 927.88 398.5 L 929.63 395 L 927.88 391.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 1046 394.94 L 1107.47 394.94 Q 1117.47 394.94 1117.48 404.94 L 1117.5 436.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1117.5 441.88 L 1114 434.88 L 1117.5 436.63 L 1121 434.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="936" y="360" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 395px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LED Matrix<br />HS Driver</div></div></div></foreignObject><text x="991" y="399" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">LED Matrix...</text></switch></g><path d="M 929.63 505 L 836 505" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 934.88 505 L 927.88 508.5 L 929.63 505 L 927.88 501.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 1046 504.94 L 1107.47 504.94 Q 1117.47 504.94 1117.48 494.94 L 1117.5 466.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1117.5 461.12 L 1120.99 468.12 L 1117.5 466.37 L 1113.99 468.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="936" y="470" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 505px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LED Matrix<br />LS Driver</div></div></div></foreignObject><text x="991" y="509" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">LED Matrix...</text></switch></g><path d="M 929.63 615 L 836 615" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 934.88 615 L 927.88 618.5 L 929.63 615 L 927.88 611.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 1046 615 L 1102.63 615" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1107.88 615 L 1100.88 618.5 L 1102.63 615 L 1100.88 611.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="936" y="580" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 108px; height: 1px; padding-top: 615px; margin-left: 937px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Low Side <br />Driver</div></div></div></foreignObject><text x="991" y="619" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Low Side...</text></switch></g><path d="M 836 615 L 836 64" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 836 64 L 930.95 63.95" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 936.2 63.95 L 929.2 67.45 L 930.95 63.95 L 929.2 60.45 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 359 431.06 L 446.88 431.06 Q 456.88 431.06 456.88 421.06 L 456.88 326.58" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 456.88 321.33 L 460.38 328.33 L 456.88 326.58 L 453.38 328.33 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="252" y="396" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 431px; margin-left: 253px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Wake Up</div></div></div></foreignObject><text x="306" y="435" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Wake Up</text></switch></g><path d="M 359 285 L 409.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 414.88 285 L 407.88 288.5 L 409.63 285 L 407.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="252" y="250" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 285px; margin-left: 253px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Transceiver<br />or SBC</div></div></div></foreignObject><text x="306" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Transceiver...</text></switch></g><path d="M 230 35.06 L 326.06 35.06 Q 336.06 35.06 336.05 45.06 L 336.01 93.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 336 98.88 L 332.51 91.88 L 336.01 93.63 L 339.51 91.89 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="123" y="0" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 35px; margin-left: 124px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Ambient <br />Light<br />Sensor</div></div></div></foreignObject><text x="177" y="39" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">Ambient...</text></switch></g><path d="M 187.37 285 L 245.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 182.12 285 L 189.12 281.5 L 187.37 285 L 189.12 288.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 250.88 285 L 243.88 288.5 L 245.63 285 L 243.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="112" y="269.5" width="107" height="31" rx="4.65" ry="4.65" fill="#60a917" stroke="none" transform="rotate(-90,165.5,285)" pointer-events="all"/><g transform="translate(-0.5 -0.5)rotate(-90 165.5 284.9999999999998)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 105px; height: 1px; padding-top: 285px; margin-left: 113px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 14px; font-family: Helvetica; color: #ffffff; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">I/O Protection</div></div></div></foreignObject><text x="166" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">I/O Protection</text></switch></g><path d="M 117 571.53 L 174.06 571.53 Q 184.06 571.53 194.06 571.44 L 245.63 571" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 250.88 570.99 L 243.89 574.5 L 245.63 571 L 243.88 567.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><ellipse cx="108.5" cy="571.5" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="54" y="560" width="40" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 570px; margin-left: 55px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Vin</div></div></div></foreignObject><text x="74" y="574" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Vin</text></switch></g><rect x="0" y="433.5" width="94" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 92px; height: 1px; padding-top: 444px; margin-left: 1px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Ignition Switch</div></div></div></foreignObject><text x="47" y="447" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Ignition Switch</text></switch></g><ellipse cx="108.5" cy="443.5" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="31" y="410" width="63" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 61px; height: 1px; padding-top: 420px; margin-left: 32px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Switches</div></div></div></foreignObject><text x="63" y="424" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Switches</text></switch></g><path d="M 117 423 L 245.63 423" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 250.88 423 L 243.88 426.5 L 245.63 423 L 243.88 419.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><ellipse cx="108.5" cy="423" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><path d="M 117 443.33 L 245.63 443.33" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 250.88 443.33 L 243.88 446.83 L 245.63 443.33 L 243.88 439.83 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 181 444 L 180.1 539 Q 180 549 190 549.01 L 244.24 549.07" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 249.49 549.08 L 242.49 552.57 L 244.24 549.07 L 242.49 545.57 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><rect x="49" y="260" width="40" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 270px; margin-left: 50px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">CAN</div></div></div></foreignObject><text x="69" y="274" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">CAN</text></switch></g><ellipse cx="108.5" cy="300.5" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><path d="M 123.37 272.47 L 129.71 272.47 Q 136.06 272.47 133.06 272.47 L 131.56 272.47 Q 130.06 272.47 136.8 272.47 L 143.54 272.48" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 118.12 272.47 L 125.12 268.97 L 123.37 272.47 L 125.12 275.97 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 148.79 272.48 L 141.79 275.98 L 143.54 272.48 L 141.79 268.98 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><ellipse cx="108.5" cy="272.5" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="49" y="288" width="40" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 38px; height: 1px; padding-top: 298px; margin-left: 50px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LIN</div></div></div></foreignObject><text x="69" y="302" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">LIN</text></switch></g><path d="M 123.37 300.46 L 139.94 300.47 Q 149.94 300.47 146.74 300.46 L 143.54 300.45" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 118.12 300.46 L 125.12 296.96 L 123.37 300.46 L 125.12 303.96 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 148.79 300.44 L 141.79 303.95 L 143.54 300.45 L 141.79 296.95 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 117 130 L 269.63 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 274.88 130 L 267.88 133.5 L 269.63 130 L 267.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><ellipse cx="108.5" cy="130" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="12" y="117.5" width="77" height="20" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 75px; height: 1px; padding-top: 128px; margin-left: 13px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Aux Sensors</div></div></div></foreignObject><text x="51" y="131" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">Aux Sensors</text></switch></g><ellipse cx="1117.5" cy="615" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="1144" y="592" width="65" height="46" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 63px; height: 1px; padding-top: 615px; margin-left: 1146px;"><div style="box-sizing: border-box; font-size: 0; text-align: left; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Relays,<br />Others LS Loads</div></div></div></foreignObject><text x="1146" y="619" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">Relays,...</text></switch></g><ellipse cx="1117.5" cy="451.5" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="1144" y="428.5" width="44" height="46" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 42px; height: 1px; padding-top: 452px; margin-left: 1146px;"><div style="box-sizing: border-box; font-size: 0; text-align: left; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LED<br />Matrix</div></div></div></foreignObject><text x="1146" y="455" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">LED...</text></switch></g><ellipse cx="1117.5" cy="285" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="1144" y="273" width="92" height="24" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 90px; height: 1px; padding-top: 285px; margin-left: 1146px;"><div style="box-sizing: border-box; font-size: 0; text-align: left; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">LED Indicators</div></div></div></foreignObject><text x="1146" y="289" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">LED Indicators</text></switch></g><ellipse cx="1117.5" cy="175" rx="7.5" ry="7.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all"/><rect x="1144" y="163" width="92" height="24" fill="none" stroke="none" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 90px; height: 1px; padding-top: 175px; margin-left: 1146px;"><div style="box-sizing: border-box; font-size: 0; text-align: left; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">Display</div></div></div></foreignObject><text x="1146" y="179" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">Display</text></switch></g><ellipse cx="1134" cy="65" rx="15" ry="15" fill="#ffffff" stroke="#000000" pointer-events="all"/><g transform="translate(-0.5 -0.5)"><switch><foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"><div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 28px; height: 1px; padding-top: 65px; margin-left: 1120px;"><div style="box-sizing: border-box; font-size: 0; text-align: center; "><div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; font-weight: bold; white-space: normal; word-wrap: normal; ">M</div></div></div></foreignObject><text x="1134" y="69" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">M</text></switch></g><rect x="1106" y="46" width="25" height="8" fill="#808080" stroke="#808080" transform="rotate(-45,1118.5,50)" pointer-events="all"/><rect x="1106" y="76" width="25" height="8" fill="#808080" stroke="#808080" transform="rotate(-134,1118.5,80)" pointer-events="all"/><path d="M 1046 47.5 L 1109.3 47.2" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1114.55 47.18 L 1107.57 50.71 L 1109.3 47.2 L 1107.54 43.71 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/><path d="M 1046 84 L 1109.3 83.7" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/><path d="M 1114.55 83.68 L 1107.57 87.21 L 1109.3 83.7 L 1107.54 80.21 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/></g><switch><g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/><a transform="translate(0,-5)" href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank"><text text-anchor="middle" font-size="10px" x="50%" y="100%">Viewer does not support full SVG 1.1</text></a></switch></svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1207px" height="651px" viewBox="-0.5 -0.5 1207 651" content="&lt;mxfile host=&quot;app.diagrams.net&quot; modified=&quot;2020-06-17T17:03:09.831Z&quot; agent=&quot;5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36&quot; etag=&quot;I53zMe6hgZYOof0l_4sB&quot; version=&quot;13.2.6&quot; type=&quot;device&quot;&gt;&lt;diagram id=&quot;RIbi7QDPcms-ajzvR4J6&quot; name=&quot;Page-1&quot;&gt;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&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 556 285 L 639.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 644.88 285 L 637.88 288.5 L 639.63 285 L 637.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 486 243.63 L 486 70" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 486 248.88 L 482.5 241.88 L 486 243.63 L 489.5 241.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 486 326.37 L 486 525" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 486 321.12 L 489.5 328.12 L 486 326.37 L 482.5 328.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="416" y="250" width="140" height="70" rx="10.5" ry="10.5" fill="#647687" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:138px;height:1px;padding-top:285px;margin-left:417px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Microcontroller
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="486" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                    Microcontroller
+                </text>
+            </switch>
+        </g>
+        <path d="M 562.37 560 L 607.63 560" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 557.12 560 L 564.12 556.5 L 562.37 560 L 564.12 563.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 612.88 560 L 605.88 563.5 L 607.63 560 L 605.88 556.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 409.63 560 L 365.37 560" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 414.88 560 L 407.88 563.5 L 409.63 560 L 407.88 556.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 360.12 560 L 367.12 556.5 L 365.37 560 L 367.12 563.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/dc-dc-controllers-converters-regulators" target="_top">
+            <rect x="416" y="525" width="140" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:138px;height:1px;padding-top:560px;margin-left:417px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Voltage
+                                    <br/>
+                                    Regulation
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="486" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Voltage...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/discretes-drivers" target="_top">
+            <rect x="252" y="525" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:560px;margin-left:253px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Power
+                                    <br/>
+                                    Protection
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="306" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Power...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/power-management/voltage-references-supervisors/voltage-supervisors" target="_top">
+            <rect x="614" y="525" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:560px;margin-left:615px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Supervisory
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="668" y="564" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Supervisory
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/sensors/thermal-management/temperature-sensors" target="_top">
+            <rect x="411" y="0" width="150" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:148px;height:1px;padding-top:35px;margin-left:412px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Thermal
+                                    <br/>
+                                    Management
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="486" y="39" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Thermal...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 756 285 L 899.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 904.88 285 L 897.88 288.5 L 899.63 285 L 897.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="646" y="250" width="110" height="70" rx="10.5" ry="10.5" fill="#647687" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:285px;margin-left:647px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Interface
+                                <br/>
+                                and Control
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="701" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                    Interface...
+                </text>
+            </switch>
+        </g>
+        <path d="M 1016 285 L 1072.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1077.88 285 L 1070.88 288.5 L 1072.63 285 L 1070.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/led-drivers" target="_top">
+            <rect x="906" y="250" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:285px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    LED
+                                    <br/>
+                                    Driver
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        LED...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/memory/eeprom-memory" target="_top">
+            <rect x="576" y="100" width="120" height="60" rx="9" ry="9" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:118px;height:1px;padding-top:130px;margin-left:577px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Memory
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="636" y="134" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Memory
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/amplifiers-comparators" target="_top">
+            <rect x="276" y="100" width="120" height="60" rx="9" ry="9" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:118px;height:1px;padding-top:130px;margin-left:277px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Signal
+                                    <br/>
+                                    Conditioning
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="336" y="134" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Signal...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 516.23 243.49 L 516.02 140 Q 516 130 522.5 130 L 525.75 130 Q 529 130 539 130 L 569.63 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 516.24 248.74 L 512.72 241.75 L 516.23 243.49 L 519.72 241.74 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 574.88 130 L 567.88 133.5 L 569.63 130 L 567.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 457.28 243.63 L 457.71 140 Q 457.75 130 447.75 130 L 402.37 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 457.25 248.88 L 453.78 241.87 L 457.28 243.63 L 460.78 241.9 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 397.12 130 L 404.12 126.5 L 402.37 130 L 404.12 133.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 899.63 175 L 806 175" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 904.88 175 L 897.88 178.5 L 899.63 175 L 897.88 171.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1016 175 L 1072.63 175" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1077.88 175 L 1070.88 178.5 L 1072.63 175 L 1070.88 171.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/led-drivers" target="_top">
+            <rect x="906" y="140" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:175px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    LCD
+                                    <br/>
+                                    Backlight
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="179" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        LCD...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <a xlink:href="https://www.onsemi.com/products/power-management/motor-drivers/motor-drivers-brushless" target="_top">
+            <rect x="906" y="30" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:65px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Stepper Motor
+                                    <br/>
+                                    Controller &amp;
+                                    <br/>
+                                    Driver
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="69" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Stepper Motor...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 899.63 395 L 806 395" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 904.88 395 L 897.88 398.5 L 899.63 395 L 897.88 391.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1016 395 L 1077.5 395 Q 1087.5 395 1087.5 405 L 1087.5 436.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1087.5 441.88 L 1084 434.88 L 1087.5 436.63 L 1091 434.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/discretes-drivers" target="_top">
+            <rect x="906" y="360" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:395px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    LED Matrix
+                                    <br/>
+                                    HS Driver
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="399" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        LED Matrix...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 899.63 505 L 806 505" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 904.88 505 L 897.88 508.5 L 899.63 505 L 897.88 501.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1016 505 L 1077.5 505 Q 1087.5 505 1087.5 495 L 1087.5 466.37" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1087.5 461.12 L 1091 468.12 L 1087.5 466.37 L 1084 468.12 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/motor-drivers/load-drivers-relay-drivers" target="_top">
+            <rect x="906" y="470" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:505px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    LED Matrix
+                                    <br/>
+                                    LS Driver
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="509" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        LED Matrix...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 899.63 615 L 806 615" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 904.88 615 L 897.88 618.5 L 899.63 615 L 897.88 611.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1016 615 L 1072.63 615" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1077.88 615 L 1070.88 618.5 L 1072.63 615 L 1070.88 611.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/motor-drivers/load-drivers-relay-drivers" target="_top">
+            <rect x="906" y="580" width="110" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:108px;height:1px;padding-top:615px;margin-left:907px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Low Side
+                                    <br/>
+                                    Driver
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="961" y="619" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Low Side...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 806 615 L 806 64" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 806 64 L 900.95 63.95" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 906.2 63.95 L 899.2 67.45 L 900.95 63.95 L 899.2 60.45 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 359 431 L 446.9 431 Q 456.9 431 456.9 421 L 456.88 326.58" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 456.88 321.33 L 460.38 328.33 L 456.88 326.58 L 453.38 328.33 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/power-management/dc-dc-controllers-converters-regulators/ldo-regulators-linear-voltage-regulators" target="_top">
+            <rect x="252" y="396" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:431px;margin-left:253px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Wake Up
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="306" y="435" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Wake Up
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 359 285 L 409.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 414.88 285 L 407.88 288.5 L 409.63 285 L 407.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/connectivity/wired-transceivers-modems" target="_top">
+            <rect x="252" y="250" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:285px;margin-left:253px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Transceiver
+                                    <br/>
+                                    or SBC
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="306" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Transceiver...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 230 35 L 326 35 Q 336 35 336 45 L 336 93.63" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 336 98.88 L 332.5 91.88 L 336 93.63 L 339.5 91.88 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/sensors/ambient-light-sensors" target="_top">
+            <rect x="123" y="0" width="107" height="70" rx="10.5" ry="10.5" fill="#60a917" stroke="none" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:35px;margin-left:124px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    Ambient
+                                    <br/>
+                                    Light
+                                    <br/>
+                                    Sensor
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="177" y="39" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        Ambient...
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 187.37 285 L 245.63 285" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 182.12 285 L 189.12 281.5 L 187.37 285 L 189.12 288.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 250.88 285 L 243.88 288.5 L 245.63 285 L 243.88 281.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <a xlink:href="https://www.onsemi.com/products/isolation-protection-devices/esd-protection-diodes" target="_top">
+            <rect x="112" y="269.5" width="107" height="31" rx="4.65" ry="4.65" fill="#60a917" stroke="none" transform="rotate(-90,165.5,285)" pointer-events="all"/>
+            <g transform="translate(-0.5 -0.5)rotate(-90 165.5 285)">
+                <switch>
+                    <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                        <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:105px;height:1px;padding-top:285px;margin-left:113px">
+                            <div style="box-sizing:border-box;font-size:0;text-align:center">
+                                <div style="display:inline-block;font-size:14px;font-family:Helvetica;color:#fff;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                    I/O Protection
+                                </div>
+                            </div>
+                        </div>
+                    </foreignObject>
+                    <text x="166" y="289" fill="#ffffff" font-family="Helvetica" font-size="14px" text-anchor="middle" font-weight="bold">
+                        I/O Protection
+                    </text>
+                </switch>
+            </g>
+        </a>
+        <path d="M 117 571.5 L 174 571.5 Q 184 571.5 194 571.42 L 245.63 570.99" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 250.88 570.99 L 243.88 574.49 L 245.63 570.99 L 243.88 567.49 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <circle cx="108.5" cy="571.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="54" y="560" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:38px;height:1px;padding-top:570px;margin-left:55px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Vin
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="74" y="574" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    Vin
+                </text>
+            </switch>
+        </g>
+        <rect x="0" y="433.5" width="94" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:92px;height:1px;padding-top:444px;margin-left:1px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Ignition Switch
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="47" y="447" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    Ignition Switch
+                </text>
+            </switch>
+        </g>
+        <circle cx="108.5" cy="443.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="31" y="410" width="63" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:61px;height:1px;padding-top:420px;margin-left:32px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Switches
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="63" y="424" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    Switches
+                </text>
+            </switch>
+        </g>
+        <path d="M 117 423 L 245.63 423" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 250.88 423 L 243.88 426.5 L 245.63 423 L 243.88 419.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <circle cx="108.5" cy="423" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <path d="M 117 443.33 L 245.63 443.33" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 250.88 443.33 L 243.88 446.83 L 245.63 443.33 L 243.88 439.83 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 181 444 L 180.1 539 Q 180 549 190 549.01 L 244.24 549.07" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 249.49 549.08 L 242.49 552.57 L 244.24 549.07 L 242.49 545.57 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="49" y="260" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:38px;height:1px;padding-top:270px;margin-left:50px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                CAN
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="69" y="274" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    CAN
+                </text>
+            </switch>
+        </g>
+        <circle cx="108.5" cy="300.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <path d="M 123.37 272.5 L 129.68 272.5 Q 136 272.5 133 272.5 L 131.5 272.5 Q 130 272.5 136.77 272.49 L 143.54 272.49" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 118.12 272.5 L 125.12 269 L 123.37 272.5 L 125.12 276 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 148.79 272.48 L 141.79 275.99 L 143.54 272.49 L 141.79 268.99 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <circle cx="108.5" cy="272.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="49" y="288" width="40" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:38px;height:1px;padding-top:298px;margin-left:50px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                LIN
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="69" y="302" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    LIN
+                </text>
+            </switch>
+        </g>
+        <path d="M 123.37 300.47 L 139.9 300.49 Q 149.9 300.5 146.72 300.47 L 143.54 300.45" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 118.12 300.46 L 125.12 296.97 L 123.37 300.47 L 125.11 303.97 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 148.79 300.44 L 141.79 303.95 L 143.54 300.45 L 141.79 296.95 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 117 130 L 269.63 130" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 274.88 130 L 267.88 133.5 L 269.63 130 L 267.88 126.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <circle cx="108.5" cy="130" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="12" y="117.5" width="77" height="20" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:75px;height:1px;padding-top:128px;margin-left:13px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Aux Sensors
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="51" y="131" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    Aux Sensors
+                </text>
+            </switch>
+        </g>
+        <circle cx="1087.5" cy="615" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="1114" y="592" width="65" height="46" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe flex-start;width:63px;height:1px;padding-top:615px;margin-left:1116px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:left">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Relays,
+                                <br/>
+                                Others LS Loads
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1116" y="619" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    Relays,...
+                </text>
+            </switch>
+        </g>
+        <circle cx="1087.5" cy="451.5" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="1114" y="428.5" width="44" height="46" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe flex-start;width:42px;height:1px;padding-top:452px;margin-left:1116px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:left">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                LED
+                                <br/>
+                                Matrix
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1116" y="455" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    LED...
+                </text>
+            </switch>
+        </g>
+        <circle cx="1087.5" cy="285" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="1114" y="273" width="92" height="24" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe flex-start;width:90px;height:1px;padding-top:285px;margin-left:1116px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:left">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                LED Indicators
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1116" y="289" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    LED Indicators
+                </text>
+            </switch>
+        </g>
+        <circle cx="1087.5" cy="175" fill="#808080" stroke="#000000" stroke-width="3" pointer-events="all" r="7.5"/>
+        <rect x="1114" y="163" width="92" height="24" fill="none" stroke="none" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe flex-start;width:90px;height:1px;padding-top:175px;margin-left:1116px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:left">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                Display
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1116" y="179" fill="#000000" font-family="Helvetica" font-size="12px" font-weight="bold">
+                    Display
+                </text>
+            </switch>
+        </g>
+        <circle cx="1104" cy="65" fill="#ffffff" stroke="#000000" pointer-events="all" r="15"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow:visible;text-align:left" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display:flex;align-items:unsafe center;justify-content:unsafe center;width:28px;height:1px;padding-top:65px;margin-left:1090px">
+                        <div style="box-sizing:border-box;font-size:0;text-align:center">
+                            <div style="display:inline-block;font-size:12px;font-family:Helvetica;color:#000;line-height:1.2;pointer-events:all;font-weight:700;white-space:normal;word-wrap:normal">
+                                M
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="1104" y="69" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle" font-weight="bold">
+                    M
+                </text>
+            </switch>
+        </g>
+        <rect x="1076" y="46" width="25" height="8" fill="#808080" stroke="#808080" transform="rotate(-45,1088.5,50)" pointer-events="all"/>
+        <rect x="1076" y="76" width="25" height="8" fill="#808080" stroke="#808080" transform="rotate(-134,1088.5,80)" pointer-events="all"/>
+        <path d="M 1016 47.5 L 1079.3 47.2" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1084.55 47.18 L 1077.57 50.71 L 1079.3 47.2 L 1077.54 43.71 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 1016 84 L 1079.3 83.7" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 1084.55 83.68 L 1077.57 87.21 L 1079.3 83.7 L 1077.54 80.21 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
