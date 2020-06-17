@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/AmmonRizosSite/static/css/main.a9bf89b2.chunk.css",
-    "main.js": "/AmmonRizosSite/static/js/main.f55c1f22.chunk.js",
-    "main.js.map": "/AmmonRizosSite/static/js/main.f55c1f22.chunk.js.map",
+    "main.js": "/AmmonRizosSite/static/js/main.b8cc98f6.chunk.js",
+    "main.js.map": "/AmmonRizosSite/static/js/main.b8cc98f6.chunk.js.map",
     "runtime-main.js": "/AmmonRizosSite/static/js/runtime-main.521f377f.js",
     "runtime-main.js.map": "/AmmonRizosSite/static/js/runtime-main.521f377f.js.map",
     "static/css/2.af3c1da9.chunk.css": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css",
@@ -22,7 +22,7 @@
     "static/js/7.fe30e465.chunk.js": "/AmmonRizosSite/static/js/7.fe30e465.chunk.js",
     "static/js/7.fe30e465.chunk.js.map": "/AmmonRizosSite/static/js/7.fe30e465.chunk.js.map",
     "index.html": "/AmmonRizosSite/index.html",
-    "precache-manifest.fe902c2cb32d5c6447828045a3f8ea80.js": "/AmmonRizosSite/precache-manifest.fe902c2cb32d5c6447828045a3f8ea80.js",
+    "precache-manifest.e16e71146f91c64ede6fee8fec38fa91.js": "/AmmonRizosSite/precache-manifest.e16e71146f91c64ede6fee8fec38fa91.js",
     "service-worker.js": "/AmmonRizosSite/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/AmmonRizosSite/static/css/2.af3c1da9.chunk.css.map",
     "static/css/3.77133e30.chunk.css.map": "/AmmonRizosSite/static/css/3.77133e30.chunk.css.map",
@@ -30,7 +30,7 @@
     "static/css/5.114a5353.chunk.css.map": "/AmmonRizosSite/static/css/5.114a5353.chunk.css.map",
     "static/css/main.a9bf89b2.chunk.css.map": "/AmmonRizosSite/static/css/main.a9bf89b2.chunk.css.map",
     "static/js/2.de992117.chunk.js.LICENSE.txt": "/AmmonRizosSite/static/js/2.de992117.chunk.js.LICENSE.txt",
-    "static/media/Instrument Cluster.svg": "/AmmonRizosSite/static/media/Instrument Cluster.d986128e.svg",
+    "static/media/Instrument Cluster.svg": "/AmmonRizosSite/static/media/Instrument Cluster.f15cccb0.svg",
     "static/media/logo_On.png": "/AmmonRizosSite/static/media/logo_On.a330b6e5.png",
     "static/media/mexico-flag.svg": "/AmmonRizosSite/static/media/mexico-flag.c7b3942d.svg",
     "static/media/united-states-of-america-flag.svg": "/AmmonRizosSite/static/media/united-states-of-america-flag.0ea08742.svg"
@@ -40,6 +40,6 @@
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.de992117.chunk.js",
     "static/css/main.a9bf89b2.chunk.css",
-    "static/js/main.f55c1f22.chunk.js"
+    "static/js/main.b8cc98f6.chunk.js"
   ]
 }
