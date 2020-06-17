@@ -1,7 +1,7 @@
 h1 {
     margin-top: 5%;
     text-align: center;
-    height: 5%;
+    height: fit-content;
     font-family: 'Roboto', sans-serif;
     font-size: 1.75em;
     font-weight: bolder;
@@ -72,18 +72,23 @@ section > *:nth-child(n + 3){
     margin-top: 10%;
 } */
 
+#svgDiagram {
+    margin: 5% auto;
+    display: block;
+    width: 75%;
+}
+
 @media (max-width: 770px) {
 
     section.fields > *{
-        width: 65%;
+        width: 85%;
         height: 20%;
         margin: 0;
     }
 
     section.subfields > *{
-        width: 65%;
-        /* margin: 0; */
-        flex-basis: 40%;
+        font-size: 0.8em;
+        flex-basis: 45%;
 
     }
 
@@ -96,14 +101,13 @@ section > *:nth-child(n + 3){
     #block-diagrams{ 
         flex-direction: row;
         margin-top: 5%;
-        height: 80%;
+        height: 90%;
+        overflow: scroll;
     }
 
+    #svgDiagram {
+        width: 120%;
+    }
     
 }
 
-#svgDiagram {
-    margin: 5% auto;
-    display: block;
-    width: 75%;
-}
