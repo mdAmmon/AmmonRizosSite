@@ -22,7 +22,10 @@ class TableContainer extends Component {
                     <CrossesList
                         currentPage={this.props.currentPage}
                         itemsPerPage={this.props.itemsPerPage}
-                        crosses={this.props.crosses} />
+                        crosses={this.props.crosses}
+                        displayModal={this.props.displayModal} 
+                        setActiveCross={this.props.setActiveCross}
+                        />
 
                 </table>
 
