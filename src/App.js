@@ -34,6 +34,7 @@ class App extends Component {
             crossModal: false,
             calendarModal: false,
             addEventModal: false,
+            manageCrossModal: false
         }
 
     }
@@ -169,9 +170,14 @@ class App extends Component {
                             <Route path="/crosses" render={() => {
                                 return <Crosses
                                     isLogged={this.state.isLogged}
-                                    showModal={() => this.handleModalShow("crossModal")}
-                                    hide={() => { this.handleModalHide("crossModal") }}
-                                    show={this.state.modalStates.crossModal} />
+                                    displayInsertCrossModal={() => this.handleModalShow("crossModal")}
+                                    hideInsertCrossModal={() => { this.handleModalHide("crossModal") }}
+                                    showInsertCrossModal={this.state.modalStates.crossModal}
+                                    displayManageCrossModal={() => this.handleModalShow("manageCrossModal")}
+                                    hideManageCrossModal={() => { this.handleModalHide("manageCrossModal") }}
+                                    showManageCrossModal={this.state.modalStates.manageCrossModal}
+                                    
+                                    />
                             }} />
                             <Route exact path="/diagrams" component={Diagrams} />
                             <Route path="/diagrams/:field/:diagram" component={Diagram} />
