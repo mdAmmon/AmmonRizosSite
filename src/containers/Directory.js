@@ -75,6 +75,7 @@ class Directory extends Component {
 
             <SearchBar placeholder="Search Name..."
                 onKeyUp={this.onKeyUp}
+                value= {this.state.input}
                 id="searchEmployee" />
             <SearchFilters setFilter={this.setFilter} />
             <DirectoryList showModal={this.modalSetup} employees={this.state.employees} />
