@@ -101,6 +101,7 @@ class Crosses extends Component {
                     crosses={this.state.crosses} 
                     displayModal={this.props.displayManageCrossModal}
                     setActiveCross={this.setActiveCross}
+                    isLogged = {this.props.isLogged}
                 />
 
 

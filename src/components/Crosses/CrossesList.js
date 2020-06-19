@@ -14,7 +14,7 @@ class CrossesList extends Component {
                 {
                     crosses.slice(itemsPerPage * (currentPage - 1), itemsPerPage * (currentPage)).map(cross => {
                         return (
-                            <tr id={cross.CROSS_ID} key={cross.COMPETITOR_PART+","+cross.GENERIC} onClick={()=>{this.displayModal(cross)}}>
+                            <tr id={cross.CROSS_ID} key={cross.COMPETITOR_PART+","+cross.GENERIC} onClick={()=>{if(this.props.isLogged)this.displayModal(cross)}}>
                                 <td>{cross.COMPETITOR}</td>
                                 <td>{cross.COMPETITOR_PART}</td>
                                 <td>{cross.BRAND}</td>

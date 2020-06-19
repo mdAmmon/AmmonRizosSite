@@ -25,6 +25,7 @@ class TableContainer extends Component {
                         crosses={this.props.crosses}
                         displayModal={this.props.displayModal} 
                         setActiveCross={this.props.setActiveCross}
+                        isLogged = {this.props.isLogged}
                         />
 
                 </table>
