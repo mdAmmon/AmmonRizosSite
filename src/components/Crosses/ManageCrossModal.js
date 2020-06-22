@@ -12,6 +12,7 @@ class ManageCrossModal extends React.Component {
         competitors: [],
         manufacturers: [],
         selectedCompetitor: "",
+        crossId: 0,
         competitorPart: "",
         selectedPrincipal: "",
         principalPart: "",
@@ -19,33 +20,38 @@ class ManageCrossModal extends React.Component {
         comments: "",
     }
 
-    componentDidMount() {
-        let mfgs;
+    componentDidMount= async () => {
+        let mfgsRes = await fetch("https://arback-node.herokuapp.com/principals");
+        let mfgs = await mfgsRes.json();
 
-        // https://arizoslocal.herokuapp.com/includes/getPrincipals.php
-        fetch("https://arback-node.herokuapp.com/principals")
-            .then(res => res.json())
-            .then(res => {
-                mfgs = res;
-                this.setState({ manufacturers: mfgs, selectedPrincipal: mfgs[0].brand_id });
-            });
+        let compsRes = await fetch("https://arback-node.herokuapp.com/competitors");
+        let comps = await compsRes.json();
 
-        this.fetchCompetitors();
+        this.setState({
+            competitors: comps,
+            manufacturers: mfgs,
+        })
 
     }
 
-    fetchCompetitors = () => {
-        let comps;
+    componentDidUpdate(prevProps, prevState){
+        if(prevProps !== this.props){
+            const { CROSS_ID, BRAND, COMPETITOR, COMPETITOR_PART, GENERIC, comments, direct } = this.props.cross;
 
-        // https://arizoslocal.herokuapp.com/includes/getCompetitors.php
-        fetch("https://arback-node.herokuapp.com/competitors")
-            .then(res => res.json())
-            .then(res => {
-                comps = res;
-                this.setState({ competitors: comps, selectedCompetitor: comps[0].competitor_id });
-            });
+            let brand = this.state.manufacturers.find(element => element.brand_name === BRAND);
+            let competitor = this.state.competitors.find(element => element.competitor_name === COMPETITOR)
+    
+            this.setState({
+                crossId: CROSS_ID, 
+                selectedCompetitor: (competitor)?competitor.competitor_id: "", 
+                competitorPart: COMPETITOR_PART, 
+                selectedPrincipal: (brand)?brand.brand_id:"", 
+                principalPart: GENERIC,
+                direct: direct,
+                comments: comments
+            })
+        }
     }
-
 
     recordChange = (e) => {
         let obj = {};
@@ -65,7 +71,35 @@ class ManageCrossModal extends React.Component {
         }
     }
 
-    deleteCross = (id) =>{
+    updateCross = (id) => {
+        const {crossId, selectedPrincipal, principalPart, direct, comments} = this.state;
+
+        let body = {
+            selectedPrincipal: Number(selectedPrincipal),
+            principalPart: principalPart,
+            direct: direct,
+            comments: comments
+        }
+
+        fetch(`https://arback-node.herokuapp.com/crosses/${crossId}`, {
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            method: 'PUT',
+            body: JSON.stringify(body)
+        })
+        .then(res=>res.json())
+        .then(response => {
+            alert(response)
+            this.props.hide();
+            this.props.updateTable();
+        })
+        .catch(error => alert(error));
+        
+
+    }
+
+    deleteCross = (id) => {
         fetch(`https://arback-node.herokuapp.com/crosses/${id}`, {
             method: "DELETE" //,
             // body: body
@@ -80,14 +114,13 @@ class ManageCrossModal extends React.Component {
             })
             .catch(error => alert(error));
     }
-    
+
 
     render() {
-        const {CROSS_ID, BRAND, COMPETITOR, COMPETITOR_PART, GENERIC, comments, direct} = this.props.cross;
+        const { CROSS_ID, BRAND, COMPETITOR, COMPETITOR_PART, direct } = this.props.cross;
 
-        let brand = this.state.manufacturers.find(element => element.brand_name===BRAND);
-        let competitor = this.state.competitors.find(element => element.competitor_name===COMPETITOR)
-
+        let brand = this.state.manufacturers.find(element => element.brand_name === BRAND);
+        let competitor = this.state.competitors.find(element => element.competitor_name === COMPETITOR)
 
         return (
             <Modal
@@ -108,12 +141,12 @@ class ManageCrossModal extends React.Component {
 
                             <div className='col-12'>
                                 <label htmlFor="compSelect">Competitor:</label>
-                                <select name="competitor" className="custom-select col-12" 
-                                    disabled defaultValue={(competitor)?competitor.competitor_id: "9"}
-                                    id="selectedCompetitor" onChange={this.recordChange} >
+                                <select name="competitor" className="custom-select col-12"
+                                    disabled defaultValue={(competitor) ? competitor.competitor_id : "9"}
+                                    id="selectedCompetitor">
                                     {this.state.competitors.map(
-                                        element => <option key={element.competitor_id} 
-                                        value={element.competitor_id}>{element.competitor_name}</option>
+                                        element => <option key={element.competitor_id}
+                                            value={element.competitor_id}>{element.competitor_name}</option>
                                     )}
                                 </select>
                             </div>
@@ -124,8 +157,8 @@ class ManageCrossModal extends React.Component {
                     <div className="row form-group">
                         <div className="col-12">
                             <input type="text" name="nombreR" id="competitorPart" className="form-control"
-                                onChange={this.recordChange} onBlur={this.validateForm}
-                                placeholder="Competitor's Part Number..." value={COMPETITOR_PART} aria-describedby="competitorPartNumber" />
+                                disabled placeholder="Competitor's Part Number..." 
+                                value={COMPETITOR_PART} aria-describedby="competitorPartNumber" />
                         </div>
 
                     </div>
@@ -133,7 +166,7 @@ class ManageCrossModal extends React.Component {
                     <div className="form-group">
                         <label htmlFor="compSelect">A&R Manufacturer:</label>
                         <select
-                            disabled defaultValue={(brand)?brand.brand_id:"8"} onChange={this.recordChange}
+                            defaultValue={(brand) ? brand.brand_id : "8"} onChange={this.recordChange}
                             name="principal" className="custom-select" id="selectedPrincipal">
                             {this.state.manufacturers.map(
                                 element => <option key={element.brand_id} value={element.brand_id}>{element.brand_name}</option>
@@ -145,7 +178,7 @@ class ManageCrossModal extends React.Component {
                         <div className="col-12">
                             <input type="text" name="nombreR" id="principalPart" className="form-control"
                                 placeholder="AR Manufacturer's Part Number..." aria-describedby="helpId"
-                                onChange={this.recordChange} value={GENERIC} onBlur={this.validateForm} />
+                                onChange={this.recordChange} value={this.state.principalPart} onBlur={this.validateForm} />
                         </div>
                     </div>
 
@@ -159,13 +192,13 @@ class ManageCrossModal extends React.Component {
 
                     <div className="form-group">
                         <label htmlFor="comments">Comments</label>
-                        <textarea className="form-control" onChange={this.recordChange} value={comments} id="comments" rows="2"></textarea>
+                        <textarea className="form-control" onChange={this.recordChange} value={(this.state.comments)?this.state.comments:""} id="comments" rows="2"></textarea>
                     </div>
 
                     {(this.state.competitorPart !== "" && this.state.principalPart !== "") ? <button className="btn btn-success col-3"
-                        id="UpdateCrossBtn" onClick={()=>{alert("Working on this feature")}}>Update</button> : <button disabled className="btn btn-success col-3"
+                        id="UpdateCrossBtn" onClick={() => { this.updateCross(CROSS_ID)}}>Update</button> : <button disabled className="btn btn-success col-3"
                             id="UpdateCrossBtn">Update</button>}
-                    <button style={{float: "right"}} className="btn btn-danger col-3" onClick={()=>{if(window.confirm("Do you really want to delete this cross?"))this.deleteCross(CROSS_ID)}}
+                    <button style={{ float: "right" }} className="btn btn-danger col-3" onClick={() => { if (window.confirm("Do you really want to delete this cross?")) this.deleteCross(CROSS_ID) }}
                         id="deleteCrossBtn">Delete</button>
                 </ModalBody>
             </Modal >
