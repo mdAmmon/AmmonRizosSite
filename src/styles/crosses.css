@@ -80,6 +80,10 @@ tbody tr {
     margin: 0;
 }
 
+.selectable * {
+    cursor: pointer;
+}
+
 .green{
     color: #16b538;
 }

@@ -10,7 +10,7 @@ class CrossesList extends Component {
         const { currentPage, itemsPerPage, crosses } = this.props;
 
         return (
-            <tbody id="tableBody">
+            <tbody id="tableBody" className={(this.props.isLogged)?"selectable":""}>
                 {
                     crosses.slice(itemsPerPage * (currentPage - 1), itemsPerPage * (currentPage)).map(cross => {
                         return (
