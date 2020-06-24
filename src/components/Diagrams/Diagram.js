@@ -1,6 +1,7 @@
 import React from 'react';
 
 import '../../styles/diagrams.css';
+import BackButton from '../BackButton';
 
 const Diagram = ({ match }) => {
     let svg;
@@ -9,8 +10,9 @@ const Diagram = ({ match }) => {
     } catch{
         svg = null;
     }
-    return <div>
-        <h1>{match.params.diagram}</h1>
+    return <div style={{height: '90%', position: "relative"}}>
+        <BackButton/>
+        <h1 style={{width: "calc(65% - 210px"}}>{match.params.diagram}</h1>
         { (svg)? <object type="image/svg+xml" aria-label="diagram" data={svg} id="svgDiagram" />: "" }
         
     </div>
