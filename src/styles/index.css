@@ -53,7 +53,22 @@ p {
   border: 1px solid red !important;
 }
 
+.btn-AR,
+.btn-AR:hover {
+    background-color: #4c628f !important;
+    color: white !important;
+}
 
+.btn-AR:hover, .btn-ar-2:hover {
+    margin-top: 1px;
+    margin-bottom: -1px;
+}
+
+.btn-ar-2 {
+  background-color: #383838 !important;
+  color: #f8f8f8 !important;
+
+}
 /* Content */
 
 #content {

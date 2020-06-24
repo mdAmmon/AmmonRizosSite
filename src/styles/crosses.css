@@ -43,20 +43,8 @@ tbody tr {
     border-bottom: 1px solid rgba(87, 85, 85, 0.25);
 }
 
-
-.btn-AR,
-.btn-AR:hover {
-    background-color: #4c628f !important;
-    color: white !important;
-}
-
 #insertCrossBtn{
     margin-left: 5%;
-}
-
-.btn-AR:hover {
-    margin-top: 1px;
-    margin-bottom: -1px;
 }
 
 #insertCrossModal, #manageCrossModal{
