@@ -46,7 +46,7 @@ class Birthdays extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3001/directory/birthdays')
+        fetch('https://arback-node.herokuapp.com/directory/birthdays')
             .then( res => res.json())
             .then( res => {
                 const birthdaysComingUp = getUpcomingBirthdays(res);
