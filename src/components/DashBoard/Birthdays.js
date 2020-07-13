@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../styles/birthdays.css'
+import months from '../../assets/months'
 import EmpBirthday from './EmpBirthday';
 
 
@@ -26,6 +27,9 @@ class Birthdays extends Component {
         }
     }
 
+    componentDidMount(){
+
+    }
 
     render() {
         const closeBirthdays = this.state.closeBirthdays;

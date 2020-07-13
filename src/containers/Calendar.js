@@ -7,8 +7,7 @@ import CalendarEventsModal from '../components/Calendar/CalendarEventsModal';
 import CalendarNavButtons from '../components/Calendar/CalendarNavButtons';
 import '../styles/calendar.css';
 import '../styles/principalsColors.css';
-
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+import months from '../assets/months';
 
 //Icons that show the type of an event on the calendar.
 const ICONS = {

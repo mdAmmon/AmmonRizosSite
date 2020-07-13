@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CalendarBody from '../Calendar/CalendarBody';
-const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+import months from '../../assets/months';
 
 class EmbeddedCalendar extends Component {
     componentDidMount(){
