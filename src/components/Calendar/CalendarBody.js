@@ -1,14 +1,8 @@
 import React, { Component } from 'react';
+import { pad }  from '../../assets/functions'
 
 function daysInMonth(iMonth, iYear) {
     return 32 - new Date(iYear, iMonth, 32).getDate();
-}
-
-function pad(s, size) {
-    while (s.length < (size || 2)) {
-        s = "0" + s;
-    }
-    return s;
 }
 
 
