@@ -6,10 +6,14 @@ import Home from './containers/Home';
 import ToggleNavButton from './components/ToggleNavButton.js';
 import LoginForm from './components/Navigation/LoginForm';
 
-
 //Should look into this
 import "bootstrap/dist/css/bootstrap.min.css";
-import ApplicationSubFields from './components/Diagrams/ApplicationSubFields';
+
+import ApplicationSubFields from './components/Diagrams/ApplicationSubFields'
+
+import MedicalVentilatorIPS from './components/Diagrams/SVGTests/MedicalVentilatorIPS';
+
+import LazyLoadModule from './components/ErrorBoundary/LazyLoader';
 
 
 const Directory = React.lazy(() => import('./containers/Directory'));
@@ -69,9 +73,6 @@ class App extends Component {
     logout = () => {
         const { cookies } = this.props;
 
-        // fetch('https://arizoslocal.herokuapp.com/includes/logout.php', {
-        //     method: 'POST',
-        // }).then(res => {
         cookies.remove('name');
         alert("Godspeed my friend");
         let modals = Object.assign({}, this.state.modalStates);
@@ -120,7 +121,7 @@ class App extends Component {
 
     render() {
         return (
-            <Router basename={process.env.PUBLIC_URL} >
+            <Router basename={process.env.PUBLIC_URL} fallback={() => <h1>Error. Unexpected Behavior</h1>} >
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <ToggleNavButton />
                 <div id="content">
@@ -176,12 +177,20 @@ class App extends Component {
                                     displayManageCrossModal={() => this.handleModalShow("manageCrossModal")}
                                     hideManageCrossModal={() => { this.handleModalHide("manageCrossModal") }}
                                     showManageCrossModal={this.state.modalStates.manageCrossModal}
-                                    
-                                    />
+
+                                />
                             }} />
                             <Route exact path="/diagrams" component={Diagrams} />
                             <Route path="/diagrams/:field/:diagram" component={Diagram} />
                             <Route path="/diagrams/:field" component={ApplicationSubFields} />
+
+
+                                <Route path="/svgtest1" render={()=><LazyLoadModule resolve={()=>import('./components/Diagrams/SVGTests/MedicalVentilatorMain')}/>} />
+
+
+                                <Route path="/svgtest2" component={MedicalVentilatorIPS} />
+
+
                         </Switch>
                     </Suspense>
                 </div>
