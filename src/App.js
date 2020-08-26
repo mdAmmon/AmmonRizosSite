@@ -185,7 +185,7 @@ class App extends Component {
                             <Route path="/diagrams/:field" component={ApplicationSubFields} />
 
 
-                                <Route path="/svgtest1" render={()=><LazyLoadModule resolve={()=>import('./components/Diagrams/SVGTests/MedicalVentilatorMain')}/>} />
+                                <Route path="/svgtest1" render={()=><LazyLoadModule resolve={()=>import('./components/Diagrams/SVGTests/MedicalVentilatorMainsError')}/>} />
 
 
                                 <Route path="/svgtest2" component={MedicalVentilatorIPS} />
