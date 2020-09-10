@@ -11,7 +11,9 @@ const EmployeeCard = ({employee, showModal}) => {
 
         const cardImageClass="employeeImage priority" + priority;
 
-        const img = (url)? require(`../../img/${url}`): null;
+        // const img = (url)? require(`../../img/${url}`): null;
+        const img = require(`../../img/gray_square.png`)
+        
 
         return (
             <div onClick={()=>{showModal({name, position, email, phone, mobile, extension, manager, priority, url})} }
