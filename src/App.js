@@ -6,21 +6,17 @@ import Home from './containers/Home';
 import ToggleNavButton from './components/ToggleNavButton.js';
 import LoginForm from './components/Navigation/LoginForm';
 
-//Should look into this
+
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import ApplicationSubFields from './components/Diagrams/ApplicationSubFields'
-
-import MedicalVentilatorIPS from './components/Diagrams/SVGTests/MedicalVentilatorIPS';
-
-import LazyLoadModule from './components/ErrorBoundary/LazyLoader';
-
+import ApplicationSubFields from './components/Diagrams/ApplicationSubFields';
 
 const Directory = React.lazy(() => import('./containers/Directory'));
 const Calendar = React.lazy(() => import('./containers/Calendar'));
 const Crosses = React.lazy(() => import('./containers/Crosses'));
 const Diagrams = React.lazy(() => import('./containers/Diagrams'));
 const Diagram = React.lazy(() => import('./components/Diagrams/Diagram'));
+const CrossFinder = React.lazy(() => import('./containers/CrossFinder'));
 
 
 class App extends Component {
@@ -78,7 +74,7 @@ class App extends Component {
         let modals = Object.assign({}, this.state.modalStates);
         modals.crossModal = false;
         this.setState({ isLogged: false, modalStates: modals });
-        // })
+
         return this.state.isLogged;
     }
 
@@ -168,6 +164,8 @@ class App extends Component {
                                 />
                             }} />
 
+                            <Route path="/crosses/verify" component={CrossFinder} />
+
                             <Route path="/crosses" render={() => {
                                 return <Crosses
                                     isLogged={this.state.isLogged}
@@ -183,13 +181,6 @@ class App extends Component {
                             <Route exact path="/diagrams" component={Diagrams} />
                             <Route path="/diagrams/:field/:diagram" component={Diagram} />
                             <Route path="/diagrams/:field" component={ApplicationSubFields} />
-
-
-                                <Route path="/svgtest1" render={()=><LazyLoadModule resolve={()=>import('./components/Diagrams/SVGTests/MedicalVentilatorMainsError')}/>} />
-
-
-                                <Route path="/svgtest2" component={MedicalVentilatorIPS} />
-
 
                         </Switch>
                     </Suspense>

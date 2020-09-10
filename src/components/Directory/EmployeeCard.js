@@ -7,7 +7,7 @@ class EmployeeCard extends Component {
 
         const img = require(`../../img/${this.props.url}`);
         return (
-            <div onClick={()=>{this.props.showModal(name, position, email, phone, mobile, extension, manager, priority, url)} }
+            <div onClick={()=>{this.props.showModal({name, position, email, phone, mobile, extension, manager, priority, url})} }
             
             className="card shadowing" key={email}>
                 <div className={cardImageClass} style={{backgroundImage: `url(${img})`}}></div>

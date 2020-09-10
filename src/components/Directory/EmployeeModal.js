@@ -1,15 +1,15 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import Modal from "react-bootstrap/Modal";
-
 import ModalBody from "react-bootstrap/ModalBody";
 import "../../styles/employeeModal.css"
+
 class EmployeeModal extends React.Component {
-
     render() {
-        const { name, position, email, phone, mobile, extension, manager, priority } = this.props;
+        const { name, position, email, phone, mobile, extension, manager, priority, url } = this.props.activeEmployeeInfo;
+        const img = require(`../../img/${url}`);
 
-        const img = require(`../../img/${this.props.url}`);
         return (
             <Modal
                 dialogClassName='custom-dialog'
@@ -22,15 +22,9 @@ class EmployeeModal extends React.Component {
                     <button type="button" id="closeModal" className="close" aria-label="Close" onClick={this.props.hide}>
                         <span aria-hidden="true">&times;</span>
                     </button>
-                    {/* <div className={cardImageClass} style={{backgroundImage: `url(${img})`}}></div> */}
                     <div className={"employeeImage priority" + priority}
                         style={{ backgroundImage: `url(${img})` }}
-                        id="modalEmpImage"
-                    >
-
-                    </div>
-
-
+                        id="modalEmpImage" />
 
                     <div className="employeeInfo">
                         <div className="row"><label>Name:</label>
@@ -55,14 +49,18 @@ class EmployeeModal extends React.Component {
                         <div className="row"><label>Manager:</label>
                             <p id="Manager">{manager}</p>
                         </div>
-
                     </div>
                 </ModalBody>
             </Modal>
         );
     }
 
-
 }
 
-export default EmployeeModal;
+const mapStateToProps = state => ({
+    activeEmployeeInfo: state.directory.activeEmployeeInfo
+})
+
+const mapDispatchToProps = null;
+
+export default connect(mapStateToProps, mapDispatchToProps)(EmployeeModal);
