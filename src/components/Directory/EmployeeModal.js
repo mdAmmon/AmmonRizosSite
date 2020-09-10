@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import { selectActiveEmployeeInfo } from '../../redux/Directory/directory.selectors';
+
 import Modal from "react-bootstrap/Modal";
 import ModalBody from "react-bootstrap/ModalBody";
 import "../../styles/employeeModal.css"
@@ -57,7 +59,7 @@ class EmployeeModal extends React.Component {
 }
 
 const mapStateToProps = state => ({
-    activeEmployeeInfo: state.directory.activeEmployeeInfo
+    activeEmployeeInfo: selectActiveEmployeeInfo(state)
 })
 
 const mapDispatchToProps = null;

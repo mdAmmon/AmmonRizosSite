@@ -48,7 +48,7 @@ const Directory = ({ show, hide, showModal, employees, fetchEmployeeDirectory, s
                 value={input}
                 id="searchEmployee" />
             <SearchFilters setFilter={setDirectoryFilter} />
-            <DirectoryList showModal={modalSetup} employees={employees} />
+            <DirectoryList showModal={modalSetup}/>
         </div>
     )
 }
