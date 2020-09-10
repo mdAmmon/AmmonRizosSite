@@ -11,11 +11,10 @@ class Home extends Component {
     state = {
         name: ''
     }
-
+    
     componentDidMount() {
         document.title = "Ammon & Rizos";
     }
-
 
     render() {
         return (

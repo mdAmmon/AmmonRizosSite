@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import { connect } from 'react-redux';
 import { fetchEmployeeDirectoryStart, setActiveEmployee } from '../redux/Directory/directory.actions';
+import { createStructuredSelector } from 'reselect';
+import { selectEmployeeDirectory, selectActiveEmployeeInfo } from '../redux/Directory/directory.selectors';
 
 import DirectoryList from '../components/Directory/DirectoryList';
 import SearchBar from '../components/SearchBar';
@@ -18,7 +20,7 @@ const Directory = ({ show, hide, showModal, employees, fetchEmployeeDirectory, s
     }, []);
 
     useEffect(() => {
-        fetchEmployeeDirectory({filter, input});
+        fetchEmployeeDirectory({ filter, input });
 
     }, [fetchEmployeeDirectory, filter, input]);
 
@@ -51,10 +53,10 @@ const Directory = ({ show, hide, showModal, employees, fetchEmployeeDirectory, s
     )
 }
 
-const mapStateToProps = state => ({
-    employees: state.directory.employees,
-    activeEmployeeInfo: state.directory.activeEmployeeInfo
-})
+const mapStateToProps = createStructuredSelector({
+    employees: selectEmployeeDirectory,
+    activeEmployeeInfo: selectActiveEmployeeInfo
+});
 
 const mapDispatchToProps = (dispatch) => ({
     fetchEmployeeDirectory: (requestParams) => dispatch(fetchEmployeeDirectoryStart(requestParams)),

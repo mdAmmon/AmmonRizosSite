@@ -54,7 +54,6 @@ class EmployeeModal extends React.Component {
             </Modal>
         );
     }
-
 }
 
 const mapStateToProps = state => ({

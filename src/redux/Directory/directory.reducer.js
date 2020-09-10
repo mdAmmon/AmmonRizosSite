@@ -17,7 +17,7 @@ const INITIAL_STATE = {
     }
 }
 
-const directoryReducer = (state = INITIAL_STATE, action) => {
+const directoryReducer = (state = INITIAL_STATE, action = null) => {
     switch (action.type) {
         case DirectoryActionTypes.FETCH_EMPLOYEE_DIRECTORY_START:
             return {
