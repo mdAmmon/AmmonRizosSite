@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import DateHeader from '../components/Calendar/DateHeader';
 import JumpToDate from '../components/Calendar/JumpToDate';
 import CalendarTable from '../components/Calendar/CalendarTable';
@@ -28,7 +29,6 @@ class Calendar extends Component {
         updatePage: false,
     }
 
-    
 
     displayEventsModal = (events) => {  
         let date = events[1].split("-");  
@@ -53,14 +53,9 @@ class Calendar extends Component {
     }
 
     deleteEvent = (id) => {
-        // let body = new FormData();
 
-        // body.append('id', id);
-
-        // https://arizoslocal.herokuapp.com/includes/calendarP.php
         fetch(`https://arback-node.herokuapp.com/calendar/${id}`, {
             method: "DELETE" //,
-            // body: body
         })
             .then(res => res.json())
             .then(response => {
@@ -77,7 +72,6 @@ class Calendar extends Component {
 
 
     addEvent = (object) => {
-        // https://arizoslocal.herokuapp.com/includes/calendarP.php
         const url = "https://arback-node.herokuapp.com/calendar";
 
         fetch(url, {
@@ -101,7 +95,6 @@ class Calendar extends Component {
                     deleteEvent={this.deleteEvent}
                     date={this.state.modalDate}
                     events={this.state.modalEvents}
-                    isLogged={this.props.isLogged}
                     show={this.props.show} hide={this.props.hide}
                     showModalAddEvent={this.props.showModalAddEvent} />
 
@@ -121,5 +114,6 @@ class Calendar extends Component {
 
     }
 }
+
 
 export default Calendar;

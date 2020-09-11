@@ -73,9 +73,9 @@ class App extends Component {
         this.props.logout();
         let modals = Object.assign({}, this.state.modalStates);
         modals.crossModal = false;
-        this.setState({ isLogged: false, modalStates: modals });
+        this.setState({ modalStates: modals });
 
-        return this.state.isLogged;
+        return this.props.isLogged;
     }
 
     goToToday = () => {
@@ -114,7 +114,7 @@ class App extends Component {
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <ToggleNavButton />
                 <div id="content">
-                    <LoginForm isLogged={this.state.isLogged} show={this.state.modalStates.loginModal}
+                    <LoginForm show={this.state.modalStates.loginModal}
                         hide={() => { this.handleModalHide("loginModal") }} />
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>

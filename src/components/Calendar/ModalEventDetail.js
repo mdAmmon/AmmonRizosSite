@@ -1,26 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class ModalEventDetail extends Component {
-    render() {
-            const { principal, id, nombre, tipo, descripcion } = this.props.element;
+import { connect } from 'react-redux';
+import { selectIsLoggedIn } from '../../redux/User/user.selectors';
 
-            return (
-                <div className="modalEventDetail">
-                    {(this.props.isLogged)?<span className="del" id={id} onClick={()=>this.props.deleteEvent(id)} >&times;</span>: ""}
-                    <div className={"principalTag " + principal}></div>
-                    <div className="modalEventData">
-                        <p><b>Nombre</b>: {nombre}</p>
-                        <p><b>Principal</b>: {principal}</p>
-                        <p><b>Tipo</b>: {tipo}</p>
-                        <p><b>Descripcion</b>: {descripcion}</p>
-                    </div>
+const ModalEventDetail = ({element, deleteEvent, isLogged}) => {
 
+    const { principal, id, nombre, tipo, descripcion } = element;
 
-                    <hr />
-
-                </div>
-            );
-    }
+    return (
+        <div className="modalEventDetail">
+            {(isLogged) ? <span className="del" id={id} onClick={() => deleteEvent(id)} >&times;</span> : ""}
+            <div className={"principalTag " + principal}></div>
+            <div className="modalEventData">
+                <p><b>Nombre</b>: {nombre}</p>
+                <p><b>Principal</b>: {principal}</p>
+                <p><b>Tipo</b>: {tipo}</p>
+                <p><b>Descripcion</b>: {descripcion}</p>
+            </div>
+            <hr />
+        </div>
+    );
 }
 
-    export default ModalEventDetail;
+const mapStateToProps = state => ({
+    isLogged: selectIsLoggedIn(state)
+})
+
+const mapDispatchToProps = dispatch => ({
+
+})
+export default connect(mapStateToProps, mapDispatchToProps)(ModalEventDetail);
