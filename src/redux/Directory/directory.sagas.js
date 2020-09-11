@@ -8,7 +8,6 @@ export function* fetchEmployeeDirectoryAsync(action) {
         url += "filter=" + action.payload.filter;
         url += "&input=" + action.payload.input;
         const employeesRes = yield call(fetch, url);
-        console.log(employeesRes);
         const employeesData = yield call([employeesRes, 'json']);
         yield put(fetchEmployeeDirectorySuccess(employeesData));
     } catch (error) {

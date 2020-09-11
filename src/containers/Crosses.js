@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsLoggedIn, selectCurrentUser, selectHasLoginError } from './../redux/User/user.selectors';
+
+
 import SearchBar from '../components/SearchBar';
 import TableTools from '../components/Crosses/TableTools';
 import TableContainer from '../components/Crosses/TableContainer';
@@ -114,4 +120,13 @@ class Crosses extends Component {
     }
 }
 
-export default Crosses;
+const mapStateToProps = createStructuredSelector({
+    isLogged: selectIsLoggedIn,
+    currentUser: selectCurrentUser
+})
+
+// const mapDispatchToProps = dispatch => ({
+//     logout: () => dispatch(logout())
+// })
+
+export default connect(mapStateToProps)(Crosses);

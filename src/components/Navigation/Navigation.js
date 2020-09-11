@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
+
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectIsLoggedIn } from '../../redux/User/user.selectors';
+import { logout } from '../../redux/User/user.actions';
+
 import {NavLink, withRouter } from "react-router-dom";
 import Logo from '../../img/arLogo.png';
 import "../../styles/navbar.css"
 
 class Navigation extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isLogged: props.isLogged
-        }
-    }
 
     expandNav() {
         if(window.innerWidth<770){
@@ -63,22 +63,9 @@ class Navigation extends Component {
     }
 
 
-    logout = () => {
-        if(!this.props.logout()){
-            this.setState({isLogged: false});
-        }
-    }
-
-    componentDidUpdate(previousProps){
-        if(previousProps.isLogged !== this.props.isLogged){
-            this.setState({isLogged: this.props.isLogged});            
-        }
-
-    }
-
     render() {
-        const logButton = (this.state.isLogged)? 
-        <span className="login" id="loginBtn" onClick={this.logout}>Logout</span>:
+        const logButton = (this.props.isLogged)? 
+        <span className="login" id="loginBtn" onClick={this.props.logout}>Logout</span>:
         <span className="login" id="loginBtn" onClick={this.props.showModal}>Login</span>;
 
         const navHeader = (
@@ -155,4 +142,11 @@ class Navigation extends Component {
     }
 }
 
-export default withRouter(Navigation);
+const mapStateToProps = createStructuredSelector({
+    isLogged: selectIsLoggedIn,
+})
+
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(logout())
+})
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Navigation));

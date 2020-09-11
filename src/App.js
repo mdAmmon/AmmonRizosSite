@@ -1,15 +1,19 @@
 import React, { Component, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { withCookies } from 'react-cookie';
+
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { logout, loginSuccessSetUser } from './redux/User/user.actions';
+import { selectIsLoggedIn } from './redux/User/user.selectors';
+
+
 import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home';
 import ToggleNavButton from './components/ToggleNavButton.js';
 import LoginForm from './components/Navigation/LoginForm';
-
+import ApplicationSubFields from './components/Diagrams/ApplicationSubFields';
 
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import ApplicationSubFields from './components/Diagrams/ApplicationSubFields';
 
 const Directory = React.lazy(() => import('./containers/Directory'));
 const Calendar = React.lazy(() => import('./containers/Calendar'));
@@ -22,7 +26,6 @@ const CrossFinder = React.lazy(() => import('./containers/CrossFinder'));
 class App extends Component {
 
     state = {
-        isLogged: false,
         user: {},
         day: "",
         month: "",
@@ -36,14 +39,13 @@ class App extends Component {
             addEventModal: false,
             manageCrossModal: false
         }
-
     }
 
     componentDidMount() {
-        const { cookies } = this.props;
-        const name = cookies.get('name');
-        if (name) {
-            this.setState({ isLogged: true });
+        const username = localStorage.getItem('username')
+        if (username) {
+            console.log('already logged in');
+            this.props.setUser({name: username});
         }
     }
 
@@ -67,22 +69,13 @@ class App extends Component {
     }
 
     logout = () => {
-        const { cookies } = this.props;
-
-        cookies.remove('name');
         alert("Godspeed my friend");
+        this.props.logout();
         let modals = Object.assign({}, this.state.modalStates);
         modals.crossModal = false;
         this.setState({ isLogged: false, modalStates: modals });
 
         return this.state.isLogged;
-    }
-
-    login = (name) => {
-        const { cookies } = this.props;
-        this.setState({ isLogged: true, user: { name } });
-        const hour = 3600;
-        cookies.set('name', name, { maxAge: 3 * hour });
     }
 
     goToToday = () => {
@@ -121,13 +114,12 @@ class App extends Component {
                 <Navigation showModal={() => this.handleModalShow("loginModal")} logout={this.logout} isLogged={this.state.isLogged} />
                 <ToggleNavButton />
                 <div id="content">
-                    <LoginForm isLogged={this.state.isLogged} login={this.login} show={this.state.modalStates.loginModal}
+                    <LoginForm isLogged={this.state.isLogged} show={this.state.modalStates.loginModal}
                         hide={() => { this.handleModalHide("loginModal") }} />
                     <Suspense fallback={<div>Loading...</div>}>
                         <Switch>
                             <Route exact path="/" render={() => {
                                 return <Home
-                                    cookies={this.props.cookies}
                                     day={this.state.day} month={this.state.month} year={this.state.year}
                                     today={this.state.today}
                                     goToToday={this.goToToday}
@@ -168,7 +160,6 @@ class App extends Component {
 
                             <Route path="/crosses" render={() => {
                                 return <Crosses
-                                    isLogged={this.state.isLogged}
                                     displayInsertCrossModal={() => this.handleModalShow("crossModal")}
                                     hideInsertCrossModal={() => { this.handleModalHide("crossModal") }}
                                     showInsertCrossModal={this.state.modalStates.crossModal}
@@ -190,4 +181,13 @@ class App extends Component {
     }
 }
 
-export default withCookies(App);
+const mapStateToProps = createStructuredSelector({
+    isLogged: selectIsLoggedIn,
+})
+
+const mapDispatchToProps = dispatch => ({
+    logout: () => dispatch(logout()),
+    setUser: user => dispatch(loginSuccessSetUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);

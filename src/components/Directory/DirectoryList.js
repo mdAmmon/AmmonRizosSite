@@ -7,7 +7,7 @@ import EmployeeCard from './EmployeeCard';
 
 const DirectoryList = ({ employees, showModal }) => (
     <div id="employeeRegistry">
-        {employees.map((employee) =>
+        {employees && employees.map((employee) =>
             (<EmployeeCard key={employee.email} showModal={showModal} employee={employee} />)
         )}
     </div>

@@ -1,11 +1,14 @@
 import React from 'react';
 
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import { selectisLoggingIn, selectHasLoginError } from '../../redux/User/user.selectors';
+import { startLogin, unsetLoginError } from '../../redux/User/user.actions';
+
 import Modal from "react-bootstrap/Modal";
 import ModalBody from "react-bootstrap/ModalBody";
 import ModalHeader from "react-bootstrap/ModalHeader";
-// import ModalFooter from "react-bootstrap/ModalFooter";
 import ModalTitle from "react-bootstrap/ModalTitle";
-// import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 class LoginForm extends React.Component {
@@ -26,46 +29,27 @@ class LoginForm extends React.Component {
             return;
         }
 
-        // let body = new FormData();
-
-        // body.append('usr', this.state.usr);
-        // body.append('pwd', this.state.pwd);
 
         let body = {
             usr: this.state.usr,
             pwd: this.state.pwd
         }
 
-        // 'https://arizoslocal.herokuapp.com/includes/loginP.php'
-        fetch('https://arback-node.herokuapp.com/session/login', {
-            headers: {'Content-Type': 'application/json'},
-            method: 'POST',
-            body: JSON.stringify(body)
-        })
-            .then(res =>res.json())
-            .then(res => {
-                if (!res.length) {
-                    alert("Error logging in");
-                    document.getElementById("pwd").style.borderColor = "red";
-                    document.getElementById("usr").style.borderColor = "red";
-                    document.getElementById("pwd").value = "";
-                    document.getElementById("usr").value = "";
-                    this.setState({
-                        usr: '',
-                        pwd: '',
-                    });
-                    return;
-                } else{
-                    this.props.login(res);
-                    this.props.hide();
-                }
-            }
-            )
-            .catch(err => alert(err));
+        this.props.login(body);
+
+        this.setState({
+            usr: '',
+            pwd: '',
+        });
+
+        // This should only happen if login was successful
+        this.props.hide();
+
 
     }
 
     updateInput = (e) => {
+        if(this.props.loginError) this.props.removeLoginError()
         this.setState({ [e.target.name]: e.target.value });
         if (e.target.value) {
             e.target.style.borderColor = 'gray';
@@ -117,4 +101,13 @@ class LoginForm extends React.Component {
 
 }
 
-export default LoginForm;
+const mapStateToProps = createStructuredSelector({
+    isLoading: selectisLoggingIn,
+    loginError: selectHasLoginError
+})
+
+const mapDispatchToProps = dispatch => ({
+    login: credentials => dispatch(startLogin(credentials)),
+    removeLoginError: () => dispatch(unsetLoginError)
+})
+export default connect(mapStateToProps, mapDispatchToProps)(LoginForm);
